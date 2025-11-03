@@ -21,7 +21,10 @@ const __dirname = dirname(__filename);
 const rootDir = join(__dirname, '..');
 
 // Configuration - can be overridden via environment variable
-const STALE_DAYS = parseInt(process.env.STALE_DAYS || '90', 10); // Days after which a branch is considered stale
+const STALE_DAYS = (() => {
+  const value = parseInt(process.env.STALE_DAYS || '90', 10);
+  return !isNaN(value) && value > 0 ? value : 90;
+})();
 const DEFAULT_BRANCHES = ['main', 'master', 'develop', 'development'];
 
 // ANSI color codes
