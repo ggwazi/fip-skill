@@ -1,0 +1,98 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., 2.1.0)'
+        required: true
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run full test suite
+        run: npm test
+
+      - name: Build and package
+        run: npm run release
+
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=${GITHUB_REF#refs/tags/v}
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Releasing version $VERSION"
+
+      - name: Extract changelog
+        id: changelog
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          CHANGELOG=$(awk "/## \[$VERSION\]/,/## \[/" CHANGELOG.md | sed '$d' | tail -n +2)
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: FIP Veterinary Advisor v${{ steps.version.outputs.version }}
+          body: |
+            ## FIP Veterinary Advisor v${{ steps.version.outputs.version }}
+
+            ${{ steps.changelog.outputs.changelog }}
+
+            ### Installation
+
+            1. Download `fip-veterinary-advisor-v${{ steps.version.outputs.version }}.skill`
+            2. Verify checksum with `.sha256` file
+            3. Upload to your Claude Code project
+            4. Skill activates automatically for FIP queries
+
+            ### Documentation
+
+            - [Installation Guide](https://github.com/${{ github.repository }}/blob/main/docs/installation.md)
+            - [Extension Guide](https://github.com/${{ github.repository }}/blob/main/docs/extending.md)
+            - [Changelog](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
+
+            ---
+
+            **Evidence Base:** ABCD Guidelines 2024, UC Davis Protocols, Published Literature
+          files: |
+            dist/fip-veterinary-advisor-v*.skill
+            dist/fip-veterinary-advisor-v*.sha256
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update version badge
+        run: |
+          echo "Version v${{ steps.version.outputs.version }} released successfully!"

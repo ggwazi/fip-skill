@@ -1,0 +1,188 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pr-info:
+    name: PR Information
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check PR title
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "PR Title: $PR_TITLE"
+
+          # Check if title follows conventional commits
+          if [[ ! "$PR_TITLE" =~ ^(feat|fix|docs|style|refactor|test|chore|content)(\(.+\))?: ]]; then
+            echo "::warning::PR title should follow conventional commits format"
+            echo "Examples: feat: add new feature, fix: correct bug, content: update protocols"
+          fi
+
+      - name: Check PR description
+        run: |
+          PR_BODY="${{ github.event.pull_request.body }}"
+          if [ -z "$PR_BODY" ]; then
+            echo "::error::PR description is empty. Please provide a description."
+            exit 1
+          fi
+
+  content-validation:
+    name: Validate Content Changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          git diff --name-only origin/${{ github.base_ref }}...HEAD >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Check for medical content changes
+        id: medical-changes
+        run: |
+          CHANGED_FILES="${{ steps.changed-files.outputs.files }}"
+
+          if echo "$CHANGED_FILES" | grep -q "src/SKILL.md\|src/references/"; then
+            echo "medical_content_changed=true" >> $GITHUB_OUTPUT
+            echo "::notice::Medical content has been modified"
+          else
+            echo "medical_content_changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for evidence citations
+        if: steps.medical-changes.outputs.medical_content_changed == 'true'
+        run: |
+          echo "Checking for evidence citations in PR description..."
+          PR_BODY="${{ github.event.pull_request.body }}"
+
+          if echo "$PR_BODY" | grep -qi "evidence\|citation\|reference\|source\|study\|research"; then
+            echo "✅ Evidence or citations mentioned in PR"
+          else
+            echo "::warning::Medical content changed but no evidence citations found in PR description"
+            echo "::warning::Please include evidence citations for medical content changes"
+          fi
+
+      - name: Check changelog updated
+        run: |
+          CHANGED_FILES="${{ steps.changed-files.outputs.files }}"
+
+          if echo "$CHANGED_FILES" | grep -q "src/\|scripts/"; then
+            if ! echo "$CHANGED_FILES" | grep -q "CHANGELOG.md"; then
+              echo "::warning::Changes made but CHANGELOG.md not updated"
+            else
+              echo "✅ CHANGELOG.md has been updated"
+            fi
+          fi
+
+  size-check:
+    name: Check File Sizes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check file sizes
+        run: |
+          echo "Checking file sizes..."
+
+          # Check SKILL.md size
+          if [ -f "src/SKILL.md" ]; then
+            SIZE=$(stat -c%s "src/SKILL.md")
+            SIZE_KB=$((SIZE / 1024))
+            echo "SKILL.md size: ${SIZE_KB} KB"
+
+            if [ $SIZE_KB -gt 100 ]; then
+              echo "::warning::SKILL.md is large (${SIZE_KB} KB). Consider moving content to references."
+            fi
+          fi
+
+          # Check reference document sizes
+          for file in src/references/*.md; do
+            if [ -f "$file" ]; then
+              SIZE=$(stat -c%s "$file")
+              SIZE_KB=$((SIZE / 1024))
+              FILENAME=$(basename "$file")
+              echo "$FILENAME size: ${SIZE_KB} KB"
+
+              if [ $SIZE_KB -gt 500 ]; then
+                echo "::warning::$FILENAME is very large (${SIZE_KB} KB)"
+              fi
+            fi
+          done
+
+  label:
+    name: Auto Label
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Label PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const labels = [];
+
+            // Get changed files
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number
+            });
+
+            const changedFiles = files.map(f => f.filename);
+
+            // Determine labels based on changed files
+            if (changedFiles.some(f => f.startsWith('src/SKILL.md') || f.startsWith('src/references/'))) {
+              labels.push('content');
+            }
+
+            if (changedFiles.some(f => f.startsWith('docs/'))) {
+              labels.push('documentation');
+            }
+
+            if (changedFiles.some(f => f.startsWith('src/scripts/'))) {
+              labels.push('enhancement');
+            }
+
+            if (changedFiles.some(f => f.startsWith('.github/workflows/'))) {
+              labels.push('ci-cd');
+            }
+
+            if (changedFiles.some(f => f.startsWith('tests/'))) {
+              labels.push('testing');
+            }
+
+            // Add labels
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: labels
+              });
+            }
