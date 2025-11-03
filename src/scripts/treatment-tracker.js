@@ -189,7 +189,7 @@ export class TreatmentTracker {
 
     let report = `
 FIP Treatment Progress Report
-${='='.repeat(50)}
+${'='.repeat(50)}
 
 Patient: ${summary.patient.name}
 Age: ${summary.patient.age_months} months
@@ -242,7 +242,7 @@ Fever Status (recent):
     }
 
     report += `
-${='='.repeat(50)}
+${'='.repeat(50)}
 Data Points Recorded: ${summary.data_points_recorded}
 `;
 
