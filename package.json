@@ -15,7 +15,9 @@
     "pretest": "npm run validate && npm run lint",
     "version": "node scripts/version.js",
     "release": "npm run test && npm run build && npm run package",
-    "clean": "rm -rf dist/ node_modules/"
+    "clean": "rm -rf dist/ node_modules/",
+    "find-issues": "node scripts/find-issues.js",
+    "find-closeable-branches": "node scripts/find-closeable-branches.js"
   },
   "keywords": [
     "claude-skill",

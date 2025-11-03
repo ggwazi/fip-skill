@@ -132,13 +132,53 @@ npm run package
 ### Available Scripts
 
 ```bash
-npm run build        # Build skill from source
-npm run package      # Create .skill package
-npm run validate     # Validate skill structure
-npm run lint         # Lint markdown files
-npm run lint:fix     # Auto-fix markdown issues
-npm test             # Run all tests
-npm run release      # Full release workflow
+npm run build                    # Build skill from source
+npm run package                  # Create .skill package
+npm run validate                 # Validate skill structure
+npm run lint                     # Lint markdown files
+npm run lint:fix                 # Auto-fix markdown issues
+npm test                         # Run all tests
+npm run release                  # Full release workflow
+npm run find-issues              # Find issues since last merge
+npm run find-closeable-branches  # Identify branches that can be closed
+```
+
+### Repository Maintenance Tools
+
+The project includes utility scripts to help maintain code quality and manage branches:
+
+#### Find Issues Since Last Merge
+
+```bash
+npm run find-issues
+```
+
+This script identifies problems that have appeared since the last merge:
+- **Validation errors** - Broken links, missing sections, invalid structure
+- **Linting issues** - Markdown formatting problems
+- **Test failures** - Unit and integration test errors
+- **Uncommitted changes** - Files that need to be staged
+
+Use this before creating pull requests to ensure code quality.
+
+#### Find Closeable Branches
+
+```bash
+npm run find-closeable-branches
+```
+
+This script identifies Git branches that can potentially be closed/deleted:
+- **Merged branches** - Branches already merged into main (safe to delete)
+- **Stale branches** - Branches with no commits in 90+ days (configurable via `STALE_DAYS` env var)
+- **Empty branches** - Branches with no unique commits compared to main
+- **Remote-only branches** - Branches that exist remotely but not locally
+
+The script provides git commands to safely delete identified branches.
+
+**Configuration:**
+```bash
+# Use a custom stale threshold (default is 90 days)
+STALE_DAYS=30 npm run find-closeable-branches
 ```
 
 ### Making Changes
