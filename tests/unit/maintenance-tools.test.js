@@ -72,31 +72,35 @@ describe('Repository Maintenance Tools', () => {
 
     it('should identify main branch', () => {
       const result = exec('node scripts/find-closeable-branches.js');
+      const output = typeof result === 'string' ? result : result.stdout;
       
-      assert.ok(result.includes('Main branch:'));
+      assert.ok(output.includes('Main branch:'));
     });
 
     it('should list branch categories', () => {
       const result = exec('node scripts/find-closeable-branches.js');
+      const output = typeof result === 'string' ? result : result.stdout;
       
       // Check for key sections
-      assert.ok(result.includes('Merged Branches'));
-      assert.ok(result.includes('Stale Branches'));
-      assert.ok(result.includes('Active Branches'));
+      assert.ok(output.includes('Merged Branches'));
+      assert.ok(output.includes('Stale Branches'));
+      assert.ok(output.includes('Active Branches'));
     });
 
     it('should show summary', () => {
       const result = exec('node scripts/find-closeable-branches.js');
+      const output = typeof result === 'string' ? result : result.stdout;
       
-      assert.ok(result.includes('Summary'));
-      assert.ok(result.includes('Branches that can be closed'));
+      assert.ok(output.includes('Summary'));
+      assert.ok(output.includes('Branches that can be closed'));
     });
 
     it('should show stale threshold', () => {
       const result = exec('node scripts/find-closeable-branches.js');
+      const output = typeof result === 'string' ? result : result.stdout;
       
-      assert.ok(result.includes('Stale threshold'));
-      assert.ok(result.includes('90 days'));
+      assert.ok(output.includes('Stale threshold'));
+      assert.ok(output.includes('90 days'));
     });
   });
 });
