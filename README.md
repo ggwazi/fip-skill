@@ -1,48 +1,49 @@
-# FIP Veterinary Advisor Skill
+# FIP Veterinary Advisor - Claude Skill
 
-Evidence-based diagnostic and treatment guidance for Feline Infectious Peritonitis (FIP), designed as a Claude Code skill.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](CHANGELOG.md)
+[![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](package.json)
+[![Evidence-Based](https://img.shields.io/badge/evidence-ABCD%202024-purple)](docs/reference/)
 
-## About This Skill
+> Comprehensive, evidence-based diagnostic and treatment guidance for Feline Infectious Peritonitis (FIP). Transform FIP cases from uniformly fatal to >85% curable with systematic, protocol-driven care.
 
-This skill provides comprehensive, evidence-based guidance for diagnosing and treating FIP based on:
+---
+
+## 🎯 Features
+
+- **🔬 Systematic Diagnostics** - ABCD evidence-weighted flowcharts for effusive, dry, neurological, and ocular FIP
+- **💊 Complete Treatment Protocols** - UC Davis GS-441524 protocols with dosing by disease form
+- **📊 Automated Tools** - Dosage calculators, treatment trackers, cost estimators
+- **📈 Monitoring Guidance** - Objective parameters for tracking treatment response
+- **💬 Client Communication** - Templates and scripts for difficult conversations
+- **📚 Comprehensive References** - 210+ KB of detailed veterinary guidance
+
+### Evidence Base
+
+All protocols derived from:
 - **ABCD Guidelines** (European Advisory Board on Cat Diseases, November 2024)
 - **UC Davis Research** (Dr. Niels C. Pedersen and team)
-- **Published field trials** of GS-441524 treatment
-- **Peer-reviewed veterinary literature**
+- **Published Field Trials** of GS-441524 treatment
+- **Peer-Reviewed Literature** from veterinary journals
 
-## Repository Structure
+---
 
-```
-fip-skill/
-├── SKILL.md                    # Core skill file with workflows and quick reference
-├── references/                 # Reference documents (auto-loaded by Claude)
-│   ├── diagnostic-flowcharts.md       # ABCD diagnostic decision trees
-│   ├── differential-diagnosis.md      # Alternative diagnoses guide
-│   ├── prevention-management.md       # Prevention strategies
-│   └── treatment-protocols.md         # Complete GS-441524 protocols
-├── scripts/                    # Executable scripts (optional)
-├── assets/                     # Output assets like templates (optional)
-├── docs/                       # Additional documentation
-│   └── icatcare_fipupdate_july25.pdf
-├── fip-veterinary-advisor.skill       # Packaged v1 (26 KB)
-├── fip-veterinary-advisor-v2.skill    # Packaged v2 with prevention (31 KB) ⭐
-└── Documentation files:
-    ├── FIP-Skill-Installation-Guide.md
-    ├── FIP-Skill-Summary.md
-    ├── How-to-Extend-FIP-Skill.md
-    ├── Extension-Demonstration-Summary.md
-    └── COMPLETE-PACKAGE-GUIDE.md
-```
+## 🚀 Quick Start
 
-## Quick Start
+### Installation
 
-### Install the Skill
+1. **Download the latest release:**
+   ```bash
+   # Download from releases page or build from source
+   npm run build && npm run package
+   ```
 
-1. Download `fip-veterinary-advisor-v2.skill` (recommended)
-2. In Claude Code, upload the skill to your project
-3. The skill will automatically activate for FIP-related queries
+2. **Upload to Claude:**
+   - Open your Claude Code project
+   - Upload the `.skill` file
+   - Skill activates automatically for FIP queries
 
-### Example Queries
+### Example Usage
 
 ```
 "I have a 9-month-old cat with ascites and high globulin. What should I do?"
@@ -51,116 +52,272 @@ fip-skill/
 "Help me explain FIP diagnosis to a worried client"
 ```
 
-## Development
+---
 
-### Skill Structure Requirements
+## 📁 Repository Structure
 
-Every Claude Code skill must have:
-- **SKILL.md** (required) - Contains YAML frontmatter and skill instructions
-- **references/** (optional) - Documentation loaded as needed
-- **scripts/** (optional) - Executable code for deterministic tasks
-- **assets/** (optional) - Files used in output (templates, images, etc.)
-
-### Making Changes
-
-1. Edit the source files in this repository
-2. Test your changes
-3. Repackage the skill:
-   ```bash
-   cd /home/user/fip-skill
-   zip -r fip-veterinary-advisor-v2.skill SKILL.md references/ scripts/ assets/
-   ```
-4. Verify package contents:
-   ```bash
-   unzip -l fip-veterinary-advisor-v2.skill
-   ```
-
-### Extending the Skill
-
-See [How-to-Extend-FIP-Skill.md](How-to-Extend-FIP-Skill.md) for comprehensive guidance on:
-- Adding new reference documents
-- Creating scripts for calculations
-- Including assets like templates
-- Updating existing content
-- Versioning and testing
-
-## Documentation
-
-- **[FIP-Skill-Installation-Guide.md](FIP-Skill-Installation-Guide.md)** - How to install and use the skill
-- **[FIP-Skill-Summary.md](FIP-Skill-Summary.md)** - Technical overview and design philosophy
-- **[How-to-Extend-FIP-Skill.md](How-to-Extend-FIP-Skill.md)** - Complete extension guide
-- **[Extension-Demonstration-Summary.md](Extension-Demonstration-Summary.md)** - Example of adding prevention module
-- **[COMPLETE-PACKAGE-GUIDE.md](COMPLETE-PACKAGE-GUIDE.md)** - Overview of all files
-
-## Skill Versions
-
-### Version 2 (Recommended) - 31 KB
-**fip-veterinary-advisor-v2.skill**
-
-Includes everything from v1 plus:
-- Prevention strategies
-- Multi-cat household management
-- Cattery breeding guidance
-- Shelter management protocols
-- FCoV testing interpretation
-
-### Version 1 - 26 KB
-**fip-veterinary-advisor.skill**
-
-Core functionality:
-- ABCD diagnostic flowcharts
-- Complete GS-441524 treatment protocols
-- Differential diagnosis guide
-- Client communication guidance
-- Monitoring protocols
-
-## Key Features
-
-### Automatic Activation
-Claude automatically uses this skill when queries involve:
-- FIP diagnosis or treatment
-- Feline coronavirus (FCoV)
-- Effusions in young cats
-- GS-441524 or other antivirals
-- Neurological or ocular disease in cats
-
-### Evidence-Based Protocols
-- >85% cure rate with proper treatment
-- Systematic diagnostic approach using ABCD criteria
-- Complete monitoring and dosing guidelines
-- Practical client communication support
-
-### Progressive Loading
-- Skill metadata: Always in context (~200 words)
-- SKILL.md: Loaded when skill triggers
-- References: Loaded only when Claude determines they're needed
-- Keeps context efficient while ensuring comprehensive coverage
-
-## Contributing
-
-To contribute improvements:
-1. Make changes to the source files
-2. Test with various queries
-3. Update version information
-4. Repackage the skill
-5. Document your changes
-
-## License & Disclaimers
-
-This skill:
-- Does not replace clinical judgment
-- Cannot guarantee treatment success
-- Does not provide legal advice on drug procurement
-- Cannot diagnose definitively without proper testing
-- Does not replace histopathology for gold standard diagnosis
-
-## Questions or Issues?
-
-- Check the [Installation Guide](FIP-Skill-Installation-Guide.md) for troubleshooting
-- Review the [Extension Guide](How-to-Extend-FIP-Skill.md) for customization help
-- Verify current drug availability and legal status in your region
+```
+fip-skill/
+├── src/                        # Skill source files
+│   ├── SKILL.md               # Core skill with workflows
+│   ├── references/            # Detailed reference documents
+│   │   ├── diagnostic-flowcharts.md
+│   │   ├── treatment-protocols.md
+│   │   ├── differential-diagnosis.md
+│   │   └── prevention-management.md
+│   ├── scripts/               # Utility scripts
+│   │   ├── calculate-dose.js
+│   │   ├── treatment-tracker.js
+│   │   └── cost-estimator.js
+│   └── assets/                # Templates and forms
+│       ├── templates/
+│       └── forms/
+│
+├── scripts/                    # Build automation
+│   ├── build.js
+│   ├── package.js
+│   ├── validate.js
+│   └── utils/
+│
+├── tests/                      # Test suite
+│   ├── unit/
+│   ├── integration/
+│   └── fixtures/
+│
+├── docs/                       # Documentation
+│   ├── installation.md
+│   ├── extending.md
+│   ├── summary.md
+│   └── reference/
+│
+├── .github/                    # GitHub Actions workflows
+│   ├── workflows/
+│   └── ISSUE_TEMPLATE/
+│
+├── dist/                       # Build output (gitignored)
+├── package.json               # Project configuration
+├── CHANGELOG.md               # Version history
+└── README.md                  # This file
+```
 
 ---
 
-**Version:** 2.0 (November 2024)
+## 💻 Development
+
+### Prerequisites
+
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+
+### Setup
+
+```bash
+# Clone repository
+git clone https://github.com/ggwazi/fip-skill.git
+cd fip-skill
+
+# Install dependencies
+npm install
+
+# Run validation
+npm test
+
+# Build the skill
+npm run build
+
+# Package the skill
+npm run package
+```
+
+### Available Scripts
+
+```bash
+npm run build        # Build skill from source
+npm run package      # Create .skill package
+npm run validate     # Validate skill structure
+npm run lint         # Lint markdown files
+npm run lint:fix     # Auto-fix markdown issues
+npm test             # Run all tests
+npm run release      # Full release workflow
+```
+
+### Making Changes
+
+1. Edit source files in `src/`
+2. Run validation: `npm test`
+3. Build and package: `npm run release`
+4. Test the generated `.skill` file
+
+See [docs/extending.md](docs/extending.md) for detailed guidance on:
+- Adding new reference documents
+- Creating utility scripts
+- Including client templates
+- Updating treatment protocols
+
+---
+
+## 📖 Documentation
+
+### User Documentation
+- **[Installation Guide](docs/installation.md)** - Setup and usage
+- **[Skill Summary](docs/summary.md)** - Technical overview
+- **[Package Guide](docs/package-guide.md)** - Complete file reference
+
+### Developer Documentation
+- **[Extension Guide](docs/extending.md)** - How to extend the skill
+- **[Extension Demo](docs/extension-demo.md)** - Example walkthrough
+- **[Contributing Guide](CONTRIBUTING.md)** - Contribution guidelines
+- **[Changelog](CHANGELOG.md)** - Version history
+
+### Reference Materials
+- **[ABCD Guidelines PDF](docs/reference/icatcare_fipupdate_july25.pdf)** - Source guidelines
+- **[Evidence Base](src/references/)** - Complete protocol sources
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run unit tests only
+npm run test:unit
+
+# Run with coverage
+npm run test:coverage
+
+# Validate skill structure
+npm run validate
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for:
+- Code of conduct
+- Contribution process
+- Evidence requirements for medical content
+- Testing requirements
+- PR guidelines
+
+### Quick Contribution Guide
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Run `npm test`
+6. Submit a pull request
+
+---
+
+## 📊 Skill Versions
+
+### v2.1.0 (Current - In Development)
+- Complete project infrastructure
+- Build automation and CI/CD
+- Utility scripts (dose calculator, treatment tracker)
+- Comprehensive testing framework
+
+### v2.0.0
+- Prevention and management module
+- Multi-cat household guidance
+- Cattery breeding considerations
+- Shelter management protocols
+
+### v1.0.0
+- Initial release
+- Core diagnostic flowcharts
+- Complete treatment protocols
+- Differential diagnosis guide
+
+See [CHANGELOG.md](CHANGELOG.md) for complete version history.
+
+---
+
+## 🎓 Key Features in Detail
+
+### Systematic Diagnostic Approach
+
+Four evidence-weighted diagnostic trees cover all FIP presentations:
+- **Tree A:** Effusion present (wet FIP)
+- **Tree B:** No effusion + non-specific signs (dry FIP)
+- **Tree C:** Neurological findings
+- **Tree D:** Ocular findings
+
+Each tree uses quantitative evidence weighting (+/-) to build diagnostic confidence.
+
+### Complete Treatment Protocols
+
+- **Dosing by disease form:** Wet/dry (4-6 mg/kg), Ocular (8 mg/kg), Neurological (10 mg/kg)
+- **Weekly monitoring:** Weight, temperature, clinical signs
+- **Monthly bloodwork:** CBC, chemistry, A:G ratio tracking
+- **Adjustment protocols:** When and how to increase dosage
+- **Stopping criteria:** Objective parameters for treatment completion
+- **Relapse management:** Recognition and retreatment protocols
+
+### Client Communication Tools
+
+- Informed consent templates
+- Treatment explanation scripts
+- Cost discussion frameworks
+- Prognosis counseling approaches
+- Euthanasia discussion guidance
+
+---
+
+## ⚠️ Medical Disclaimer
+
+This skill provides evidence-based veterinary guidance for **educational purposes only**.
+
+**It does NOT:**
+- Replace clinical judgment or veterinary expertise
+- Guarantee treatment success or specific outcomes
+- Provide legal advice on drug procurement
+- Diagnose definitively without proper testing
+- Replace histopathology for gold standard diagnosis
+
+**Always consult with a licensed veterinarian** for specific medical advice and treatment decisions.
+
+---
+
+## 📜 License
+
+[MIT License](LICENSE) - See LICENSE file for details.
+
+Copyright (c) 2024 FIP Veterinary Skill Team
+
+---
+
+## 🔗 Links
+
+- **Repository:** [github.com/ggwazi/fip-skill](https://github.com/ggwazi/fip-skill)
+- **Issues:** [github.com/ggwazi/fip-skill/issues](https://github.com/ggwazi/fip-skill/issues)
+- **Releases:** [github.com/ggwazi/fip-skill/releases](https://github.com/ggwazi/fip-skill/releases)
+
+---
+
+## 📞 Support
+
+- **Documentation Issues:** Open an issue with the `documentation` label
+- **Medical Content:** Open an issue with the `content` label and provide evidence citations
+- **Bug Reports:** Use the bug report template
+- **Feature Requests:** Use the feature request template
+
+---
+
+## 🙏 Acknowledgments
+
+This skill is built on the pioneering work of:
+- **ABCD** (European Advisory Board on Cat Diseases)
+- **Dr. Niels C. Pedersen** and the UC Davis team
+- **International Cat Care** for FIP research compilation
+- All veterinarians and researchers advancing FIP treatment
+
+---
+
+**Version:** 2.1.0 (In Development)
+**Last Updated:** 2024-11-03
 **Evidence Base:** ABCD Guidelines 2024, UC Davis Protocols, Published Literature

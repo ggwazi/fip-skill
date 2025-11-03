@@ -1,0 +1,57 @@
+{
+  "name": "@skills/fip-veterinary-advisor",
+  "version": "2.1.0",
+  "description": "Evidence-based diagnostic and treatment guidance for Feline Infectious Peritonitis (FIP)",
+  "main": "src/SKILL.md",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "package": "node scripts/package.js",
+    "validate": "node scripts/validate.js",
+    "lint": "markdownlint '**/*.md' --ignore node_modules --ignore dist --config .markdownlint.json",
+    "lint:fix": "markdownlint '**/*.md' --ignore node_modules --ignore dist --config .markdownlint.json --fix",
+    "test": "node --test tests/**/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage tests/**/*.test.js",
+    "pretest": "npm run validate && npm run lint",
+    "version": "node scripts/version.js",
+    "release": "npm run test && npm run build && npm run package",
+    "clean": "rm -rf dist/ node_modules/"
+  },
+  "keywords": [
+    "claude-skill",
+    "veterinary",
+    "fip",
+    "feline-infectious-peritonitis",
+    "diagnostics",
+    "treatment",
+    "gs-441524",
+    "veterinary-medicine",
+    "evidence-based"
+  ],
+  "author": "FIP Veterinary Skill Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggwazi/fip-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ggwazi/fip-skill/issues"
+  },
+  "homepage": "https://github.com/ggwazi/fip-skill#readme",
+  "devDependencies": {
+    "markdownlint-cli": "^0.39.0",
+    "archiver": "^6.0.1",
+    "chalk": "^5.3.0",
+    "globby": "^14.0.0"
+  },
+  "files": [
+    "src/SKILL.md",
+    "src/references/",
+    "src/scripts/",
+    "src/assets/"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
