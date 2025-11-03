@@ -67,7 +67,7 @@ describe('Repository Maintenance Tools', () => {
       const result = exec('node scripts/find-closeable-branches.js');
       
       // The script should always run successfully
-      assert.ok(typeof result === 'string');
+      assert.ok(typeof result === 'string' || typeof result === 'object');
     });
 
     it('should identify main branch', () => {

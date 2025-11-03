@@ -169,11 +169,17 @@ npm run find-closeable-branches
 
 This script identifies Git branches that can potentially be closed/deleted:
 - **Merged branches** - Branches already merged into main (safe to delete)
-- **Stale branches** - Branches with no commits in 90+ days
+- **Stale branches** - Branches with no commits in 90+ days (configurable via `STALE_DAYS` env var)
 - **Empty branches** - Branches with no unique commits compared to main
 - **Remote-only branches** - Branches that exist remotely but not locally
 
 The script provides git commands to safely delete identified branches.
+
+**Configuration:**
+```bash
+# Use a custom stale threshold (default is 90 days)
+STALE_DAYS=30 npm run find-closeable-branches
+```
 
 ### Making Changes
 

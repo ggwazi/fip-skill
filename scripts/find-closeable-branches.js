@@ -14,13 +14,14 @@
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const rootDir = join(__dirname, '..');
 
-// Configuration
-const STALE_DAYS = 90; // Days after which a branch is considered stale
+// Configuration - can be overridden via environment variable
+const STALE_DAYS = parseInt(process.env.STALE_DAYS || '90', 10); // Days after which a branch is considered stale
 const DEFAULT_BRANCHES = ['main', 'master', 'develop', 'development'];
 
 // ANSI color codes
@@ -360,6 +361,7 @@ function main() {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+const scriptURL = pathToFileURL(process.argv[1]).href;
+if (import.meta.url === scriptURL) {
   main();
 }

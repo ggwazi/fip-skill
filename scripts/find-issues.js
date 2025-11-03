@@ -17,6 +17,7 @@ import { execSync } from 'child_process';
 import { readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -175,7 +176,7 @@ function checkTests() {
   printSubsection('🧪 Test Issues');
   
   try {
-    // Run tests without pretest (to avoid re-running validation)
+    // Run tests using npm test script (without pretest to avoid circular dependency)
     exec('node --test tests/**/*.test.js', { silent: false });
     console.log(`${colors.green}✓ All tests passing${colors.reset}`);
     return [];
@@ -329,6 +330,7 @@ function main() {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+const scriptURL = pathToFileURL(process.argv[1]).href;
+if (import.meta.url === scriptURL) {
   main();
 }
