@@ -8,7 +8,7 @@
 
 ## Overview
 
-While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in dry FIP, a subset of cats fail to respond or respond initially then relapse. This document provides systematic approaches to managing these refractory cases.
+While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in dry FIP, a subset of cats fail to respond or respond initially, then relapse. This document provides systematic approaches to managing these refractory cases.
 
 **Definition of Treatment Failure:**
 - No clinical improvement after 2-4 weeks of appropriate dosing
