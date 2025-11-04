@@ -380,7 +380,7 @@ npm run clean           # Remove build artifacts
 
 - **Documentation Issues:** Check `docs/` directory
 - **Build Issues:** Check `scripts/` directory source code
-- **Medical Content Questions:** Review ABCD guidelines in `docs/reference/`
+- **Medical Content Questions:** Review ABCD FIP guidelines PDF in `docs/reference/icatcare_fipupdate_july25.pdf`
 - **Contributing Guide:** See `CONTRIBUTING.md`
 - **Changelog:** See `CHANGELOG.md`
 
