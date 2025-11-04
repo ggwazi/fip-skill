@@ -24,6 +24,7 @@ Use this skill for any FIP-related veterinary consultation, including:
 ### 1. Evidence-Based Medicine
 
 All guidance derives from peer-reviewed research and established veterinary guidelines:
+
 - ABCD diagnostic criteria (November 2024)
 - UC Davis treatment protocols (Dr. Niels C. Pedersen)
 - Published field trials and clinical studies
@@ -31,6 +32,7 @@ All guidance derives from peer-reviewed research and established veterinary guid
 ### 2. Preponderance of Evidence Approach
 
 FIP diagnosis requires multiple supporting findings - never one test alone:
+
 - Weight signalment, history, clinical signs, and laboratory findings together
 - Use diagnostic flowcharts systematically
 - Consider overall clinical picture over isolated test abnormalities
@@ -38,6 +40,7 @@ FIP diagnosis requires multiple supporting findings - never one test alone:
 ### 3. Treatment is Now Possible
 
 GS-441524 has transformed FIP from uniformly fatal to >85% curable:
+
 - Provide realistic hope while maintaining honesty about challenges
 - Support veterinarians working with clients using various drug sources
 - Focus on patient welfare regardless of drug procurement method
@@ -47,6 +50,7 @@ GS-441524 has transformed FIP from uniformly fatal to >85% curable:
 ### Diagnosis Checklist
 
 **High Suspicion Indicators:**
+
 - Age <2 years with multi-cat household
 - Persistent fever non-responsive to antibiotics
 - Swollen abdomen (effusion) or dyspnoea
@@ -60,11 +64,13 @@ GS-441524 has transformed FIP from uniformly fatal to >85% curable:
 ### Treatment Quick Start
 
 **Initial Dosing (GS-441524):**
+
 - Wet/dry FIP (no CNS/ocular): 4-6 mg/kg SC daily × 12 weeks
 - Ocular FIP: 8 mg/kg SC daily × 12 weeks  
 - Neurological FIP: 10 mg/kg SC daily × 12 weeks
 
 **Essential Monitoring:**
+
 - Weekly: Weight, temperature, clinical signs
 - Monthly: CBC and chemistry panel (focus on hematocrit, globulin, albumin, A:G ratio)
 
@@ -77,6 +83,7 @@ GS-441524 has transformed FIP from uniformly fatal to >85% curable:
 Gather complete information:
 
 **Signalment & History:**
+
 - Age, breed, sex
 - Multi-cat household?
 - Recent stressors (rehoming, vaccination, neutering)?
@@ -84,6 +91,7 @@ Gather complete information:
 - Duration and progression of clinical signs
 
 **Physical Examination:**
+
 - Temperature, weight, body condition score
 - Presence of effusion (abdominal, thoracic, pericardial)
 - Ocular examination (uveitis, iris changes, retinal changes)
@@ -91,6 +99,7 @@ Gather complete information:
 - Abdominal palpation (organomegaly, masses, lymph nodes)
 
 **Laboratory Tests:**
+
 - CBC: Look for anemia, lymphopenia, microcytosis
 - Chemistry: Total protein, albumin, globulin, A:G ratio, bilirubin
 - Alpha-1-acid glycoprotein if available
@@ -120,18 +129,21 @@ Use when ocular abnormalities predominate
 Based on diagnostic tree:
 
 **Effusion Analysis:**
+
 - Biochemistry: Protein, Rivalta test, A:G ratio
 - Cytology: Cell count, cell types
 - FCoV RT-PCR (quantitative preferred - high loads more specific)
 - Immunostaining for FCoV antigen (high specificity)
 
 **Tissue Sampling (FNA or Biopsy):**
+
 - Target abnormal organs (lymph nodes, kidney, liver, spleen)
 - Cytology assessment
 - FCoV RT-PCR
 - Immunostaining for FCoV antigen
 
 **Gold Standard:**
+
 - Histopathology consistent with FIP
 - Positive immunohistochemistry for FCoV antigen in lesions
 
@@ -142,12 +154,15 @@ Consider and systematically exclude other conditions:
 **Key Differentials by Presentation:**
 
 *For effusive disease:*
+
 - Lymphocytic cholangitis, pyothorax, septic peritonitis, congestive heart failure, lymphoma
 
 *For neurological disease:*
+
 - Toxoplasmosis, trauma, thiamine deficiency, middle ear disease
 
 *For ocular disease:*
+
 - Toxoplasmosis, lymphoma, bartonellosis
 
 **Full differential diagnosis guidance:** See [differential-diagnosis.md](references/differential-diagnosis.md)
@@ -155,16 +170,20 @@ Consider and systematically exclude other conditions:
 ### Step 5: Establish Diagnosis Confidence Level
 
 **Confirmed FIP:**
+
 - Histopathology + positive immunohistochemistry
 
 **FIP Very Likely:**
+
 - Positive immunostaining on effusion/FNA/CSF with consistent clinical picture
 - High FCoV RNA loads on RT-PCR with consistent cytology and clinical signs
 
 **FIP Possible:**
+
 - Clinical signs + laboratory findings suggestive, but confirmatory tests not yet performed or inconclusive
 
 **FIP Less Likely:**
+
 - Negative confirmatory tests
 - Alternative diagnosis more consistent with findings
 
@@ -173,11 +192,13 @@ Consider and systematically exclude other conditions:
 ### Phase 1: Pre-treatment Assessment
 
 **Confirm Diagnosis:**
+
 - Establish diagnosis confidence level
 - Collect samples for FCoV detection if not already done
 - Document baseline parameters
 
 **Baseline Documentation:**
+
 - Complete CBC and chemistry panel
 - Body weight
 - Temperature
@@ -185,6 +206,7 @@ Consider and systematically exclude other conditions:
 - Activity level and appetite assessment
 
 **Client Communication:**
+
 - Explain diagnosis and prognosis
 - Discuss treatment options (including legal status, costs, duration)
 - Set realistic expectations (>85% cure rate with proper protocol)
@@ -196,17 +218,20 @@ Consider and systematically exclude other conditions:
 **Select Starting Dose:**
 
 Determine appropriate dosage based on disease form:
+
 - Wet/dry FIP without CNS or ocular involvement: 4-6 mg/kg daily SC
 - FIP with ocular involvement: 8 mg/kg daily SC
 - FIP with neurological involvement: 10 mg/kg daily SC
 
 **Administration Guidance:**
+
 - Injectable GS-441524 preferred (oral acceptable if ≤10 mg/kg equivalent)
 - Subcutaneous injection
 - Rotate injection sites systematically
 - Consider gabapentin pre-treatment (5-10 mg/kg PO) for injection pain
 
 **Supportive Care:**
+
 - Nutritional support (appetite stimulants if needed)
 - Fluid therapy if dehydrated
 - Thoracocentesis only if dyspnoeic
@@ -218,17 +243,20 @@ Determine appropriate dosage based on disease form:
 ### Phase 3: Monitoring Protocol
 
 **Daily/Weekly Owner Monitoring:**
+
 - Daily temperature
 - Weekly weight
 - Activity level and appetite
 - Clinical signs progression or resolution
 
 **Veterinary Monitoring:**
+
 - Blood work every 4 weeks (minimum)
 - CBC: Hematocrit, lymphocyte count
 - Chemistry: Total protein, albumin, globulin, A:G ratio, bilirubin
 
 **Expected Response Timeline:**
+
 - 24-72 hours: Temperature normalization, appetite improvement
 - 2-4 weeks: Near-normal behavior, effusion resolution, weight gain starting
 - 8-10 weeks: Blood values normalizing, activity surge
@@ -240,11 +268,13 @@ Create graphs tracking weight, temperature, A:G ratio, globulin over time for ob
 ### Phase 4: Dosage Adjustments
 
 **Weekly Weight Adjustments:**
+
 - Adjust dose for weight gain weekly
 - Do not decrease dose for initial weight loss
 - Significant weight gain expected (some cats double body weight)
 
 **Increase Dosage If:**
+
 - Slow improvement in clinical signs
 - Blood values not improving adequately (after 4-8 weeks)
 - Poor activity levels despite treatment
@@ -253,12 +283,14 @@ Create graphs tracking weight, temperature, A:G ratio, globulin over time for ob
 - Development of neurological signs during treatment (increase to 10 mg/kg)
 
 **How to Increase:**
+
 - Add 2-5 mg/kg to daily dose
 - Continue increased dose minimum 4 weeks
 - Extend total treatment duration to accommodate
 - Expect positive response within days to 2 weeks
 
 **No Response to Increase:**
+
 - Consider further increase if <15 mg/kg
 - Evaluate drug quality
 - Reassess diagnosis
@@ -270,6 +302,7 @@ Create graphs tracking weight, temperature, A:G ratio, globulin over time for ob
 **Assess All Criteria Before Stopping:**
 
 *Outward Health Signs (all required):*
+
 - Normal activity level
 - Normal appetite
 - Appropriate weight gain/growth
@@ -277,6 +310,7 @@ Create graphs tracking weight, temperature, A:G ratio, globulin over time for ob
 - Clinical signs resolved
 
 *Blood Test Normalization (all required):*
+
 - Hematocrit normal
 - Lymphocyte count normal
 - Total protein normal
@@ -285,6 +319,7 @@ Create graphs tracking weight, temperature, A:G ratio, globulin over time for ob
 - A:G ratio normalized
 
 *Additional Considerations:*
+
 - Minimum 12 weeks treatment completed
 - No fever
 - No effusion
@@ -296,11 +331,13 @@ Focus on OVERALL clinical picture. Do not extend treatment based solely on singl
 ### Phase 6: Post-Treatment Monitoring
 
 **12-Week Observation Period:**
+
 - Continue monitoring weight, activity, appetite
 - Blood work at 4 and 8 weeks post-treatment
 - Watch for relapse signs
 
 **Relapse Indicators:**
+
 - Return of fever
 - New neurological signs
 - New ocular signs
@@ -310,6 +347,7 @@ Focus on OVERALL clinical picture. Do not extend treatment based solely on singl
 
 **Relapse Management:**
 If relapse occurs:
+
 - Restart treatment at higher dose (minimum previous dose + 5 mg/kg)
 - Duration: Minimum 8 weeks
 - Use injectable form only (especially if >10 mg/kg)
@@ -322,6 +360,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Risk Assessment
 
 **Evaluate environment:**
+
 - Number of cats in household
 - Group stability (additions/removals)
 - Hygiene practices
@@ -329,6 +368,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Space availability
 
 **Provide guidance based on risk level:**
+
 - Low risk (1-3 stable cats): Basic hygiene, monitor for illness
 - Moderate risk (4-6 cats): Enhanced hygiene, stress reduction
 - High risk (>6 cats, cattery, shelter): Rigorous protocols, consider testing
@@ -338,12 +378,14 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### After FIP Diagnosis in Multi-Cat Household
 
 **Immediate advice:**
+
 - Other cats likely already exposed to FCoV (not mutated form)
 - No need to isolate FIP cat from stable household
 - Focus on stress reduction for all cats
 - Monitor others for clinical signs (siblings highest risk)
 
 **Long-term recommendations:**
+
 - No routine testing of other cats needed
 - Excellent litter box hygiene
 - Avoid adding new cats during treatment period
@@ -352,6 +394,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Cattery or Breeding Questions
 
 **When FIP occurs:**
+
 - Pause breeding temporarily
 - Consider testing breeding cats for FCoV shedding
 - Siblings of FIP cat at higher risk
@@ -359,6 +402,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Do NOT use antivirals prophylactically
 
 **Prevention strategies:**
+
 - Small stable groups
 - Early weaning and kitten separation
 - Minimize stress
@@ -370,11 +414,13 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Drug Resistance
 
 **Recognition:**
+
 - Inadequate response despite dosage increases
 - Disease progression on treatment
 - Relapse shortly after treatment completion
 
 **Management:**
+
 - Escalate dosage up to 15 mg/kg
 - Consider combination therapy (GC376 + GS-441524) if available
 - May achieve disease control without cure
@@ -385,17 +431,20 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Neurological FIP
 
 **Special Considerations:**
+
 - Higher starting dose required (10 mg/kg minimum)
 - Blood-brain barrier limits drug penetration
 - Higher relapse risk
 - Permanent CNS damage possible even with cure
 
 **Monitoring:**
+
 - Standard protocols plus neurological assessment
 - Advanced imaging (MRI) may be needed
 - CSF analysis for diagnosis and monitoring
 
 **Prognosis:**
+
 - Lower cure rate than wet/dry FIP
 - Some permanent deficits may persist even after virus clearance
 - Peripheral nerve damage may slowly recover
@@ -404,11 +453,13 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Injection Site Reactions
 
 **Prevention:**
+
 - Systematic site rotation
 - Proper injection technique (subcutaneous, not intramuscular)
 - Avoid between-shoulder area
 
 **Management:**
+
 - Gabapentin pre-medication
 - Clean 4+ times daily with dilute hydrogen peroxide (1:5)
 - Usually heal within 2 weeks
@@ -418,6 +469,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Financial Constraints
 
 **Supportive Conversation:**
+
 - Acknowledge financial reality
 - Discuss treatment duration and total costs transparently
 - Consider shorter proven protocols (42 days for effusive cases)
@@ -425,6 +477,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Discuss euthanasia as humane option if treatment not feasible
 
 **Ethical Framework:**
+
 - Patient welfare is paramount
 - Quality of life assessment ongoing
 - Euthanasia preferable to untreated suffering
@@ -435,6 +488,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Explaining FIP Diagnosis
 
 **Key Points to Cover:**
+
 - FIP is caused by mutation of common feline coronavirus
 - Mutation occurs within individual cat (not typically transmitted cat-to-cat in mutated form)
 - Historically always fatal, now treatable with antivirals
@@ -442,6 +496,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - FCoV antibodies in many healthy cats (not diagnostic of FIP)
 
 **Avoid:**
+
 - Guaranteeing 100% diagnosis without histopathology
 - Blaming owner for cat's FIP (stress factors are just associations, not causes)
 - False hope or false doom
@@ -450,6 +505,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Discussing Treatment Options
 
 **Present Honestly:**
+
 - Treatment availability varies by region
 - GS-441524 not licensed for veterinary use in many areas
 - Clients may obtain from unregulated sources
@@ -458,12 +514,14 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Duration is lengthy (12+ weeks minimum)
 
 **Emphasize:**
+
 - >85% cure rate with proper protocol
 - Importance of veterinary monitoring
 - Commitment required (daily injections, regular monitoring)
 - You will support monitoring regardless of drug source
 
 **Prognostic Factors:**
+
 - Young cats: Better outcomes
 - Wet FIP: Easier to treat than dry
 - No neurological involvement: Better prognosis
@@ -472,6 +530,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Setting Expectations
 
 **Realistic Timeline:**
+
 - Rapid initial response (24-72 hours) expected
 - Near-normal by 2-4 weeks in most cases
 - Full treatment 12+ weeks
@@ -479,11 +538,13 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Total commitment: 6+ months
 
 **Financial Reality:**
+
 - Estimate total costs including drug, monitoring, supportive care
 - Discuss payment plans if available
 - Acknowledge this is major financial commitment
 
 **Possible Outcomes:**
+
 - Cure (>85%)
 - Relapse requiring additional treatment
 - Drug resistance (partial or complete)
@@ -493,12 +554,14 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Supporting Difficult Decisions
 
 **When Treatment Not Pursued:**
+
 - Validate client's decision
 - Emphasize quality of life
 - Discuss euthanasia as compassionate option
 - Provide grief support resources
 
 **When Treatment Fails:**
+
 - Explain not a failure of client commitment
 - Some cats develop resistance
 - Euthanasia discussion when appropriate
@@ -509,11 +572,13 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Multi-cat Households
 
 **Risk Assessment:**
+
 - Other cats likely already exposed to FCoV
 - Mutation theory: Each FIP case requires new mutation
 - Direct transmission of mutated form unlikely in natural settings
 
 **Management Recommendations:**
+
 - No need to isolate FIP cat from established household
 - Reduce stress for all cats
 - Monitor other cats for clinical signs
@@ -521,6 +586,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Excellent litter box hygiene
 
 **Cattery Considerations:**
+
 - Pause breeding during FIP case
 - Siblings at higher risk
 - Avoid stress (overcrowding, excessive showing, frequent sales)
@@ -529,12 +595,14 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 ### Preventive Measures
 
 **Reduce FIP Risk:**
+
 - Small stable groups (≤3 cats ideal)
 - Reduce stress in multi-cat households
 - Excellent litter box hygiene
 - Avoid overcrowding
 
 **FIP Vaccine:**
+
 - Available in some countries (Felocell FIP)
 - Given intranasally at ≥16 weeks
 - Efficacy controversial
@@ -542,6 +610,7 @@ When clients have multiple cats or are concerned about prevention after an FIP d
 - Most cats already exposed before vaccine age
 
 **Testing for FCoV:**
+
 - Fecal PCR can identify shedders
 - Allows separation in catteries if feasible
 - Requires multiple samples (intermittent shedding)
@@ -620,12 +689,14 @@ This skill is based on:
 ### Limitations
 
 **What This Skill Cannot Do:**
+
 - Replace histopathology for definitive diagnosis
 - Guarantee treatment success (resistance, misdiagnosis possible)
 - Provide legal advice on drug procurement
 - Replace clinical judgment in complex cases
 
 **When to Seek Additional Expertise:**
+
 - Complex neurological cases requiring advanced imaging
 - Ophthalmological procedures (aqueous humour sampling)
 - Surgical interventions needed
@@ -701,6 +772,7 @@ This skill is based on:
 ### "Clinical signs not improving despite treatment"
 
 **Assess:**
+
 - Verify drug quality and source
 - Check dosage calculation (mg/kg correct?)
 - Evaluate injection technique
@@ -709,6 +781,7 @@ This skill is based on:
 - Consider partial drug resistance
 
 **Action:**
+
 - Increase dosage by 2-5 mg/kg
 - Recheck blood work
 - Consider imaging for complications
@@ -717,12 +790,14 @@ This skill is based on:
 ### "Blood values not normalizing"
 
 **Assess:**
+
 - Which specific values abnormal?
 - Overall clinical picture (is cat healthy appearing?)
 - Magnitude of abnormality (slightly off vs markedly abnormal)
 - Trend over time (improving vs static vs worsening)
 
 **Action:**
+
 - If single marginally abnormal value + healthy cat → Consider stopping at 12 weeks
 - If multiple abnormal values → Extend treatment
 - If markedly abnormal → Increase dosage
@@ -730,12 +805,14 @@ This skill is based on:
 ### "Owner reports injection site problems"
 
 **Assess:**
+
 - Site rotation adequate?
 - Injection depth correct?
 - Severity of reaction
 - Pattern (every injection vs specific sites)
 
 **Action:**
+
 - Review injection technique with owner
 - Recommend gabapentin pre-treatment
 - Dilute hydrogen peroxide cleaning protocol
@@ -744,12 +821,14 @@ This skill is based on:
 ### "Suspected relapse after treatment"
 
 **Assess:**
+
 - Clinical signs (fever, weight loss, decreased activity?)
 - Blood work (rising globulin, falling A:G?)
 - Form of relapse (CNS, ocular, systemic?)
 - Time since stopping treatment
 
 **Action:**
+
 - Confirm relapse with blood work
 - Restart treatment at higher dose (previous + 5 mg/kg minimum)
 - Plan minimum 8-week retreatment
@@ -759,12 +838,14 @@ This skill is based on:
 ### "Client wants to stop treatment early"
 
 **Assess:**
+
 - Reason for wanting to stop (financial, improved cat, injection difficulty?)
 - Current duration of treatment
 - Clinical response so far
 - Risk of relapse
 
 **Discussion:**
+
 - Explain relapse risk if stopped prematurely
 - Consider shorter proven protocols if appropriate (42 days for effusive)
 - If financial: Discuss options, payment plans
@@ -772,6 +853,7 @@ This skill is based on:
 - Support decision while providing education
 
 **Action:**
+
 - If <8 weeks: Strongly discourage unless cat unhealthy
 - If 8-12 weeks with complete response: May consider in selected cases
 - If ≥12 weeks: Assess stopping criteria

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Complete project infrastructure with package.json
 - Build automation scripts
 - Validation and testing framework
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Development tooling and scripts
 
 ### Changed
+
 - Reorganized repository structure into professional layout
 - Moved SKILL.md and references to src/ directory
 - Consolidated documentation into docs/ directory
@@ -25,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2024-12-01
 
 ### Added
+
 - Prevention and management reference document
 - Multi-cat household guidance
 - Cattery breeding considerations
@@ -32,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FCoV testing interpretation
 
 ### Changed
+
 - Expanded skill description to include prevention capabilities
 - Enhanced workflow sections with prevention guidance
 - Updated package to include new reference document
@@ -39,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-11-01
 
 ### Added
+
 - Initial release of FIP Veterinary Advisor skill
 - Core SKILL.md with diagnostic and treatment workflows
 - Four comprehensive reference documents:
@@ -51,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Troubleshooting section
 
 ### Evidence Base
+
 - ABCD (European Advisory Board on Cat Diseases) Guidelines - November 2024
 - UC Davis Veterinary School research (Dr. Niels C. Pedersen)
 - Published field trials and clinical studies

@@ -21,6 +21,7 @@
 ### Evidence Base
 
 All protocols derived from:
+
 - **ABCD Guidelines** (European Advisory Board on Cat Diseases, November 2024)
 - **UC Davis Research** (Dr. Niels C. Pedersen and team)
 - **Published Field Trials** of GS-441524 treatment
@@ -33,6 +34,7 @@ All protocols derived from:
 ### Installation
 
 1. **Download the latest release:**
+
    ```bash
    # Download from releases page or build from source
    npm run build && npm run package
@@ -97,6 +99,7 @@ fip-skill/
 ├── dist/                       # Build output (gitignored)
 ├── package.json               # Project configuration
 ├── CHANGELOG.md               # Version history
+├── TODO.md                    # Missing files tracking
 └── README.md                  # This file
 ```
 
@@ -154,6 +157,7 @@ npm run find-issues
 ```
 
 This script identifies problems that have appeared since the last merge:
+
 - **Validation errors** - Broken links, missing sections, invalid structure
 - **Linting issues** - Markdown formatting problems
 - **Test failures** - Unit and integration test errors
@@ -168,6 +172,7 @@ npm run find-closeable-branches
 ```
 
 This script identifies Git branches that can potentially be closed/deleted:
+
 - **Merged branches** - Branches already merged into main (safe to delete)
 - **Stale branches** - Branches with no commits in 90+ days (configurable via `STALE_DAYS` env var)
 - **Empty branches** - Branches with no unique commits compared to main
@@ -176,6 +181,7 @@ This script identifies Git branches that can potentially be closed/deleted:
 The script provides git commands to safely delete identified branches.
 
 **Configuration:**
+
 ```bash
 # Use a custom stale threshold (default is 90 days)
 STALE_DAYS=30 npm run find-closeable-branches
@@ -189,6 +195,7 @@ STALE_DAYS=30 npm run find-closeable-branches
 4. Test the generated `.skill` file
 
 See [docs/extending.md](docs/extending.md) for detailed guidance on:
+
 - Adding new reference documents
 - Creating utility scripts
 - Including client templates
@@ -199,17 +206,21 @@ See [docs/extending.md](docs/extending.md) for detailed guidance on:
 ## 📖 Documentation
 
 ### User Documentation
+
 - **[Installation Guide](docs/installation.md)** - Setup and usage
 - **[Skill Summary](docs/summary.md)** - Technical overview
 - **[Package Guide](docs/package-guide.md)** - Complete file reference
 
 ### Developer Documentation
+
 - **[Extension Guide](docs/extending.md)** - How to extend the skill
 - **[Extension Demo](docs/extension-demo.md)** - Example walkthrough
 - **[Contributing Guide](CONTRIBUTING.md)** - Contribution guidelines
+- **[TODO Plan](TODO.md)** - Missing files and implementation roadmap
 - **[Changelog](CHANGELOG.md)** - Version history
 
 ### Reference Materials
+
 - **[ABCD Guidelines PDF](docs/reference/icatcare_fipupdate_july25.pdf)** - Source guidelines
 - **[Evidence Base](src/references/)** - Complete protocol sources
 
@@ -236,6 +247,7 @@ npm run validate
 ## 🤝 Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for:
+
 - Code of conduct
 - Contribution process
 - Evidence requirements for medical content
@@ -256,18 +268,21 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for:
 ## 📊 Skill Versions
 
 ### v2.1.0 (Current - In Development)
+
 - Complete project infrastructure
 - Build automation and CI/CD
 - Utility scripts (dose calculator, treatment tracker)
 - Comprehensive testing framework
 
 ### v2.0.0
+
 - Prevention and management module
 - Multi-cat household guidance
 - Cattery breeding considerations
 - Shelter management protocols
 
 ### v1.0.0
+
 - Initial release
 - Core diagnostic flowcharts
 - Complete treatment protocols
@@ -282,6 +297,7 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 ### Systematic Diagnostic Approach
 
 Four evidence-weighted diagnostic trees cover all FIP presentations:
+
 - **Tree A:** Effusion present (wet FIP)
 - **Tree B:** No effusion + non-specific signs (dry FIP)
 - **Tree C:** Neurological findings
@@ -313,6 +329,7 @@ Each tree uses quantitative evidence weighting (+/-) to build diagnostic confide
 This skill provides evidence-based veterinary guidance for **educational purposes only**.
 
 **It does NOT:**
+
 - Replace clinical judgment or veterinary expertise
 - Guarantee treatment success or specific outcomes
 - Provide legal advice on drug procurement
@@ -351,6 +368,7 @@ Copyright (c) 2024 FIP Veterinary Skill Team
 ## 🙏 Acknowledgments
 
 This skill is built on the pioneering work of:
+
 - **ABCD** (European Advisory Board on Cat Diseases)
 - **Dr. Niels C. Pedersen** and the UC Davis team
 - **International Cat Care** for FIP research compilation

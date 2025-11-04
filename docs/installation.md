@@ -23,6 +23,7 @@ This Claude Skill provides comprehensive, evidence-based guidance for diagnosing
 ### Evidence Base
 
 All guidance is derived from:
+
 - **ABCD Guidelines** (European Advisory Board on Cat Diseases, November 2024)
 - **UC Davis Research** (Dr. Niels C. Pedersen and team)
 - **Published field trials** of GS-441524 treatment
@@ -46,6 +47,7 @@ All guidance is derived from:
 ### The Skill Activates Automatically
 
 Claude will automatically use this skill when you:
+
 - Mention FIP, feline infectious peritonitis, or FCoV
 - Describe clinical signs consistent with FIP
 - Ask about diagnosing effusions in cats
@@ -56,24 +58,28 @@ Claude will automatically use this skill when you:
 ### Example Queries
 
 **Diagnostic Scenarios:**
+
 - "I have a 9-month-old cat with fever, ascites, and high globulin. Could this be FIP?"
 - "What tests should I run to confirm FIP in a cat with pleural effusion?"
 - "How do I interpret a positive FCoV PCR result?"
 - "Walk me through the ABCD diagnostic flowchart for wet FIP"
 
 **Treatment Planning:**
+
 - "What's the starting dose of GS-441524 for a 3 kg cat with wet FIP?"
 - "How should I monitor a cat during FIP treatment?"
 - "When should I increase the dosage during treatment?"
 - "My FIP patient isn't responding to treatment - what should I do?"
 
 **Specific Situations:**
+
 - "Help me explain FIP diagnosis and treatment to a worried client"
 - "What are the differential diagnoses for a young cat with ascites?"
 - "A cat relapsed 2 weeks after finishing treatment - how do I manage this?"
 - "What injection sites should I recommend for daily GS injections?"
 
 **Complex Cases:**
+
 - "I'm treating neurological FIP - what special considerations apply?"
 - "How do I manage injection site reactions?"
 - "When is it appropriate to stop treatment before 12 weeks?"
@@ -84,6 +90,7 @@ Claude will automatically use this skill when you:
 ### 1. Systematic Diagnostic Approach
 
 The skill guides you through:
+
 - Evidence-based signalment and history assessment
 - Four diagnostic decision trees (effusive, non-effusive, neurological, ocular)
 - Confirmatory testing interpretation
@@ -92,6 +99,7 @@ The skill guides you through:
 ### 2. Evidence-Based Treatment Protocols
 
 Complete guidance on:
+
 - Initial dosing by disease form
 - Monitoring parameters and frequency
 - Dosage adjustment criteria
@@ -101,6 +109,7 @@ Complete guidance on:
 ### 3. Practical Clinical Support
 
 Real-world assistance with:
+
 - Injection technique and site management
 - Client communication strategies
 - Financial constraint discussions
@@ -110,6 +119,7 @@ Real-world assistance with:
 ### 4. Comprehensive Reference Materials
 
 Detailed information on:
+
 - All ABCD diagnostic criteria with evidence weighting
 - Complete UC Davis treatment protocols
 - 20+ differential diagnoses with key differentiators
@@ -121,6 +131,7 @@ Detailed information on:
 ### 1. Provide Context
 
 Give Claude relevant clinical information:
+
 ```
 "I have a 7-month-old male DSH from a shelter. He's had fever (39.8°C) 
 for 2 weeks not responding to antibiotics. On exam I found moderate 
@@ -132,6 +143,7 @@ What should I do next?"
 ### 2. Ask Specific Questions
 
 The skill works best with clear queries:
+
 - ✅ "What are the stopping criteria for FIP treatment?"
 - ✅ "How do I differentiate FIP from lymphocytic cholangitis?"
 - ❌ "Tell me everything about FIP" (too broad)
@@ -139,18 +151,21 @@ The skill works best with clear queries:
 ### 3. Follow Diagnostic Trees
 
 Reference specific decision trees:
+
 - "I have effusion - walk me through diagnostic tree A"
 - "Neurological signs are present - what does tree C recommend?"
 
 ### 4. Request Detailed Protocols
 
 Ask for specific reference documents when needed:
+
 - "Show me the complete GS-441524 dosing protocol"
 - "What are all the differential diagnoses for effusive disease?"
 
 ### 5. Get Client Communication Help
 
 Request assistance with difficult conversations:
+
 - "Help me explain the diagnosis to the owner"
 - "What should I say about treatment costs?"
 - "How do I discuss euthanasia if treatment fails?"
@@ -173,6 +188,7 @@ Claude will help you weight the evidence from multiple findings to reach a diagn
 ## What This Skill Does NOT Do
 
 **Limitations:**
+
 - Does not replace your clinical judgment
 - Cannot guarantee treatment success (resistance and misdiagnosis possible)
 - Does not provide legal advice on drug procurement
@@ -180,6 +196,7 @@ Claude will help you weight the evidence from multiple findings to reach a diagn
 - Does not replace histopathology for gold standard diagnosis
 
 **When to Seek Additional Expertise:**
+
 - Complex cases requiring advanced imaging (MRI, CT)
 - Specialized procedures (aqueous humour sampling, CSF collection)
 - Surgical interventions
@@ -208,6 +225,7 @@ This skill is based on guidelines and research current as of November 2024. Key 
 - Published field trial data
 
 **Note:** FIP research is rapidly evolving. Verify current best practices for:
+
 - Drug availability and legal status in your region
 - Newest treatment protocols
 - Emerging resistance patterns
@@ -225,16 +243,19 @@ This skill is based on guidelines and research current as of November 2024. Key 
 ### Common Issues
 
 **"Claude isn't using the skill"**
+
 - Make sure your query mentions FIP, FCoV, or related terms
 - Try explicitly mentioning "feline infectious peritonitis"
 - Ensure the skill is properly installed in your Project
 
 **"I need more detail on a specific topic"**
+
 - Ask Claude to reference the specific document (e.g., "Show me the complete treatment protocol")
 - Request examples: "Give me an example dosing calculation"
 - Ask for step-by-step guidance: "Walk me through this decision tree"
 
 **"The guidance seems outdated"**
+
 - Note: This skill is current as of November 2024
 - For cutting-edge research, supplement with current literature searches
 - Drug availability and legal status vary by region - verify locally
@@ -244,6 +265,7 @@ This skill is based on guidelines and research current as of November 2024. Key 
 Here's how to use the skill for a complete FIP case:
 
 ### 1. Initial Presentation
+
 ```
 "I have a 10-month-old male DSH with 3 weeks of intermittent fever 
 and progressive abdominal distension. He's from a 5-cat household. 
@@ -251,6 +273,7 @@ What should be my diagnostic approach?"
 ```
 
 ### 2. Test Interpretation
+
 ```
 "I tapped the abdomen and got yellow fluid with protein 48 g/L, 
 cell count 3.2×10⁹/L, mainly neutrophils and macrophages. 
@@ -259,12 +282,14 @@ What does this mean?"
 ```
 
 ### 3. Treatment Planning
+
 ```
 "The owner wants to proceed with treatment. The cat weighs 3.2 kg 
 and has no neurological or ocular signs. What's the treatment plan?"
 ```
 
 ### 4. Monitoring
+
 ```
 "We're 4 weeks into treatment. The cat has gained 600g, appetite is 
 excellent, but globulin is still 62 g/L (down from 77). Continue 
@@ -272,6 +297,7 @@ current dose or increase?"
 ```
 
 ### 5. Client Communication
+
 ```
 "The owner is concerned about the cost of continuing treatment. 
 How should I discuss this sensitively while prioritizing the cat's welfare?"
@@ -280,12 +306,14 @@ How should I discuss this sensitively while prioritizing the cat's welfare?"
 ## Quick Reference Card
 
 ### Diagnostic Quick Check
+
 - Young cat + multi-cat household = higher suspicion
 - Fever + effusion + high globulin = very suspicious
 - Yellow effusion + high protein + low cells = highly suspicious
 - High FCoV PCR loads in effusion = FIP very likely
 
 ### Treatment Quick Start
+
 - Wet/dry FIP: 4-6 mg/kg SC daily × 12 weeks
 - Ocular FIP: 8 mg/kg SC daily × 12 weeks
 - Neurological FIP: 10 mg/kg SC daily × 12 weeks
@@ -293,6 +321,7 @@ How should I discuss this sensitively while prioritizing the cat's welfare?"
 - Success: >85% cure rate with proper protocol
 
 ### Red Flags During Treatment
+
 - No improvement in 1 week = reassess
 - New neurological signs = increase dose
 - Weight not increasing = bad sign
@@ -307,6 +336,7 @@ Remember: This skill is a tool to support your clinical judgment, not replace it
 ---
 
 **Questions or Issues?**
+
 - Ensure the skill is properly installed in your Claude Project
 - Provide specific clinical details for best results
 - Reference the included documentation for comprehensive guidance

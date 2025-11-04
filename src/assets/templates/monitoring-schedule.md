@@ -34,6 +34,7 @@
 ## Daily Home Monitoring Checklist
 
 **Record daily:**
+
 - [ ] Temperature (normal: 38.0-39.2°C)
 - [ ] Appetite (poor / fair / good / excellent)
 - [ ] Activity level (lethargic / quiet / normal / playful)

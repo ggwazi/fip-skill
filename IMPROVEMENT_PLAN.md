@@ -9,6 +9,7 @@ This plan outlines a complete overhaul of the FIP veterinary advisor skill repos
 ## Current State Analysis
 
 ### ✅ Strengths
+
 1. **Excellent Content Quality**
    - Evidence-based veterinary guidance (ABCD Guidelines 2024, UC Davis protocols)
    - Comprehensive coverage of FIP diagnosis and treatment
@@ -57,6 +58,7 @@ This plan outlines a complete overhaul of the FIP veterinary advisor skill repos
 ## Phase 1: Repository Restructuring
 
 ### Goal
+
 Transform into a professional Node.js/TypeScript project with proper tooling
 
 ### Tasks
@@ -64,6 +66,7 @@ Transform into a professional Node.js/TypeScript project with proper tooling
 #### 1.1 Create Project Infrastructure
 
 **Add package.json:**
+
 ```json
 {
   "name": "@skills/fip-veterinary-advisor",
@@ -116,6 +119,7 @@ Transform into a professional Node.js/TypeScript project with proper tooling
 #### 1.2 Reorganize Directory Structure
 
 **New Structure:**
+
 ```
 fip-skill/
 ├── .github/
@@ -190,6 +194,7 @@ fip-skill/
 #### 1.3 Create Configuration Files
 
 **.gitignore:**
+
 ```
 # Dependencies
 node_modules/
@@ -224,6 +229,7 @@ coverage/
 ```
 
 **.markdownlint.json:**
+
 ```json
 {
   "default": true,
@@ -242,6 +248,7 @@ coverage/
 ## Phase 2: Capability Extensions
 
 ### Goal
+
 Add practical tools and enhanced functionality
 
 ### 2.1 Dosage Calculator Script
@@ -251,6 +258,7 @@ Add practical tools and enhanced functionality
 **File:** `src/scripts/calculate-dose.js`
 
 **Features:**
+
 - Calculate dose by weight and disease form
 - Weekly weight adjustment calculations
 - Volume calculations for different concentrations
@@ -258,6 +266,7 @@ Add practical tools and enhanced functionality
 - Support for oral vs injectable conversions
 
 **Usage:**
+
 ```javascript
 // Can be called by Claude or run directly
 const result = calculateDose({
@@ -274,6 +283,7 @@ const result = calculateDose({
 **File:** `src/scripts/treatment-tracker.js`
 
 **Features:**
+
 - Record daily weights, temperatures
 - Track blood work results over time
 - Calculate trends (A:G ratio, globulin levels)
@@ -281,6 +291,7 @@ const result = calculateDose({
 - Alert on concerning trends
 
 **Output:**
+
 - CSV export of data
 - Markdown progress report
 - Treatment timeline visualization (text-based)
@@ -292,6 +303,7 @@ const result = calculateDose({
 **File:** `src/scripts/cost-estimator.js`
 
 **Features:**
+
 - Estimate drug costs by duration
 - Include monitoring costs
 - Factor in weight changes
@@ -305,6 +317,7 @@ const result = calculateDose({
 **File:** `src/scripts/diagnostic-scorer.js`
 
 **Features:**
+
 - Implement the +/- evidence weighting system
 - Calculate total diagnostic score
 - Recommend diagnostic tree to follow
@@ -318,6 +331,7 @@ const result = calculateDose({
 **Files in:** `src/assets/templates/`
 
 **Templates:**
+
 1. **treatment-consent.md** - Informed consent template
 2. **monitoring-schedule.md** - Appointment calendar
 3. **home-care-guide.md** - Injection instructions
@@ -341,6 +355,7 @@ const result = calculateDose({
 ## Phase 3: GitHub Actions CI/CD
 
 ### Goal
+
 Automated testing, validation, and release workflow
 
 ### 3.1 Continuous Integration Workflow
@@ -348,6 +363,7 @@ Automated testing, validation, and release workflow
 **File:** `.github/workflows/ci.yml`
 
 **Triggers:**
+
 - Push to any branch
 - Pull requests
 - Manual workflow dispatch
@@ -355,6 +371,7 @@ Automated testing, validation, and release workflow
 **Jobs:**
 
 1. **Lint**
+
    ```yaml
    - Validate markdown formatting
    - Check for broken links
@@ -362,6 +379,7 @@ Automated testing, validation, and release workflow
    ```
 
 2. **Validate**
+
    ```yaml
    - Ensure SKILL.md has required sections
    - Check reference document structure
@@ -370,6 +388,7 @@ Automated testing, validation, and release workflow
    ```
 
 3. **Test**
+
    ```yaml
    - Run unit tests for scripts
    - Test skill packaging
@@ -377,6 +396,7 @@ Automated testing, validation, and release workflow
    ```
 
 4. **Build**
+
    ```yaml
    - Package skill
    - Generate checksums
@@ -388,12 +408,14 @@ Automated testing, validation, and release workflow
 **File:** `.github/workflows/release.yml`
 
 **Triggers:**
+
 - Push to main branch with version tag (v*)
 - Manual release trigger
 
 **Jobs:**
 
 1. **Validate Release**
+
    ```yaml
    - Run full test suite
    - Check version consistency
@@ -401,6 +423,7 @@ Automated testing, validation, and release workflow
    ```
 
 2. **Build Release**
+
    ```yaml
    - Package skill with version number
    - Generate multiple formats
@@ -409,6 +432,7 @@ Automated testing, validation, and release workflow
    ```
 
 3. **Create GitHub Release**
+
    ```yaml
    - Create release with notes
    - Attach .skill package
@@ -417,6 +441,7 @@ Automated testing, validation, and release workflow
    ```
 
 4. **Update Documentation**
+
    ```yaml
    - Deploy docs to GitHub Pages
    - Update version badges
@@ -428,11 +453,13 @@ Automated testing, validation, and release workflow
 **File:** `.github/workflows/pr-check.yml`
 
 **Triggers:**
+
 - Pull request opened/updated
 
 **Jobs:**
 
 1. **Content Validation**
+
    ```yaml
    - Check for breaking changes
    - Validate evidence citations
@@ -441,6 +468,7 @@ Automated testing, validation, and release workflow
    ```
 
 2. **Build Verification**
+
    ```yaml
    - Test skill can be packaged
    - Validate new scripts work
@@ -448,6 +476,7 @@ Automated testing, validation, and release workflow
    ```
 
 3. **Documentation Check**
+
    ```yaml
    - Ensure docs updated if needed
    - Check changelog updated
@@ -459,12 +488,14 @@ Automated testing, validation, and release workflow
 **File:** `.github/workflows/docs.yml`
 
 **Triggers:**
+
 - Push to main branch
 - Manual trigger
 
 **Jobs:**
 
 1. **Build Documentation**
+
    ```yaml
    - Generate API docs from scripts
    - Build documentation site
@@ -472,6 +503,7 @@ Automated testing, validation, and release workflow
    ```
 
 2. **Deploy to GitHub Pages**
+
    ```yaml
    - Deploy to gh-pages branch
    - Update version selector
@@ -483,6 +515,7 @@ Automated testing, validation, and release workflow
 ## Phase 4: Testing & Validation
 
 ### Goal
+
 Ensure quality and reliability
 
 ### 4.1 Unit Tests
@@ -550,6 +583,7 @@ Ensure quality and reliability
 ## Phase 5: Documentation Improvements
 
 ### Goal
+
 Professional, comprehensive documentation
 
 ### 5.1 Documentation Site Structure
@@ -585,6 +619,7 @@ docs/
 ### 5.2 README Improvements
 
 **New README.md Structure:**
+
 ```markdown
 # FIP Veterinary Advisor - Claude Skill
 
@@ -620,6 +655,7 @@ MIT
 ### 5.3 API Documentation
 
 **Auto-generated from JSDoc:**
+
 ```javascript
 /**
  * Calculate GS-441524 dosage for FIP treatment
@@ -643,11 +679,13 @@ MIT
 ### 6.1 Code Quality
 
 **Linting Rules:**
+
 - Markdown: markdownlint with custom rules
 - JavaScript: ESLint with recommended rules
 - Consistent formatting: Prettier
 
 **Pre-commit Hooks:**
+
 ```bash
 # Using husky
 - Lint staged files
@@ -658,11 +696,13 @@ MIT
 ### 6.2 Version Management
 
 **Semantic Versioning:**
+
 - MAJOR: Breaking changes to skill structure
 - MINOR: New features, new reference documents
 - PATCH: Bug fixes, content updates
 
 **CHANGELOG.md:**
+
 ```markdown
 # Changelog
 
@@ -688,6 +728,7 @@ MIT
 ### 6.3 Security
 
 **Considerations:**
+
 1. **No Secrets in Repo**
    - No API keys
    - No credentials
@@ -709,6 +750,7 @@ MIT
 ### 7.1 Contribution Guidelines
 
 **CONTRIBUTING.md:**
+
 ```markdown
 # Contributing to FIP Skill
 
@@ -740,6 +782,7 @@ MIT
 ### 7.2 Issue Templates
 
 **Bug Report Template:**
+
 ```markdown
 ---
 name: Content Error
@@ -765,6 +808,7 @@ Why is this important to fix?
 ### 7.3 Collaboration Features
 
 **Pull Request Template:**
+
 ```markdown
 ## Type of Change
 - [ ] Content update
@@ -792,6 +836,7 @@ How was this tested?
 ## Implementation Timeline
 
 ### Week 1: Foundation
+
 - ✅ Create package.json
 - ✅ Reorganize directory structure
 - ✅ Move documentation to docs/
@@ -799,30 +844,35 @@ How was this tested?
 - ✅ Initial commit to new structure
 
 ### Week 2: Build System
+
 - Create build scripts
 - Create packaging scripts
 - Create validation scripts
 - Test build process
 
 ### Week 3: Scripts & Tools
+
 - Implement dose calculator
 - Implement treatment tracker
 - Implement cost estimator
 - Add unit tests
 
 ### Week 4: GitHub Actions
+
 - Setup CI workflow
 - Setup release workflow
 - Setup PR validation
 - Test automation
 
 ### Week 5: Documentation
+
 - Improve README
 - Create contribution guide
 - Write API documentation
 - Setup GitHub Pages
 
 ### Week 6: Testing & Polish
+
 - Complete test coverage
 - Fix any issues
 - Polish documentation
@@ -833,18 +883,21 @@ How was this tested?
 ## Success Metrics
 
 ### Technical Metrics
+
 - ✅ All tests pass
 - ✅ 100% CI/CD coverage
 - ✅ Build time <2 minutes
 - ✅ Package size <50KB
 
 ### Quality Metrics
+
 - ✅ No broken links
 - ✅ All references validated
 - ✅ Markdown lint passing
 - ✅ Scripts tested and documented
 
 ### User Metrics
+
 - ✅ Installation time <5 minutes
 - ✅ Clear documentation
 - ✅ Examples for all features
@@ -855,6 +908,7 @@ How was this tested?
 ## Future Enhancements
 
 ### Phase 8 (Future)
+
 1. **Interactive Tools**
    - Web-based dose calculator
    - Treatment timeline visualizer
@@ -880,15 +934,19 @@ How was this tested?
 ## Risks & Mitigations
 
 ### Risk: Breaking Changes
+
 **Mitigation:** Semantic versioning, clear migration guides
 
 ### Risk: Content Accuracy
+
 **Mitigation:** Peer review process, evidence citations required
 
 ### Risk: Maintenance Burden
+
 **Mitigation:** Automated testing, clear contribution guidelines
 
 ### Risk: CI/CD Costs
+
 **Mitigation:** Use GitHub Actions free tier, optimize workflows
 
 ---

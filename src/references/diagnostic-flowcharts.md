@@ -22,16 +22,19 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 ### High Suspicion Signalment & History
 
 **Age**
+
 - <2 years: `++++`
 - >5 years: `-`
 
 **Environment**
+
 - Multi-cat household: `+++`
 - Sibling with FIP: `++`
 - Recent stress (vaccination, rehoming, neutering): `++`
 - Outdoor only/feral: `--`
 
 **Clinical Signs**
+
 - Weight loss/failure to thrive: `+++`
 - Swollen abdomen: `++++`
 - Persistent fever non-responsive to antibiotics: `+++`
@@ -43,6 +46,7 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 ### Physical Examination Findings
 
 **Critical Findings**
+
 - Fever (typically <40°C): `+++`
 - Fluid thrill due to ascites: `++++`
 - Irregular organomegaly: `+++`
@@ -51,6 +55,7 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 - Bicavitary effusion: `+++`
 
 **Ocular Changes**
+
 - Change in iris color: `++++`
 - Dyscoria/anisocoria: `+++`
 - Hyphaema: `++`
@@ -60,6 +65,7 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 ### Laboratory Findings
 
 **Serum Biochemistry**
+
 - Hyperglobulinaemia: `+++`
 - Hyperbilirubinaemia: `+++`
 - Hyperproteinaemia: `++`
@@ -69,12 +75,14 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 - Alpha-1-acid glycoprotein >3.0 mg/mL: `+++`
 
 **Haematology**
+
 - Lymphopenia: `++`
 - Mild non-regenerative anaemia: `++`
 - Neutrophilia (mild ± left shift): `++`
 - Microcytosis: `++`
 
 **Effusion Analysis (if present)**
+
 - High protein (>35 g/L): `++++`
 - Low cell count (<5 x10⁹/L): `++++`
 - Yellow color: `++++`
@@ -118,6 +126,7 @@ FIP diagnosis requires a weight-of-evidence approach combining signalment, histo
 ### Laboratory Contact Note
 
 When submitting fluid or FNA samples for FCoV antigen immunostaining:
+
 - Contact laboratory first for preferred sample preparation methods
 - Some labs prefer cell pellets prepared from fluid samples
 
@@ -128,13 +137,13 @@ When submitting fluid or FNA samples for FCoV antigen immunostaining:
 ### Pathway
 
 1. **Perform Diagnostic Imaging**
-   
+
    **Ultrasonography findings consistent with FIP:**
    - Abdominal lymphadenopathy
    - Liver abnormalities (variable echogenicity)
    - Spleen abnormalities (variable echogenicity)
    - Kidney abnormalities (variable echogenicity, medullary rim sign)
-   
+
    **Radiography findings:**
    - Lymphadenopathy
    - Alveolar pattern
@@ -164,6 +173,7 @@ When submitting fluid or FNA samples for FCoV antigen immunostaining:
 ### Important Note
 
 In absence of obvious localizing signs or abnormalities:
+
 - Ultrasonography indicated to evaluate abdominal & thoracic organs
 - Remember effusions can develop over time
 - Sequential imaging may reveal new fluid pockets
@@ -175,6 +185,7 @@ In absence of obvious localizing signs or abnormalities:
 ### Advanced Imaging Findings
 
 **MRI findings suggestive of FIP:**
+
 - Obstructive hydrocephalus
 - Syringomyelia
 - Foramen magnum herniation
@@ -185,10 +196,12 @@ In absence of obvious localizing signs or abnormalities:
   - Brainstem
 
 **CT findings:**
+
 - Hydrocephalus
 - Syringohydromyelia
 
 **CSF findings suggestive of FIP:**
+
 - High protein (>0.3 g/L cisternal; >0.46 g/L lumbar)
 - High cell count (>0.008 x10⁹/L)
 - Cytology: predominantly neutrophilic, mononuclear, mixed, or pyogranulomatous
@@ -222,6 +235,7 @@ In absence of obvious localizing signs or abnormalities:
 ### Advanced Imaging Requirements
 
 In absence of non-neurological signs or abnormalities:
+
 - Advanced imaging via CT or preferably MRI is indicated
 - Allows evaluation for neurological system abnormalities
 - Assesses potential risk of herniation before CSF collection
@@ -259,6 +273,7 @@ In absence of non-neurological signs or abnormalities:
 ### Important Notes
 
 **Sample Collection:**
+
 - Aqueous humour sampling may require referral if veterinarian unfamiliar with ophthalmological investigations
 
 **Alternative Sampling:**
@@ -271,22 +286,26 @@ As effective antiviral treatments (especially GS-441524) are increasingly availa
 ### Treatment Trial Protocol
 
 **Before Starting:**
+
 - Ideally, collect appropriate samples for FCoV detection
 - Submit for testing to confirm diagnosis or show "very likely"
 
 **During Treatment:**
+
 - Use objective measures to monitor response:
   - Weight
   - Temperature
   - A:G ratio
   
 **Response Assessment:**
+
 - If cat does NOT respond rapidly (within 1 week) to trial treatment using antiviral of known quality
 - Important to consider other diagnoses (see differential diagnoses)
 
 ### Treatment Response Criteria
 
 **Positive Response Indicators:**
+
 - Rapid improvement in clinical signs (within 1 week)
 - Temperature normalization
 - Weight gain
@@ -294,6 +313,7 @@ As effective antiviral treatments (especially GS-441524) are increasingly availa
 - Effusion resolution (if present)
 
 **Poor Response Indicators:**
+
 - No improvement in clinical signs within 1 week
 - Persistent fever
 - Continued weight loss
@@ -303,13 +323,17 @@ As effective antiviral treatments (especially GS-441524) are increasingly availa
 ## Confirmatory Testing Summary
 
 ### Gold Standard
+
 **Histopathology + Immunohistochemistry**
+
 - Histopathology consistent with FIP
 - Positive immunohistochemistry for FCoV antigen in lesions
 - → **Confirms FIP**
 
 ### Very Likely Diagnosis¹
+
 Any of the following with appropriate clinical context:
+
 - Positive immunostaining for FCoV antigen in effusion (with consistent biochemistry & cytology)
 - Positive FCoV RT-PCR with high viral loads in effusion
 - Positive immunostaining for FCoV antigen in FNA (with consistent cytology)
