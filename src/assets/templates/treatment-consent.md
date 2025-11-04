@@ -27,26 +27,31 @@ Your cat has been diagnosed with Feline Infectious Peritonitis (FIP). We recomme
 ### Treatment Requirements
 
 **Daily:**
+
 - Subcutaneous injection (at home after training)
 - Monitoring for adverse reactions
 - Recording temperature and appetite
 
 **Weekly:**
+
 - Weight monitoring
 - Clinical assessment
 
 **Monthly:**
+
 - Bloodwork (CBC and chemistry panel)
 - Veterinary examination
 
 ### Risks and Side Effects
 
 **Common:**
+
 - Injection site reactions (pain, inflammation)
 - Temporary decreased appetite
 - Mild lethargy
 
 **Rare:**
+
 - Severe injection site reactions
 - Drug resistance
 - Treatment failure
@@ -55,6 +60,7 @@ Your cat has been diagnosed with Feline Infectious Peritonitis (FIP). We recomme
 ### Financial Considerations
 
 **Estimated Costs:**
+
 - Drug: $_____________ (12 weeks)
 - Monitoring visits: $_____________
 - Laboratory tests: $_____________
@@ -71,6 +77,7 @@ Your cat has been diagnosed with Feline Infectious Peritonitis (FIP). We recomme
 ### Treatment Availability
 
 I understand that:
+
 - GS-441524 may not be licensed for veterinary use in my region
 - Drug quality and sourcing may vary
 - The veterinary clinic will provide medical monitoring regardless of drug source
@@ -78,6 +85,7 @@ I understand that:
 ### Commitment
 
 I understand that:
+
 - Treatment requires 12+ weeks of daily injections
 - Stopping treatment early increases relapse risk
 - Regular monitoring is essential for success
@@ -95,6 +103,7 @@ ___________________________________________________________________
 ## Consent
 
 I consent to treatment of my cat with GS-441524 for FIP. I understand:
+
 - The treatment protocol and requirements
 - The risks and benefits
 - The financial commitment
@@ -102,6 +111,7 @@ I consent to treatment of my cat with GS-441524 for FIP. I understand:
 - That treatment success is not guaranteed
 
 I agree to:
+
 - Administer daily injections as instructed
 - Monitor my cat as directed
 - Report any concerns promptly

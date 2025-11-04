@@ -37,24 +37,28 @@ Thank you for your interest in contributing to the FIP Veterinary Advisor skill!
 ## Types of Contributions
 
 ### 1. Medical Content Updates
+
 - Correcting inaccuracies
 - Adding new research findings
 - Updating treatment protocols
 - Expanding diagnostic guidance
 
 ### 2. Code Contributions
+
 - Utility scripts (dose calculators, trackers)
 - Build system improvements
 - Test coverage
 - Bug fixes
 
 ### 3. Documentation
+
 - Installation guides
 - Usage examples
 - API documentation
 - Clarifications
 
 ### 4. Templates & Assets
+
 - Client education materials
 - Treatment forms
 - Monitoring templates
@@ -146,6 +150,7 @@ git commit -m "content: update stopping criteria based on 2024 study"
 ```
 
 **Commit Message Format:**
+
 - `feat:` New feature
 - `fix:` Bug fix
 - `content:` Medical content update
@@ -179,6 +184,7 @@ All medical content changes MUST be supported by:
    - Veterinary school protocols
 
 2. **Citation Format:**
+
    ```markdown
    According to the ABCD Guidelines (2024), the diagnostic approach should...
 
@@ -220,6 +226,7 @@ Medical content changes undergo additional review:
 ### Code Style
 
 **JavaScript/Node.js:**
+
 - Use ES modules (`import/export`)
 - Clear variable names
 - JSDoc comments for functions
@@ -242,6 +249,7 @@ export function calculateDose({ weight }) {
 ```
 
 **Markdown:**
+
 - Follow markdownlint rules
 - Use ATX-style headings (`#`)
 - Line length ≤ 120 characters (except code blocks)
@@ -272,6 +280,7 @@ export function calculateDose({ weight }) {
 All code changes must include tests:
 
 **Unit Tests:**
+
 ```javascript
 // tests/unit/dose-calculator.test.js
 import { test } from 'node:test';
@@ -291,6 +300,7 @@ test('throws error for invalid weight', () => {
 ```
 
 **Integration Tests:**
+
 - Test skill loading
 - Test script execution
 - Test build process
@@ -363,6 +373,7 @@ console.log(result);
 ### What Reviewers Check
 
 **For Medical Content:**
+
 1. Evidence citations present and accurate
 2. Information reflects current best practices
 3. No contradictions with existing content
@@ -370,6 +381,7 @@ console.log(result);
 5. Appropriate disclaimers
 
 **For Code:**
+
 1. Tests pass
 2. Code follows style guidelines
 3. Functions well-documented
@@ -408,6 +420,7 @@ git push origin feature/your-feature-name
 ## Recognition
 
 Contributors will be:
+
 - Listed in project contributors
 - Acknowledged in relevant documentation
 - Credited for significant contributions

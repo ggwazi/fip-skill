@@ -50,23 +50,27 @@ fip-skill/
 ### How Claude Uses Each Part
 
 **SKILL.md** (Core Document)
+
 - **When loaded**: Automatically when skill triggers
 - **Purpose**: Workflows, quick reference, decision trees
 - **Keep it**: <500 lines if possible (currently ~600 lines)
 - **Contains**: Essential procedures, when to use references
 
 **Reference Documents** (`references/`)
+
 - **When loaded**: Only when Claude determines they're needed
 - **Purpose**: Comprehensive details on specific topics
 - **Size**: Can be much larger (50-200 KB each)
 - **Contains**: Complete protocols, extensive lists, detailed guidance
 
 **Scripts** (`scripts/`)
+
 - **When loaded**: Can be executed without loading into context
 - **Purpose**: Deterministic calculations, repetitive tasks
 - **Use for**: Dosage calculators, data processing, file manipulation
 
 **Assets** (`assets/`)
+
 - **When loaded**: Never loaded into context
 - **Purpose**: Files used in Claude's outputs
 - **Use for**: Templates, images, forms, example documents
@@ -142,24 +146,28 @@ When clients need detailed explanations:
 ### Other Reference Documents You Might Add
 
 **Advanced Treatment Topics:**
+
 - `refractory-cases.md` - Managing treatment failures
 - `combination-therapy.md` - Using multiple antivirals
 - `pediatric-considerations.md` - Treating very young kittens
 - `geriatric-fip.md` - Special considerations for older cats
 
 **Specialized Diagnostics:**
+
 - `advanced-imaging.md` - MRI/CT interpretation for FIP
 - `csf-analysis.md` - Detailed CSF collection and interpretation
 - `histopathology-guide.md` - Understanding biopsy results
 - `molecular-diagnostics.md` - PCR interpretation, viral sequencing
 
 **Practice Management:**
+
 - `client-education.md` - Pre-written explanations and materials
 - `legal-considerations.md` - Liability, off-label drug use
 - `cost-analysis.md` - Pricing strategies, payment plans
 - `record-keeping.md` - Documentation templates
 
 **Regional Adaptations:**
+
 - `drug-access-usa.md` - US-specific availability
 - `drug-access-europe.md` - European regulations
 - `drug-access-australia.md` - Australian considerations
@@ -359,6 +367,7 @@ python scripts/calculate_dose.py 3.5 neurological
 ```
 
 Or call directly from Claude for automatic calculation.
+
 ```
 
 **Step 4: Test the script**
@@ -373,16 +382,19 @@ python scripts/calculate_dose.py 4.5 neurological
 ### Other Useful Scripts
 
 **Treatment Monitoring:**
+
 - `scripts/treatment_tracker.py` - Track weight, temp, bloodwork over time
 - `scripts/graph_progress.py` - Generate progress graphs
 - `scripts/relapse_risk.py` - Calculate relapse risk score
 
 **Dosage Tools:**
+
 - `scripts/dose_converter.py` - Convert between oral and injectable
 - `scripts/compound_calculator.py` - Calculate compounding ratios
 - `scripts/cost_estimator.py` - Estimate total treatment costs
 
 **Diagnostic Support:**
+
 - `scripts/rivalta_test.py` - Rivalta test result interpreter
 - `scripts/ag_ratio.py` - A:G ratio calculator with interpretation
 - `scripts/differential_scorer.py` - Score differential diagnoses
@@ -407,6 +419,7 @@ mkdir -p fip-skill/assets/images
 **Step 2: Add the files**
 
 Example files to add:
+
 - `assets/client-forms/treatment-consent-form.docx`
 - `assets/client-forms/monitoring-schedule.pdf`
 - `assets/templates/bloodwork-tracking.xlsx`
@@ -452,16 +465,19 @@ When clients need documentation:
 ### Other Useful Assets
 
 **Reference Materials:**
+
 - `assets/reference/drug-formulations.pdf` - Available GS-441524 products
 - `assets/reference/injection-sites-diagram.png` - Visual guide
 - `assets/reference/fip-facts-handout.pdf` - Client education
 
 **Templates:**
+
 - `assets/templates/case-report-template.docx`
 - `assets/templates/monitoring-spreadsheet.xlsx`
 - `assets/templates/referral-letter.docx`
 
 **Visual Aids:**
+
 - `assets/images/diagnostic-flowchart.png`
 - `assets/images/injection-technique.png`
 - `assets/images/fip-signs-photos/` - Directory of clinical photos
@@ -508,6 +524,7 @@ zip -r fip-veterinary-advisor-$DATE.skill fip-skill/
 ### What Gets Packaged
 
 Everything in the `fip-skill/` directory:
+
 - ✅ SKILL.md
 - ✅ All files in references/
 - ✅ All files in scripts/
@@ -536,6 +553,7 @@ unzip -l fip-veterinary-advisor.skill
 **Test locally first:**
 
 1. **Review content**
+
    ```bash
    # Check file exists and has content
    cat fip-skill/references/prevention-management.md | head -50
@@ -545,12 +563,14 @@ unzip -l fip-veterinary-advisor.skill
    ```
 
 2. **Verify references**
+
    ```bash
    # Check that SKILL.md references new content
    grep "prevention" fip-skill/SKILL.md
    ```
 
 3. **Test scripts** (if added)
+
    ```bash
    # Run script to ensure it works
    python fip-skill/scripts/calculate_dose.py 3.5 wet
@@ -561,21 +581,25 @@ unzip -l fip-veterinary-advisor.skill
 **Test the skill with Claude:**
 
 1. **Simple query** - Check it triggers
+
    ```
    "Tell me about FIP prevention in multi-cat households"
    ```
 
 2. **Reference loading** - Verify new content accessible
+
    ```
    "What does the prevention and management guide say about catteries?"
    ```
 
 3. **Workflow integration** - Ensure it fits naturally
+
    ```
    "A client just had a cat diagnosed with FIP. They have 4 other cats. What should I tell them?"
    ```
 
 4. **Error checking** - Try edge cases
+
    ```
    "Calculate dose for 2.8 kg cat with ocular FIP"
    ```
@@ -599,6 +623,7 @@ unzip -l fip-veterinary-advisor.skill
 **What to update:**
 
 1. **treatment-protocols.md** - Add new drug section
+
    ```markdown
    ### Alternative Antiviral: [Drug Name]
    
@@ -613,6 +638,7 @@ unzip -l fip-veterinary-advisor.skill
 2. **SKILL.md** - Update "Available Antivirals" section
 
 3. **Create new reference** - If drug is complex
+
    ```bash
    touch references/[drugname]-protocol.md
    ```
@@ -624,6 +650,7 @@ unzip -l fip-veterinary-advisor.skill
 **What to add:**
 
 1. **New reference document:**
+
    ```bash
    touch references/regional-guidance-[country].md
    ```
@@ -637,6 +664,7 @@ unzip -l fip-veterinary-advisor.skill
    - Liability considerations
 
 3. **Update SKILL.md description:**
+
    ```markdown
    description: ... Also includes region-specific guidance for [country]
    ```
@@ -646,11 +674,13 @@ unzip -l fip-veterinary-advisor.skill
 **What to add:**
 
 1. **Practice-specific reference:**
+
    ```bash
    touch references/practice-protocols.md
    ```
 
 2. **Content:**
+
    ```markdown
    # [Practice Name] FIP Protocols
    
@@ -689,6 +719,7 @@ unzip -l fip-veterinary-advisor.skill
    - Update decision tree if needed
 
 3. **Add note about evidence update:**
+
    ```markdown
    ### Evidence Updates
    
@@ -699,6 +730,7 @@ unzip -l fip-veterinary-advisor.skill
    ```
 
 4. **Version the update:**
+
    ```bash
    zip -r fip-veterinary-advisor-v2.1-evidence-update.skill fip-skill/
    ```
@@ -710,6 +742,7 @@ unzip -l fip-veterinary-advisor.skill
 ### Content Organization
 
 **DO:**
+
 - ✅ Keep SKILL.md under 500-600 lines
 - ✅ Move detailed content to reference documents
 - ✅ Use clear headings and structure
@@ -718,6 +751,7 @@ unzip -l fip-veterinary-advisor.skill
 - ✅ Provide examples
 
 **DON'T:**
+
 - ❌ Put everything in SKILL.md
 - ❌ Duplicate content between files
 - ❌ Create orphan references (not mentioned in SKILL.md)
@@ -727,11 +761,13 @@ unzip -l fip-veterinary-advisor.skill
 ### File Naming
 
 **Use clear, descriptive names:**
+
 - ✅ `treatment-protocols.md`
 - ✅ `calculate_dose.py`
 - ✅ `client-consent-form.docx`
 
 **Avoid:**
+
 - ❌ `doc1.md`
 - ❌ `script.py`
 - ❌ `temp.pdf`
@@ -788,6 +824,7 @@ Create `CHANGELOG.md` in skill folder:
 ### Documentation
 
 **Always document:**
+
 - What changed
 - Why it changed  
 - What evidence supports the change
@@ -882,6 +919,7 @@ Create `CHANGELOG.md` in skill folder:
 **Key principle:** Keep SKILL.md lean with workflows and quick reference. Put detailed content in references. Let Claude load what's needed when it's needed.
 
 **I just demonstrated** adding a complete prevention module by:
+
 - Creating `prevention-management.md` reference
 - Updating SKILL.md to reference it
 - Adding to workflows
@@ -902,6 +940,7 @@ Create `CHANGELOG.md` in skill folder:
 - **"Links broken"** - Verify paths are correct relative to SKILL.md location
 
 **For complex modifications**, ask Claude to help you:
+
 - Design new reference document structure
 - Write scripts for specific calculations
 - Update workflows to incorporate new content

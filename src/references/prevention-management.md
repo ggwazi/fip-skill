@@ -9,6 +9,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Environmental Management
 
 **Litter Box Protocol:**
+
 - Minimum: 1 box per cat + 1 extra
 - Clean twice daily minimum
 - Use clumping litter (easier to remove contaminated material)
@@ -16,6 +17,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Separate from food/water areas
 
 **Hygiene Practices:**
+
 - Daily disinfection of high-touch surfaces
 - Weekly deep cleaning
 - Use coronavirus-effective disinfectants:
@@ -24,6 +26,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
   - Steam cleaning (>60°C)
 
 **Space Requirements:**
+
 - Minimum 18 sq ft per cat for indoor spaces
 - Vertical space counts (cat trees, shelves)
 - Separate areas for eating, sleeping, toileting
@@ -31,12 +34,14 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Population Management
 
 **Optimal Group Size:**
+
 - Ideal: ≤3 cats per household
 - Maximum recommended: 5-6 cats
 - Risk increases substantially with >6 cats
 - Consider separate groups if >6 cats necessary
 
 **Stress Reduction:**
+
 - Stable groups (avoid frequent additions/removals)
 - Minimize competition for resources
 - Provide hiding spots and escape routes
@@ -44,6 +49,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Pheromone diffusers may help
 
 **Quarantine Protocols:**
+
 - New arrivals: 2-week isolation minimum
 - Test for FCoV shedding before integration
 - Monitor for clinical signs
@@ -52,17 +58,20 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Breeding Cattery Considerations
 
 **Pre-Breeding Testing:**
+
 - Test queens and studs for FCoV shedding
 - Separate shedders from non-shedders if feasible
 - Consider breeding only from non-shedding lines
 
 **Kitten Management:**
+
 - Early weaning (5-6 weeks) may reduce transmission
 - Separate kittens from adults early
 - Individual housing for kittens if possible
 - Do NOT use GS-441524 prophylactically (resistance risk)
 
 **When FIP Occurs in Cattery:**
+
 - Pause breeding temporarily
 - Identify and isolate shedders
 - Enhance environmental hygiene
@@ -72,18 +81,21 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Shelter Management
 
 **Intake Protocols:**
+
 - Separate housing for new arrivals
 - Minimize stress during transition
 - Rapid adoption to reduce crowding
 - Consider foster programs
 
 **Housing Strategy:**
+
 - Small stable groups
 - Avoid mixing cats from different sources
 - Provide enrichment to reduce stress
 - Prompt medical attention for illness
 
 **Adoption Considerations:**
+
 - Educate adopters about FIP risk
 - Higher risk in multi-cat adoptions
 - Recommend 2-week isolation if adding to existing household
@@ -94,12 +106,14 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### When to Test
 
 **Cattery Scenarios:**
+
 - Before breeding
 - When FIP case occurs
 - When separating shedders from non-shedders
 - Annual screening recommended
 
 **Household Scenarios:**
+
 - Generally not recommended for stable pet households
 - Consider if adding new cat to known FCoV-negative group
 - If FIP occurs and other cats need evaluation
@@ -107,6 +121,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Testing Methods
 
 **Fecal RT-PCR:**
+
 - Most practical for detecting shedders
 - Collect feces (litter-free) or rectal swab
 - Test 3 samples over 1-2 weeks (intermittent shedding)
@@ -114,6 +129,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Negative = not shedding at time of test (but may shed later)
 
 **Serology (Antibody Testing):**
+
 - Indicates exposure, not active infection
 - Does NOT predict FIP risk
 - Not useful for management decisions
@@ -122,18 +138,21 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Interpreting Results
 
 **Positive Fecal PCR:**
+
 - Cat is shedding FCoV in feces
 - Transmission risk to other cats
 - Does NOT mean cat will develop FIP
 - Consider isolation if feasible
 
 **Negative Fecal PCR:**
+
 - Not shedding at time of test
 - May become shedder later
 - Requires repeated testing to confirm
 - Best for introducing to FCoV-negative groups
 
 **Management Based on Testing:**
+
 - Separate shedders from non-shedders if possible
 - Not always practical in households
 - More feasible in catteries
@@ -144,23 +163,27 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Available Vaccine: Felocell FIP
 
 **Product Details:**
+
 - Intranasal modified live virus vaccine
 - Temperature-sensitive strain
 - Minimum age: 16 weeks
 
 **ABCD Position:**
+
 - Not recommended by ABCD
 - Efficacy controversial
 - Most cats already exposed before vaccine age
 - Does not work in previously infected cats
 
 **When Might Be Considered:**
+
 - Kittens in FCoV-negative household
 - Before 16 weeks exposure risk
 - Known FCoV-negative status
 - Limited evidence of benefit
 
 **Why Not Recommended:**
+
 - Most kittens exposed <16 weeks
 - Vaccine ineffective after FCoV exposure
 - Evidence of efficacy limited
@@ -171,12 +194,14 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Breed Predispositions
 
 **Higher Risk Breeds:**
+
 - Pedigree cats in general at higher risk than mixed breed
 - Specific breeds vary by geographic region
 - May reflect breeding practices more than genetics
 - Inbreeding increases risk
 
 **Family Lines:**
+
 - Siblings of FIP cases at higher risk
 - Some family lines show multiple cases
 - Genetic susceptibility likely
@@ -185,12 +210,14 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Reducing Genetic Risk
 
 **Breeding Strategies:**
+
 - Avoid breeding cats with FIP in close relatives
 - Maintain genetic diversity
 - Avoid excessive inbreeding
 - Track FIP cases in pedigree lines
 
 **Not Recommended:**
+
 - Culling entire lines (most cats will never develop FIP)
 - Refusing to breed any cat with FIP relative
 - Extreme measures (low risk in general population)
@@ -200,6 +227,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Ineffective or Harmful Practices
 
 **Do NOT:**
+
 - Use GS-441524 or other antivirals as prophylaxis (creates resistance)
 - Cull all cats in household/cattery after FIP case
 - Rely on antibody testing for management decisions
@@ -208,6 +236,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Assume all cats in environment will develop FIP (most won't)
 
 **Why These Don't Work:**
+
 - Prophylactic antivirals: Drive resistance without proven benefit
 - Culling: Most cats don't develop FIP; unnecessary
 - Antibody testing: Doesn't predict FIP; not actionable
@@ -218,6 +247,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ## Risk Assessment Tool
 
 ### Low Risk Environment
+
 - 1-3 cats
 - Stable group (no additions/removals)
 - Good hygiene
@@ -227,6 +257,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 **Action:** Basic hygiene, monitor for illness
 
 ### Moderate Risk Environment
+
 - 4-6 cats
 - Occasional additions
 - Multi-cat household
@@ -235,6 +266,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 **Action:** Enhanced hygiene, stress reduction, consider testing new arrivals
 
 ### High Risk Environment
+
 - >6 cats
 - Frequent additions/removals (shelter, cattery)
 - High density housing
@@ -247,18 +279,21 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### After FIP Diagnosis in Household
 
 **Immediate Actions:**
+
 - Do NOT isolate the sick cat (unless for treatment convenience)
 - Other cats likely already exposed to FCoV
 - Focus on stress reduction for all cats
 - Monitor others for clinical signs
 
 **Long-term:**
+
 - No need to test other cats routinely
 - Watch for similar signs
 - Maintain good hygiene
 - Avoid adding new cats during illness/treatment
 
 **When to Worry About Other Cats:**
+
 - Siblings of FIP cat (highest risk)
 - Young cats (<2 years)
 - Recent stress events
@@ -267,12 +302,14 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Adding New Cat to Household
 
 **Before Addition:**
+
 - Consider testing new cat for FCoV shedding
 - 2-week quarantine minimum
 - Monitor for illness during quarantine
 - Gradual introduction to reduce stress
 
 **After Addition:**
+
 - Minimize stress during integration
 - Provide adequate resources
 - Monitor all cats for illness
@@ -281,6 +318,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ### Moving/Rehoming Cats
 
 **Stress Management:**
+
 - Major stressor for FIP development
 - If possible, delay if cat recently exposed to FCoV
 - Pheromone therapy
@@ -288,6 +326,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Allow adjustment time in new environment
 
 **Risk Period:**
+
 - Highest risk 2-8 weeks after major stress
 - Monitor closely during this period
 - Seek veterinary care promptly if signs develop
@@ -313,6 +352,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 ## Summary Guidelines
 
 ### For Pet Owners
+
 - Keep groups small (≤3 cats ideal)
 - Excellent litter box hygiene
 - Minimize stress
@@ -320,6 +360,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Don't obsess over prevention (most cats fine)
 
 ### For Catteries
+
 - Test breeding stock for FCoV shedding
 - Separate shedders from non-shedders if feasible
 - Early kitten weaning and separation
@@ -327,6 +368,7 @@ Evidence-based strategies for reducing FIP risk in multi-cat environments, catte
 - Maintain genetic diversity
 
 ### For Shelters
+
 - Rapid adoption programs
 - Small stable groups
 - Enhanced hygiene
@@ -346,6 +388,7 @@ If FIP develops despite prevention efforts:
 ## Resources and References
 
 Based on:
+
 - ABCD FIP Guidelines 2024
 - Feline coronavirus epidemiology studies
 - Cattery management research
