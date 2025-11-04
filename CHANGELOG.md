@@ -9,9 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Client Education Templates (4 of 4 complete)
 - home-care-guide.md - Step-by-step injection instructions for clients
 - fip-explained.md - FIP basics in compassionate, client-friendly language
-- refractory-cases.md - Evidence-based guidance for managing treatment failures
+- prognosis-discussion.md - Framework for discussing outcomes and expectations with clients
+- relapse-watch.md - Post-treatment monitoring guidance for preventing and detecting relapse
+
+#### Veterinary Reference Documents (4 of 6 complete)
+- refractory-cases.md - Evidence-based guidance for managing treatment failures and non-responders
+- combination-therapy.md - Multiple antiviral protocols and adjunctive treatments
+- pediatric-fip.md - Special considerations for kittens <12 weeks old
+- laboratory-reference.md - Complete lab interpretation guide for diagnosis and monitoring
+
+#### Planning and Organization
 - ROADMAP.md - Prioritized development roadmap for v2.2.0 - v2.3.0
 - docs/archive/ directory for historical planning documents
 
@@ -22,6 +32,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Build artifact .skill files from root directory (properly gitignored)
+
+### Content Status
+
+**v2.2.0 Progress:** 8 of 10 target files complete (80%)
+- ✅ 4/4 client education templates
+- ✅ 4/6 veterinary reference documents
+- ⏳ 2 remaining for v2.3.0: case-studies.md, drug-sources.md
 
 ## [2.1.0] - 2024-11-04
 
