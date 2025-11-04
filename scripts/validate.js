@@ -170,6 +170,8 @@ async function validateReferences() {
 /**
  * Convert a markdown heading to an anchor ID
  * Follows GitHub's anchor generation rules
+ * Note: This simplified implementation handles ASCII characters.
+ * For full Unicode support, consider using a library like github-slugger.
  */
 function headingToAnchor(heading) {
   return heading
@@ -186,7 +188,7 @@ function headingToAnchor(heading) {
  */
 async function extractAnchors(filePath) {
   const content = await fs.readFile(filePath, 'utf-8');
-  const headingRegex = /^#{1,6}\s+(.+)$/gm;
+  const headingRegex = /^#{1,6}\s*(.+)$/gm;
   const anchors = new Set();
   let match;
 
