@@ -99,6 +99,7 @@ fip-skill/
 ├── dist/                       # Build output (gitignored)
 ├── package.json               # Project configuration
 ├── CHANGELOG.md               # Version history
+├── TODO.md                    # Missing files tracking
 └── README.md                  # This file
 ```
 
@@ -215,6 +216,7 @@ See [docs/extending.md](docs/extending.md) for detailed guidance on:
 - **[Extension Guide](docs/extending.md)** - How to extend the skill
 - **[Extension Demo](docs/extension-demo.md)** - Example walkthrough
 - **[Contributing Guide](CONTRIBUTING.md)** - Contribution guidelines
+- **[TODO Plan](TODO.md)** - Missing files and implementation roadmap
 - **[Changelog](CHANGELOG.md)** - Version history
 
 ### Reference Materials
