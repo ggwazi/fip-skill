@@ -476,7 +476,7 @@ Since 2019, the FIP community has witnessed countless success stories - cats who
 
 - ABCD (European Advisory Board on Cat Diseases) FIP Guidelines, 2024
 - UC Davis Veterinary School FIP Treatment Research
-- Dr. Niels C. Pedersen FIP Research Publications
+- Dr. Niels C. Pedersen FIP Research Publications.
 - Published GS-441524 efficacy studies
 - International Cat Care FIP Resources
 
