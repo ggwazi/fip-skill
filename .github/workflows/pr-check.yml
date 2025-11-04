@@ -91,6 +91,41 @@ jobs:
             fi
           fi
 
+  validate:
+    name: Validate Skill Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Fix for CI job 54497678730 (log ref: 5e7a17c9f688397364bb28f6384ed4a3478ae713)
+      # Ensures required files exist and have correct permissions before validation
+      - name: Ensure validation files exist and set permissions
+        run: |
+          # Fail fast with clear errors if required files are missing
+          if [ ! -f scripts/validate.js ]; then
+            echo "::error::scripts/validate.js not found" && exit 1
+          fi
+          if [ ! -f src/SKILL.md ]; then
+            echo "::error::src/SKILL.md not found" && exit 1
+          fi
+
+          # Ensure the Node script can be executed and the SKILL document is readable
+          chmod +x scripts/validate.js || true
+          chmod 644 src/SKILL.md || true
+
+      - name: Run validation script with Node
+        run: node scripts/validate.js
+
   size-check:
     name: Check File Sizes
     runs-on: ubuntu-latest
