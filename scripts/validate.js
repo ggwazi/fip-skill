@@ -168,6 +168,38 @@ async function validateReferences() {
 }
 
 /**
+ * Convert a markdown heading to an anchor ID
+ * Follows GitHub's anchor generation rules
+ */
+function headingToAnchor(heading) {
+  return heading
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '') // Remove special characters except word chars, spaces, hyphens
+    .replace(/\s+/g, '-')     // Replace spaces with hyphens
+    .replace(/-+/g, '-')      // Replace multiple hyphens with single hyphen
+    .replace(/^-|-$/g, '');   // Remove leading/trailing hyphens
+}
+
+/**
+ * Extract all heading anchors from a markdown file
+ */
+async function extractAnchors(filePath) {
+  const content = await fs.readFile(filePath, 'utf-8');
+  const headingRegex = /^#{1,6}\s+(.+)$/gm;
+  const anchors = new Set();
+  let match;
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    const headingText = match[1];
+    const anchor = headingToAnchor(headingText);
+    anchors.add(anchor);
+  }
+
+  return anchors;
+}
+
+/**
  * Check for broken internal links
  */
 async function validateLinks() {
@@ -184,17 +216,31 @@ async function validateLinks() {
   while ((match = linkRegex.exec(content)) !== null) {
     const linkPath = match[2];
 
-    // Skip external links and anchors
+    // Skip external links and standalone anchors
     if (linkPath.startsWith('http') || linkPath.startsWith('#')) {
       continue;
     }
 
+    // Split path and anchor
+    const [filePath, anchor] = linkPath.split('#');
+
     // Check if file exists
-    const fullPath = path.join(srcDir, linkPath);
+    const fullPath = path.join(srcDir, filePath);
     if (!(await fileExists(fullPath))) {
-      error(`Broken link in SKILL.md: ${linkPath}`);
+      error(`Broken link in SKILL.md: ${linkPath} (file not found)`);
       brokenLinks++;
       validationErrors++;
+      continue;
+    }
+
+    // If link has an anchor, verify it exists in the target file
+    if (anchor) {
+      const anchors = await extractAnchors(fullPath);
+      if (!anchors.has(anchor)) {
+        error(`Broken link in SKILL.md: ${linkPath} (anchor not found)`);
+        brokenLinks++;
+        validationErrors++;
+      }
     }
   }
 
