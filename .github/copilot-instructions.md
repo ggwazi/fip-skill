@@ -95,9 +95,7 @@ fip-skill/
 │   ├── validate.js            # Validate structure
 │   └── find-issues.js         # Find issues since last merge
 ├── tests/                      # Test suite
-│   ├── unit/                  # Unit tests
-│   ├── integration/           # Integration tests
-│   └── fixtures/              # Test fixtures
+│   └── unit/                  # Unit tests
 ├── docs/                       # Documentation
 ├── dist/                       # Build output (gitignored)
 └── package.json               # Project configuration
@@ -145,7 +143,7 @@ export function calculateDose({ weight, diseaseForm }) {
 
 - **Source files:** Place in `src/` directory
 - **Build scripts:** Place in `scripts/` directory
-- **Tests:** Place in `tests/unit/` or `tests/integration/`
+- **Tests:** Place in `tests/unit/` directory
 - **Documentation:** Place in `docs/` directory
 - **Temporary files:** Use `/tmp` for temporary files, never commit them
 
@@ -201,11 +199,7 @@ export function calculateDose({ weight, diseaseForm }) {
    - Test error handling
    - Test edge cases
    - Use Node.js native test runner
-
-2. **Integration Tests:**
-   - Test skill loading
-   - Test script execution
-   - Test build process
+   - Place in `tests/unit/` directory
 
 **Example Unit Test:**
 
