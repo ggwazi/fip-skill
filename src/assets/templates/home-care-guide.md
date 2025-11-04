@@ -49,10 +49,10 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### Before Use
 
 1. **Remove from refrigerator:** Allow to warm to room temperature (15-30 minutes)
-2. **Warm medication helps reduce injection discomfort**
-3. **Never microwave or heat in hot water**
-4. **Gently roll vial between hands** - do not shake vigorously
-5. **Inspect medication:** Should be clear; do not use if cloudy or discolored
+   - *Warming the medication helps reduce injection discomfort*
+2. **Never microwave or heat in hot water**
+3. **Gently roll vial between hands** - do not shake vigorously
+4. **Inspect medication:** Should be clear; do not use if cloudy or discolored
 
 ---
 
