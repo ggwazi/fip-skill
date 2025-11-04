@@ -114,7 +114,7 @@ Use when fluid detected by POCUS or physical exam
 
 **Tree B - No Effusion, Non-specific Signs:**
 Use when no fluid but suspicious clinical picture
-→ See [diagnostic-flowcharts.md - Tree B](references/diagnostic-flowcharts.md#diagnostic-tree-b-no-effusion--non-specific-signs)
+→ See [diagnostic-flowcharts.md - Tree B](references/diagnostic-flowcharts.md#diagnostic-tree-b-no-effusion-non-specific-signs)
 
 **Tree C - Neurological Signs:**
 Use when neurological abnormalities predominate
