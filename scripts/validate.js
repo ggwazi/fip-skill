@@ -14,58 +14,16 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { log, error, success, warning, info } from './utils/logger.js';
+import { fileExists } from './utils/fs-helpers.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 const srcDir = path.join(rootDir, 'src');
 
-/**
- * Console colors
- */
-const colors = {
-  reset: '\x1b[0m',
-  green: '\x1b[32m',
-  red: '\x1b[31m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  cyan: '\x1b[36m'
-};
-
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-function error(message) {
-  log(`❌ ${message}`, 'red');
-}
-
-function success(message) {
-  log(`✅ ${message}`, 'green');
-}
-
-function warning(message) {
-  log(`⚠️  ${message}`, 'yellow');
-}
-
-function info(message) {
-  log(`ℹ️  ${message}`, 'cyan');
-}
-
 let validationErrors = 0;
 let validationWarnings = 0;
-
-/**
- * Check if file exists
- */
-async function fileExists(filePath) {
-  try {
-    await fs.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 /**
  * Validate YAML frontmatter in SKILL.md

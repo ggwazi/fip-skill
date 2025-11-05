@@ -12,6 +12,8 @@ import { fileURLToPath } from 'url';
 import { createWriteStream } from 'fs';
 import archiver from 'archiver';
 import crypto from 'crypto';
+import { log, error, success, info } from './utils/logger.js';
+import { fileExists, readJSON } from './utils/fs-helpers.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,52 +21,17 @@ const rootDir = path.join(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 
 /**
- * Console colors
- */
-const colors = {
-  reset: '\x1b[0m',
-  green: '\x1b[32m',
-  red: '\x1b[31m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  cyan: '\x1b[36m'
-};
-
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-function error(message) {
-  log(`❌ ${message}`, 'red');
-}
-
-function success(message) {
-  log(`✅ ${message}`, 'green');
-}
-
-function info(message) {
-  log(`ℹ️  ${message}`, 'cyan');
-}
-
-/**
  * Check if dist directory exists
  */
 async function checkDist() {
-  try {
-    await fs.access(distDir);
-    return true;
-  } catch {
-    return false;
-  }
+  return await fileExists(distDir);
 }
 
 /**
  * Get package version from package.json
  */
 async function getVersion() {
-  const packageJson = JSON.parse(
-    await fs.readFile(path.join(rootDir, 'package.json'), 'utf-8')
-  );
+  const packageJson = await readJSON(path.join(rootDir, 'package.json'));
   return packageJson.version;
 }
 
