@@ -123,8 +123,8 @@ jobs:
           chmod +x scripts/validate.js
           chmod 644 src/SKILL.md
 
-      - name: Run validation script with Node
-        run: node scripts/validate.js
+      - name: Run validation script
+        run: npm run validate
 
   size-check:
     name: Check File Sizes
