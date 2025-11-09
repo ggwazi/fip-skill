@@ -572,14 +572,14 @@ When ready:
 ### Skill Files
 
 1. **[fip-veterinary-advisor-v2.skill](computer:///mnt/user-data/outputs/fip-veterinary-advisor-v2.skill)** (31 KB) ⭐ RECOMMENDED
-2. **[fip-veterinary-advisor.skill](computer:///mnt/user-data/outputs/fip-veterinary-advisor.skill)** (26 KB) - Original
+1. **[fip-veterinary-advisor.skill](computer:///mnt/user-data/outputs/fip-veterinary-advisor.skill)** (26 KB) - Original
 
 ### Documentation
 
-3. **[FIP-Skill-Installation-Guide.md](computer:///mnt/user-data/outputs/FIP-Skill-Installation-Guide.md)** (11 KB)
-4. **[How-to-Extend-FIP-Skill.md](computer:///mnt/user-data/outputs/How-to-Extend-FIP-Skill.md)** (24 KB)
-5. **[FIP-Skill-Summary.md](computer:///mnt/user-data/outputs/FIP-Skill-Summary.md)** (12 KB)
-6. **[Extension-Demonstration-Summary.md](computer:///mnt/user-data/outputs/Extension-Demonstration-Summary.md)** (9 KB)
+1. **[FIP-Skill-Installation-Guide.md](computer:///mnt/user-data/outputs/FIP-Skill-Installation-Guide.md)** (11 KB)
+2. **[How-to-Extend-FIP-Skill.md](computer:///mnt/user-data/outputs/How-to-Extend-FIP-Skill.md)** (24 KB)
+3. **[FIP-Skill-Summary.md](computer:///mnt/user-data/outputs/FIP-Skill-Summary.md)** (12 KB)
+4. **[Extension-Demonstration-Summary.md](computer:///mnt/user-data/outputs/Extension-Demonstration-Summary.md)** (9 KB)
 
 ---
 

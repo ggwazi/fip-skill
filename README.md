@@ -5,7 +5,8 @@
 [![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](package.json)
 [![Evidence-Based](https://img.shields.io/badge/evidence-ABCD%202024-purple)](docs/reference/)
 
-> Comprehensive, evidence-based diagnostic and treatment guidance for Feline Infectious Peritonitis (FIP). Transform FIP cases from uniformly fatal to >85% curable with systematic, protocol-driven care.
+> Comprehensive, evidence-based diagnostic and treatment guidance for Feline Infectious Peritonitis (FIP).
+> Transform FIP cases from uniformly fatal to >85% curable with systematic, protocol-driven care.
 
 ---
 

@@ -2,7 +2,9 @@
 
 ## What Was Created
 
-I've successfully created a comprehensive Claude Skill for Feline Infectious Peritonitis (FIP) diagnosis and treatment. This skill transforms the four PDF documents you provided into an actionable, evidence-based tool for veterinary professionals.
+I've successfully created a comprehensive Claude Skill for Feline Infectious Peritonitis (FIP) diagnosis
+and treatment. This skill transforms the four PDF documents you provided into an actionable, evidence-based
+tool for veterinary professionals.
 
 ## Files Created
 

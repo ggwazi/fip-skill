@@ -4,7 +4,9 @@ Based on ABCD (European Advisory Board on Cat Diseases) Guidelines, November 202
 
 ## Overview
 
-FIP diagnosis requires a weight-of-evidence approach combining signalment, history, clinical examination, laboratory findings, and confirmatory testing. This document provides diagnostic decision trees for four clinical presentations.
+FIP diagnosis requires a weight-of-evidence approach combining signalment, history, clinical examination,
+laboratory findings, and confirmatory testing. This document provides diagnostic decision trees for four
+clinical presentations.
 
 ## Evidence Weighting System
 
@@ -230,7 +232,9 @@ In absence of obvious localizing signs or abnormalities:
 
 ### Critical Note
 
-**Always look for signs of disease elsewhere** (chest & abdomen via ultrasonography) in cats with neurological signs. These areas can be easier and more cost-effective to sample compared to CT, MRI, CSF collection.
+**Always look for signs of disease elsewhere** (chest & abdomen via ultrasonography) in cats with
+neurological signs. These areas can be easier and more cost-effective to sample compared to CT, MRI,
+CSF collection.
 
 ### Advanced Imaging Requirements
 
@@ -277,7 +281,8 @@ In absence of non-neurological signs or abnormalities:
 - Aqueous humour sampling may require referral if veterinarian unfamiliar with ophthalmological investigations
 
 **Alternative Sampling:**
-Always look for signs of disease elsewhere (chest & abdomen via ultrasonography) in cats with ocular signs. These areas can be easier and more cost-effective to sample than aqueous humour.
+Always look for signs of disease elsewhere (chest & abdomen via ultrasonography) in cats with ocular signs.
+These areas can be easier and more cost-effective to sample than aqueous humour.
 
 ## Treatment Trial Considerations
 
