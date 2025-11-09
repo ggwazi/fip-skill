@@ -53,20 +53,24 @@ FIP develops through an unfortunate chain of events:
 We don't fully understand why some cats develop FIP while most don't, but certain factors increase risk:
 
 **Age:**
+
 - **Kittens and young cats** (under 2 years) are most commonly affected
 - Senior cats (over 10 years) are also at higher risk
 - Cats between 3-10 years can get FIP but it's less common
 
 **Living Situation:**
+
 - Cats from shelters, catteries, or multi-cat households
 - Crowded conditions with shared litter boxes
 - Stressful environments
 
 **Genetics:**
+
 - Some cat breeds appear more susceptible (Bengals, Ragdolls, Birmans)
 - Purebred cats may be at slightly higher risk than mixed breeds
 
 **Stress:**
+
 - Recent surgery (like spaying/neutering)
 - Moving to a new home
 - Introduction of new pets
@@ -124,6 +128,7 @@ FIP appears in different forms, though cats can have features of more than one t
 There is **no single definitive test** for FIP (except biopsy/necropsy). Veterinarians must piece together multiple clues:
 
 **Tests that help diagnose FIP:**
+
 - Physical examination findings
 - Blood tests (especially protein levels)
 - Fluid analysis (if wet FIP)
@@ -131,6 +136,7 @@ There is **no single definitive test** for FIP (except biopsy/necropsy). Veterin
 - Eye examination
 
 **Tests that are often misunderstood:**
+
 - **Coronavirus antibody tests:** Only show exposure to coronavirus, not FIP
   - Most cats test positive but don't have FIP
   - Not useful for diagnosis
@@ -162,6 +168,7 @@ Your veterinarian uses a **diagnostic approach** that combines multiple findings
 These medications were developed for treating coronaviruses in humans and were found to be effective against the FIP virus.
 
 **Research from UC Davis Veterinary School showed:**
+
 - Over 85% cure rate in cats with wet FIP
 - 70-75% cure rate in cats with dry FIP
 - 60-70% cure rate in cats with neurological FIP
@@ -176,22 +183,26 @@ These medications were developed for treating coronaviruses in humans and were f
 ### The Treatment Protocol
 
 **Medication:**
+
 - Daily injections or oral medication of GS-441524
 - Dose depends on disease type and severity
 - Given at home by pet owners (you can learn!)
 
 **Duration:**
+
 - Minimum 12 weeks (84 days) of treatment
 - Many cats need 14-16 weeks or longer
 - Treatment continues until cat is clinically well and bloodwork normalizes
 
 **Monitoring:**
+
 - Weekly weight checks
 - Monthly bloodwork
 - Regular veterinary examinations
 - Tracking of symptoms
 
 **What to Expect:**
+
 - Most cats start improving within 1-2 weeks
 - Appetite returns quickly
 - Energy increases
@@ -213,6 +224,7 @@ These medications were developed for treating coronaviruses in humans and were f
 - Many cats with ocular FIP also respond
 
 **Factors that improve success:**
+
 - Starting treatment early (before severe organ damage)
 - Young, otherwise healthy cats
 - Owner ability to commit to full treatment course
@@ -222,6 +234,7 @@ These medications were developed for treating coronaviruses in humans and were f
 ### The Challenges
 
 **Treatment is demanding:**
+
 - Daily medication for 3-4+ months
 - Financial investment (medication costs vary by region)
 - Emotional commitment during treatment
@@ -229,6 +242,7 @@ These medications were developed for treating coronaviruses in humans and were f
 - Dealing with injections (if using injectable form)
 
 **Not all cats respond:**
+
 - 15-30% of cats don't achieve cure
 - Some cats relapse after initial improvement
 - Neurological cases can be more challenging
@@ -260,12 +274,14 @@ These medications were developed for treating coronaviruses in humans and were f
 ### Daily Life During Treatment
 
 **Your cat can still enjoy life:**
+
 - Play and interact normally
 - Live with other cats (FIP itself isn't contagious)
 - Eat favorite foods
 - Receive love and attention
 
 **What you'll need to do:**
+
 - Give daily injections or oral medication
 - Monitor appetite and energy
 - Track weight weekly
@@ -274,6 +290,7 @@ These medications were developed for treating coronaviruses in humans and were f
 - Maintain treatment log
 
 **Most owners report:**
+
 - The routine becomes manageable after first few weeks
 - Seeing improvement makes it worthwhile
 - Support from FIP communities is invaluable
@@ -282,11 +299,13 @@ These medications were developed for treating coronaviruses in humans and were f
 ### Other Cats in the Home
 
 **Good news:**
+
 - Your other cats are not at risk of catching FIP
 - The FIP-causing mutation can't be transmitted
 - Your treated cat can continue living with other cats
 
 **However:**
+
 - They may share the common coronavirus (which is okay)
 - Reduce stress during treatment period
 - Ensure clean litter boxes (scoop 2x daily)
@@ -299,18 +318,21 @@ These medications were developed for treating coronaviruses in humans and were f
 ### Cost of Treatment
 
 **Medication costs vary significantly:**
+
 - Depends on cat's weight and disease type
 - Ranges from affordable to expensive depending on source and region
 - Many owners find ways to make treatment affordable
 - Complete treatment may cost several hundred to several thousand dollars
 
 **Your veterinarian can provide:**
+
 - Cost estimates specific to your cat
 - Information about medication sources
 - Payment plan options
 - Guidance on financial resources
 
 **Remember:**
+
 - Cost is a valid concern - discuss openly with your veterinarian
 - Some owners find creative solutions (fundraising, payment plans)
 - Quality of life considerations are important
@@ -323,21 +345,27 @@ These medications were developed for treating coronaviruses in humans and were f
 ### Myth vs. Reality
 
 **MYTH:** "FIP is contagious to other cats"
+
 - **REALITY:** The common coronavirus is contagious, but FIP itself is not. The mutation happens inside each individual cat.
 
 **MYTH:** "A positive coronavirus test means my cat has FIP"
+
 - **REALITY:** Most cats test positive for coronavirus but don't have FIP. This test is not useful for diagnosis.
 
 **MYTH:** "FIP is always fatal"
+
 - **REALITY:** This was true before 2019, but modern antiviral treatment can cure most cats with FIP.
 
 **MYTH:** "Treatment is experimental"
+
 - **REALITY:** GS-441524 has been used successfully in thousands of cats worldwide since 2019.
 
 **MYTH:** "If my cat has FIP, it's because I did something wrong"
+
 - **REALITY:** FIP is not caused by anything you did or didn't do. It's a random mutation that happens unpredictably.
 
 **MYTH:** "All cats with FIP will relapse"
+
 - **REALITY:** Only 5-10% of successfully treated cats relapse, and most relapses can be treated successfully.
 
 ---
@@ -389,6 +417,7 @@ These medications were developed for treating coronaviruses in humans and were f
 - **Success stories** remind you that cure is possible
 
 **What support groups can provide:**
+
 - Emotional support during difficult time
 - Practical advice on giving injections
 - Information about treatment sources
@@ -416,6 +445,7 @@ These medications were developed for treating coronaviruses in humans and were f
 - The journey can be emotionally challenging
 
 **Many owners say:**
+
 - "It was hard, but worth it"
 - "I'm so glad we tried"
 - "My cat is thriving now"
