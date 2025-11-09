@@ -692,10 +692,11 @@ unzip -l fip-veterinary-advisor.skill
    - Emergency contact procedures
    
    ## Fee Structure
-   - Initial diagnostic workup: $XXX
-   - Weekly monitoring: $XXX
-   - Emergency visits: $XXX
-   - Discharge planning: $XXX
+   <!-- Replace with your practice's actual fees -->
+   - Initial diagnostic workup: $350-500
+   - Weekly monitoring: $75-150
+   - Emergency visits: $200-400
+   - Discharge planning: $100-200
    
    ## Client Resources
    - Support groups we recommend
