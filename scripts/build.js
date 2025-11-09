@@ -13,71 +13,14 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { log, error, success, info } from './utils/logger.js';
+import { fileExists, copyDir, hasContent, countFiles, readJSON, writeJSON } from './utils/fs-helpers.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 const srcDir = path.join(rootDir, 'src');
 const distDir = path.join(rootDir, 'dist');
-
-/**
- * Console colors for better output
- */
-const colors = {
-  reset: '\x1b[0m',
-  green: '\x1b[32m',
-  red: '\x1b[31m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  cyan: '\x1b[36m'
-};
-
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-function error(message) {
-  log(`❌ ${message}`, 'red');
-}
-
-function success(message) {
-  log(`✅ ${message}`, 'green');
-}
-
-function info(message) {
-  log(`ℹ️  ${message}`, 'cyan');
-}
-
-/**
- * Check if a file exists
- */
-async function fileExists(filePath) {
-  try {
-    await fs.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-/**
- * Copy directory recursively
- */
-async function copyDir(src, dest) {
-  await fs.mkdir(dest, { recursive: true });
-  const entries = await fs.readdir(src, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const srcPath = path.join(src, entry.name);
-    const destPath = path.join(dest, entry.name);
-
-    if (entry.isDirectory()) {
-      await copyDir(srcPath, destPath);
-    } else {
-      await fs.copyFile(srcPath, destPath);
-    }
-  }
-}
 
 /**
  * Validate required files exist
@@ -151,19 +94,6 @@ async function copySourceFiles() {
   // Copy assets directory if it has content
   const assetsDir = path.join(srcDir, 'assets');
   if (await fileExists(assetsDir)) {
-    const hasContent = async (dir) => {
-      const entries = await fs.readdir(dir, { withFileTypes: true });
-      for (const entry of entries) {
-        if (entry.name === '.gitkeep') continue;
-        if (entry.isFile()) return true;
-        if (entry.isDirectory()) {
-          const fullPath = path.join(dir, entry.name);
-          if (await hasContent(fullPath)) return true;
-        }
-      }
-      return false;
-    };
-
     if (await hasContent(assetsDir)) {
       await copyDir(assetsDir, path.join(distDir, 'assets'));
     }
@@ -178,9 +108,7 @@ async function copySourceFiles() {
 async function generateMetadata() {
   info('Generating build metadata...');
 
-  const packageJson = JSON.parse(
-    await fs.readFile(path.join(rootDir, 'package.json'), 'utf-8')
-  );
+  const packageJson = await readJSON(path.join(rootDir, 'package.json'));
 
   const metadata = {
     name: packageJson.name,
@@ -190,10 +118,7 @@ async function generateMetadata() {
     node: process.version
   };
 
-  await fs.writeFile(
-    path.join(distDir, '.build-info.json'),
-    JSON.stringify(metadata, null, 2)
-  );
+  await writeJSON(path.join(distDir, '.build-info.json'), metadata);
 
   success(`Build metadata generated (v${metadata.version})`);
 }
@@ -221,26 +146,7 @@ async function verifyBuild() {
   }
 
   // Get build stats
-  const stats = {
-    files: 0,
-    size: 0
-  };
-
-  async function countFiles(dir) {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await countFiles(fullPath);
-      } else {
-        stats.files++;
-        const fileStats = await fs.stat(fullPath);
-        stats.size += fileStats.size;
-      }
-    }
-  }
-
-  await countFiles(distDir);
+  const stats = await countFiles(distDir);
 
   success(`Build verified: ${stats.files} files, ${(stats.size / 1024).toFixed(2)} KB`);
 }

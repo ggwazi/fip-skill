@@ -7,13 +7,20 @@
  * Helps with client financial planning
  */
 
+import {
+  DOSING_MAP,
+  DISEASE_FORMS,
+  TREATMENT_DURATION_WEEKS,
+  WEIGHT_GAIN_RATE_MONTHLY
+} from './constants.js';
+
 /**
  * Calculate treatment costs
  *
  * @param {Object} params - Cost parameters
  * @param {number} params.weight - Cat weight in kg
  * @param {string} params.diseaseForm - Disease form
- * @param {number} params.durationWeeks - Treatment duration in weeks
+ * @param {number} [params.durationWeeks] - Treatment duration in weeks
  * @param {number} params.drugCostPerMg - Cost per mg of GS-441524
  * @param {number} [params.weeklyMonitoringCost=0] - Weekly vet visit cost
  * @param {number} [params.monthlyBloodworkCost=0] - Monthly bloodwork cost
@@ -23,25 +30,17 @@
 export function estimateTreatmentCost({
   weight,
   diseaseForm,
-  durationWeeks = 12,
+  durationWeeks = TREATMENT_DURATION_WEEKS,
   drugCostPerMg,
   weeklyMonitoringCost = 0,
   monthlyBloodworkCost = 0,
   includeWeightGain = true
 }) {
-  // Dosing map
-  const dosingMap = {
-    wet: 5,
-    dry: 6,
-    ocular: 8,
-    neurological: 10
-  };
-
   const normalizedForm = diseaseForm.toLowerCase();
-  const mgPerKg = dosingMap[normalizedForm];
+  const mgPerKg = DOSING_MAP[normalizedForm];
 
   if (!mgPerKg) {
-    throw new Error('Invalid disease form');
+    throw new Error(`Invalid disease form. Must be one of: ${DISEASE_FORMS.join(', ')}`);
   }
 
   // Calculate daily dose at start weight
@@ -56,9 +55,9 @@ export function estimateTreatmentCost({
     const weeklyDose = dailyDoseMg * 7;
     totalDrugMg += weeklyDose;
 
-    // Account for weight gain (typical: 5-10% per month for growing kittens)
+    // Account for weight gain (typical: 5% per month for growing kittens)
     if (includeWeightGain && week % 4 === 0 && week > 0) {
-      currentWeight *= 1.05; // 5% weight gain per month
+      currentWeight *= (1 + WEIGHT_GAIN_RATE_MONTHLY);
       dailyDoseMg = currentWeight * mgPerKg;
     }
   }
