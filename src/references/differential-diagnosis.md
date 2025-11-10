@@ -291,7 +291,9 @@ FIP can mimic many diseases and must be differentiated from other conditions cau
 - Age typically older for FIV (vs FIP in young cats)
 
 **Important Note:**
-When clinical signs manifest in retrovirus-infected cats, there is usually an associated infection or morbidity in addition to the retrovirus. The retrovirus itself is not causing the overt clinical signs - it's the secondary opportunistic infections.
+When clinical signs manifest in retrovirus-infected cats, there is usually an associated infection or
+morbidity in addition to the retrovirus. The retrovirus itself is not causing the overt clinical signs -
+it's the secondary opportunistic infections.
 
 **Diagnosis:**
 

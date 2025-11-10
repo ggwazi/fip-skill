@@ -8,9 +8,12 @@
 
 ## Overview
 
-While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in dry FIP, a subset of cats fail to respond or respond initially, then relapse. This document provides systematic approaches to managing these refractory cases.
+While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in dry FIP, a subset of cats
+fail to respond or respond initially, then relapse. This document provides systematic approaches to
+managing these refractory cases.
 
 **Definition of Treatment Failure:**
+
 - No clinical improvement after 2-4 weeks of appropriate dosing
 - Initial improvement followed by clinical deterioration while on treatment
 - Relapse within 12 weeks of completing treatment course
@@ -21,11 +24,13 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 ## Categories of Treatment Failure
 
 ### 1. Primary Non-Response
+
 **Definition:** No improvement within 2-4 weeks of initiating treatment at appropriate doses
 
 **Estimated Incidence:** 10-20% of treated cats
 
 **Clinical Presentation:**
+
 - Persistent fever
 - Continued weight loss
 - No improvement in appetite or energy
@@ -34,22 +39,26 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 - Declining bloodwork parameters (continued elevation of globulins, declining A:G ratio)
 
 ### 2. Secondary Non-Response
+
 **Definition:** Initial improvement (1-4 weeks) followed by plateau or deterioration despite continued treatment
 
 **Estimated Incidence:** 5-10% of treated cats
 
 **Clinical Presentation:**
+
 - Initial fever resolution then return
 - Weight gain that plateaus or reverses
 - Re-accumulation of fluid after initial decrease
 - Bloodwork improves then worsens
 
 ### 3. Relapse During Treatment
+
 **Definition:** Clinical deterioration while on active treatment after initial good response
 
 **Estimated Incidence:** 5-10% during treatment
 
 **Clinical Presentation:**
+
 - Return of fever
 - Appetite decrease
 - Lethargy
@@ -57,11 +66,13 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 - Neurological signs worsening
 
 ### 4. Post-Treatment Relapse
+
 **Definition:** Disease recurrence after completing full treatment course
 
 **Estimated Incidence:** 5-10% within first year post-treatment
 
 **Clinical Presentation:**
+
 - Recurrence of original symptoms
 - May present differently than initial disease
 - Usually occurs within 3-6 months of stopping treatment
@@ -100,6 +111,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
   - Pancreatitis
 
 **Confirmatory testing for FIP:**
+
 - RT-PCR on effusion (if present) - very high sensitivity/specificity
 - Immunohistochemistry on biopsy samples (gold standard if obtainable)
 - Re-evaluation of initial diagnostic criteria
@@ -191,6 +203,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 ### Protocol 1: Dose Escalation
 
 **Indications:**
+
 - Partial response but incomplete
 - Plateau in improvement
 - Adequate compliance verified
@@ -213,11 +226,13 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
    - If worsening: reconsider diagnosis
 
 **Evidence:**
+
 - Case reports of successful treatment with doses up to 20 mg/kg
 - Higher doses associated with increased side effects
 - Balance efficacy vs. tolerability
 
 **Maximum recommended doses:**
+
 - Wet/dry FIP: 10-12 mg/kg
 - Neurological FIP: 15-20 mg/kg
 - Monitor liver enzymes closely at high doses
@@ -225,6 +240,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 ### Protocol 2: Switch Formulation
 
 **Indications:**
+
 - Oral medication with suboptimal response
 - Suspected bioavailability issues
 - GI symptoms affecting absorption
@@ -290,18 +306,21 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 **Controversy:** Some advocate for, others against
 
 **Arguments FOR use:**
+
 - FIP pathology driven by inflammation
 - May reduce organ damage
 - Can improve appetite and quality of life
 - Some case reports of improved outcomes
 
 **Arguments AGAINST use:**
+
 - Immunosuppression may worsen viral replication
 - May mask clinical signs of progression
 - Historical failure of steroids as monotherapy
 - Theoretical concern about interfering with antiviral effectiveness
 
 **Current approach (if used):**
+
 - Low to moderate doses only
 - Prednisolone: 0.5-1 mg/kg q12-24h initially, taper to lowest effective dose
 - Use for cats with severe inflammation/symptoms despite antivirals
@@ -309,6 +328,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 - Not recommended as first-line or long-term
 
 **Other anti-inflammatory options:**
+
 - **Maropitant:** For nausea, may have anti-inflammatory properties
 - **NSAIDs:** Generally avoided (risk of GI ulceration, renal compromise)
 
@@ -339,12 +359,14 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 ### Protocol 5: Extended Treatment Duration
 
 **Indications:**
+
 - Slow but steady improvement
 - Neurological or ocular involvement
 - Bloodwork normalizing slowly
 - Clinical signs improving but not resolved
 
 **Approach:**
+
 - Continue treatment beyond standard 12-16 weeks
 - Some cats require 20-24 weeks or longer
 - Monitor bloodwork monthly
@@ -355,6 +377,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
   - Then taper if protocol calls for it
 
 **Evidence:**
+
 - Case reports of cats requiring extended treatment
 - Neurological and ocular cases often need longer
 - No established maximum duration
@@ -379,6 +402,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
    - Worsening → Reconsider diagnosis
 
 **Client discussion points:**
+
 - Acknowledge treatment isn't working as hoped
 - Review options: dose increase, formulation change, combination therapy
 - Discuss realistic prognosis with current approach
@@ -391,6 +415,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 **Definition:** Improvement in some parameters but incomplete response
 
 **Common presentation:**
+
 - Appetite and energy improved
 - Fever resolved
 - But: Effusion persists, weight not increasing, bloodwork not normalizing
@@ -412,6 +437,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 ### Scenario 3: Initial Response Then Deterioration
 
 **Most concerning pattern** - suggests:
+
 - Development of viral resistance (theoretical, not proven)
 - Inadequate dosing
 - Concurrent disease emerging
@@ -473,6 +499,7 @@ While GS-441524 treatment achieves cure rates of 85%+ in wet FIP and 70-75% in d
 **Quality of life assessment:**
 
 Consider euthanasia if:
+
 - Cat is suffering (pain, severe dyspnea, uncontrolled seizures)
 - No appetite despite interventions
 - Withdrawn, hiding, not interacting
@@ -498,6 +525,7 @@ Consider euthanasia if:
 **Typical timeframe:** 3-6 months after stopping treatment (range: 2 weeks to >1 year)
 
 **Clinical presentation:**
+
 - May mirror original disease
 - May present differently
 - Often less severe than initial episode
@@ -515,6 +543,7 @@ Consider euthanasia if:
 **More concerning:** Suggests resistance or inadequate therapy
 
 **Management:**
+
 1. **Immediate dose escalation** (50-100%)
 2. **Verify medication quality**
 3. **Consider combination therapy**
@@ -528,12 +557,14 @@ Consider euthanasia if:
 ### Neurological FIP - Refractory Cases
 
 **Challenges:**
+
 - Blood-brain barrier limits drug penetration
 - Higher doses required
 - Response often slower
 - Permanent damage may occur
 
 **Approach:**
+
 - Doses up to 15-20 mg/kg reported in literature
 - Consider combination therapy earlier
 - CT/MRI to assess extent of CNS damage
@@ -543,11 +574,13 @@ Consider euthanasia if:
 ### Ocular FIP - Refractory Cases
 
 **Challenges:**
+
 - Intraocular penetration variable
 - Vision loss may be irreversible
 - Often concurrent with systemic FIP
 
 **Approach:**
+
 - Ensure systemic disease controlled first
 - Higher doses (8-10 mg/kg minimum)
 - Extended treatment (16-20+ weeks)
@@ -559,11 +592,13 @@ Consider euthanasia if:
 **Prognosis significantly worsened** by retroviral co-infection
 
 **Challenges:**
+
 - Immunocompromise limits viral clearance
 - Concurrent opportunistic infections
 - Shortened lifespan even if FIP controlled
 
 **Approach:**
+
 - Higher doses may be needed
 - Aggressive supportive care
 - Management of concurrent infections
@@ -635,12 +670,14 @@ Mixed anecdotal reports; no controlled studies
 ### Realistic Expectations
 
 **When treatment is going well:**
+
 - Emphasize that most cats respond
 - Set appropriate timeline (weeks, not days)
 - Prepare for long treatment course
 - Discuss relapse possibility
 
 **When treatment is failing:**
+
 - Be honest about limited options
 - Discuss quality of life objectively
 - Provide realistic success rates for salvage approaches
@@ -648,6 +685,7 @@ Mixed anecdotal reports; no controlled studies
 - Support euthanasia decision if appropriate
 
 **Financial counseling:**
+
 - Discuss cost of escalated/extended treatment
 - Help clients make informed decisions
 - No judgment about financial limitations

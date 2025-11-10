@@ -5,7 +5,9 @@ description: Evidence-based diagnostic and treatment guidance for Feline Infecti
 
 # FIP Veterinary Advisor
 
-Comprehensive, evidence-based guidance for diagnosing and treating Feline Infectious Peritonitis based on ABCD (European Advisory Board on Cat Diseases) Guidelines and research from UC Davis Veterinary School.
+Comprehensive, evidence-based guidance for diagnosing and treating Feline Infectious Peritonitis
+based on ABCD (European Advisory Board on Cat Diseases) Guidelines and research from UC Davis
+Veterinary School.
 
 ## When to Use This Skill
 

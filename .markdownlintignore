@@ -1,0 +1,7 @@
+# Ignore generated or archived documentation
+docs/archive/
+dist/
+node_modules/
+
+# Ignore templates - these have intentionally long lines for readability
+src/assets/templates/

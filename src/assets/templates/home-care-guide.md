@@ -184,6 +184,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### "My cat won't stay still"
 
 **Solutions:**
+
 - Have a helper gently restrain
 - Use a towel wrap (burrito method)
 - Time injection when cat is sleepy or relaxed
@@ -194,6 +195,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### "I see medication leaking out after injection"
 
 **This is common and usually not concerning:**
+
 - A few drops of leakage is normal
 - Don't attempt to re-inject the leaked amount
 - Make sure you're creating a proper skin tent
@@ -203,6 +205,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### "The injection seems painful"
 
 **To reduce discomfort:**
+
 - Ensure medication is room temperature (not cold)
 - Inject slowly and steadily (not too fast)
 - Use smaller needles if possible (ask veterinarian)
@@ -213,6 +216,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### "I forgot a dose"
 
 **If you miss a dose:**
+
 - **Give as soon as you remember** if less than 12 hours late
 - **If more than 12 hours late:** Skip missed dose and give next scheduled dose
 - **Never double up doses**
@@ -222,12 +226,14 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### "I'm not sure if the injection went in"
 
 **Signs of successful injection:**
+
 - Needle penetrated skin (you felt it go through)
 - Syringe plunger pushed completely
 - No large puddle of medication on fur
 - Small bump may be visible/palpable at injection site
 
 **If truly unsure:**
+
 - Do NOT give second injection
 - Note uncertainty in treatment log
 - Contact veterinarian for guidance
@@ -248,6 +254,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### When to Call Your Veterinarian
 
 **Call immediately if:**
+
 - Difficulty breathing or rapid breathing
 - Severe lethargy or collapse
 - Vomiting or diarrhea (severe or bloody)
@@ -257,6 +264,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 - Signs of allergic reaction
 
 **Call within 24 hours if:**
+
 - Mild injection site reactions not improving
 - Questions about technique
 - Concerns about medication effectiveness
@@ -270,6 +278,7 @@ This guide provides detailed instructions for safely administering subcutaneous 
 ### What to Track Daily
 
 Keep a log with:
+
 - Date and time of injection
 - Injection site used
 - Any difficulty with injection
@@ -279,6 +288,7 @@ Keep a log with:
 - Weekly weight
 
 **Why tracking matters:**
+
 - Helps ensure proper injection site rotation
 - Identifies patterns or problems
 - Provides valuable information for veterinary appointments
@@ -348,6 +358,7 @@ Some formulations are available orally. Discuss with your veterinarian - bioavai
 ### How do I know if treatment is working?
 
 Improvements typically seen within 1-2 weeks:
+
 - Increased appetite
 - Better energy
 - Fever resolution (if present)

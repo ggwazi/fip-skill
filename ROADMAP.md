@@ -12,6 +12,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ## 📊 Current Status
 
 ### ✅ Completed (v2.1.0)
+
 - Core infrastructure (package.json, build system)
 - GitHub Actions CI/CD workflows
 - Testing framework (unit tests)
@@ -22,6 +23,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - Build and release automation
 
 ### 🎯 To Complete (v2.2.0 - v2.3.0)
+
 - **4 client education templates** 🔴 HIGH PRIORITY
 - **6 enhanced reference documents** 🟡 MEDIUM PRIORITY
 - **1 diagnostic utility script** 🟡 MEDIUM PRIORITY
@@ -33,16 +35,19 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ## 🚀 Release Plan
 
 ### Version 2.2.0 - Client Education Focus
+
 **Target Date:** 2-3 weeks
 **Focus:** Essential client-facing materials
 
 **Deliverables:**
+
 1. ✅ home-care-guide.md - Injection instructions for clients
 2. ✅ fip-explained.md - FIP basics in client-friendly language
 3. prognosis-discussion.md - Framework for discussing outcomes
 4. refractory-cases.md - Managing treatment failures (veterinary focus)
 
 **Success Criteria:**
+
 - All 4 files implemented with evidence citations
 - Templates tested for clarity and completeness
 - SKILL.md updated with references
@@ -51,10 +56,12 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 ### Version 2.3.0 - Advanced Veterinary Guidance
+
 **Target Date:** 4-6 weeks
 **Focus:** Complex cases and special populations
 
 **Deliverables:**
+
 1. combination-therapy.md - Multiple antiviral protocols
 2. pediatric-fip.md - Kittens <12 weeks considerations
 3. laboratory-reference.md - Complete lab interpretation guide
@@ -63,6 +70,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 6. Integration tests suite
 
 **Success Criteria:**
+
 - Reference documents complete with citations
 - Diagnostic scorer script tested
 - Integration tests covering all workflows
@@ -71,10 +79,12 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 ### Version 2.4.0 - Documentation & Polish (Future)
+
 **Target Date:** 8-10 weeks
 **Focus:** Professional documentation and optional content
 
 **Deliverables:**
+
 1. case-studies.md - Real-world examples (anonymized)
 2. drug-sources.md - Regional availability (with disclaimers)
 3. docs/api/ - API documentation for scripts
@@ -88,11 +98,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ### 🔴 Priority 1: Essential Client Templates (Week 1-2)
 
 #### 1. home-care-guide.md
+
 **Location:** `src/assets/templates/home-care-guide.md`
 **Size:** ~3-4 KB
 **Status:** ✅ IN PROGRESS
 
 **Content Requirements:**
+
 - Injection site selection and rotation
 - Proper subcutaneous injection technique
 - Storage and handling of GS-441524
@@ -103,6 +115,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - Visual references (text descriptions)
 
 **Evidence Base:**
+
 - UC Davis protocols
 - Veterinary nursing standards
 - Published GS-441524 studies
@@ -110,11 +123,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 2. fip-explained.md
+
 **Location:** `src/assets/templates/fip-explained.md`
 **Size:** ~3-5 KB
 **Status:** ✅ IN PROGRESS
 
 **Content Requirements:**
+
 - FIP basics (simplified pathophysiology)
 - Coronavirus mutation explanation
 - Why FIP was historically fatal
@@ -129,11 +144,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 3. prognosis-discussion.md
+
 **Location:** `src/assets/templates/prognosis-discussion.md`
 **Size:** ~4-5 KB
 **Status:** 🔲 NOT STARTED
 
 **Content Requirements:**
+
 - Realistic success rates by disease form
 - Factors affecting prognosis (age, form, timing)
 - Treatment duration expectations (12+ weeks)
@@ -143,6 +160,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - Scripts for difficult conversations
 
 **Evidence Base:**
+
 - ABCD Guidelines 2024
 - Published outcome studies
 - UC Davis treatment data
@@ -150,11 +168,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 4. refractory-cases.md
+
 **Location:** `src/references/refractory-cases.md`
 **Size:** ~5-7 KB
 **Status:** ✅ IN PROGRESS
 
 **Content Requirements:**
+
 - Definition of treatment failure
 - Reasons for failure (dosing, quality, misdiagnosis)
 - Dose escalation protocols
@@ -165,6 +185,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - Case examples and troubleshooting
 
 **Evidence Base:**
+
 - UC Davis research
 - Published case series
 - ABCD Guidelines
@@ -174,11 +195,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ### 🟡 Priority 2: Advanced References (Week 3-4)
 
 #### 5. combination-therapy.md
+
 **Location:** `src/references/combination-therapy.md`
 **Size:** ~4-6 KB
 **Status:** 🔲 NOT STARTED
 
 **Content Requirements:**
+
 - GS-441524 + Remdesivir protocols
 - Corticosteroid use (when/why/dosing)
 - Immunomodulators (Polyprenyl Immunostimulant)
@@ -193,11 +216,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 6. pediatric-fip.md
+
 **Location:** `src/references/pediatric-fip.md`
 **Size:** ~3-5 KB
 **Status:** 🔲 NOT STARTED
 
 **Content Requirements:**
+
 - Challenges in neonatal/pediatric FIP
 - Dosing adjustments for small kittens
 - Injection volume considerations
@@ -212,11 +237,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 7. laboratory-reference.md
+
 **Location:** `src/references/laboratory-reference.md`
 **Size:** ~6-8 KB
 **Status:** 🔲 NOT STARTED
 
 **Content Requirements:**
+
 - CBC interpretation (anemia, lymphopenia patterns)
 - Chemistry panel (globulin, A:G ratio, bilirubin)
 - Effusion analysis (Rivalta test, cell counts, protein, PCR)
@@ -230,11 +257,13 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 8. diagnostic-scorer.js
+
 **Location:** `src/scripts/diagnostic-scorer.js`
 **Size:** ~150-200 lines
 **Status:** 🔲 NOT STARTED
 
 **Functionality:**
+
 ```javascript
 /**
  * Calculate FIP probability score based on weighted evidence
@@ -244,6 +273,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ```
 
 **Features:**
+
 - Implement +/- evidence weighting from ABCD flowcharts
 - Calculate cumulative diagnostic score
 - Recommend which diagnostic tree (A, B, C, or D)
@@ -255,16 +285,19 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 9. Integration Tests
+
 **Location:** `tests/integration/`
 **Status:** 🔲 NOT STARTED
 
 **Required Test Files:**
+
 - `skill-loading.test.js` - Skill loads and parses correctly
 - `workflow.test.js` - Diagnostic and treatment workflows
 - `scripts.test.js` - All utility scripts work together
 - `fixtures/sample-cases.json` - Test data
 
 **Test Coverage:**
+
 - Skill loading and reference accessibility
 - Diagnostic workflows (Trees A, B, C, D)
 - Treatment workflows (dose calculation, cost estimation)
@@ -275,6 +308,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ### 🟢 Priority 3: Optional Content (Week 5-6)
 
 #### 10. relapse-watch.md
+
 **Location:** `src/assets/templates/relapse-watch.md`
 **Size:** ~2-3 KB
 **Status:** 🔲 NOT STARTED
@@ -284,6 +318,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 11. case-studies.md
+
 **Location:** `src/references/case-studies.md`
 **Size:** ~8-10 KB
 **Status:** 🔲 NOT STARTED
@@ -295,6 +330,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 12. drug-sources.md
+
 **Location:** `src/references/drug-sources.md`
 **Size:** ~3-4 KB
 **Status:** 🔲 NOT STARTED
@@ -306,10 +342,12 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 13. API Documentation
+
 **Location:** `docs/api/`
 **Status:** 🔲 NOT STARTED
 
 **Required Files:**
+
 - `calculate-dose.md` - Dose calculator API
 - `treatment-tracker.md` - Treatment tracker API
 - `cost-estimator.md` - Cost estimator API
@@ -320,6 +358,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ---
 
 #### 14. architecture.md
+
 **Location:** `docs/architecture.md`
 **Size:** ~4-6 KB
 **Status:** 🔲 NOT STARTED
@@ -330,7 +369,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 
 ## 🎯 Implementation Workflow
 
-### For Each Content File:
+### For Each Content File
 
 1. **Research Phase**
    - Review evidence sources (ABCD Guidelines, UC Davis, peer-reviewed literature)
@@ -363,7 +402,8 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 
 ## 📏 Quality Standards
 
-### All Content Must Have:
+### All Content Must Have
+
 - [ ] Evidence citations from peer-reviewed sources
 - [ ] Medical accuracy verification
 - [ ] Appropriate disclaimers
@@ -373,7 +413,8 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - [ ] Linked from SKILL.md (if applicable)
 - [ ] Added to package.json files array
 
-### All Scripts Must Have:
+### All Scripts Must Have
+
 - [ ] JSDoc comments
 - [ ] Input validation
 - [ ] Error handling
@@ -386,6 +427,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ## 📊 Progress Tracking
 
 ### Current Sprint (Week 1-2): v2.2.0 Prep
+
 - [x] Repository cleanup (delete .skill artifacts)
 - [x] Archive IMPROVEMENT_PLAN.md
 - [x] Create ROADMAP.md
@@ -395,12 +437,14 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 - [ ] Implement prognosis-discussion.md
 
 ### Next Sprint (Week 3-4): v2.2.0 Release
+
 - [ ] Complete remaining v2.2.0 deliverables
 - [ ] Full testing and validation
 - [ ] Update all documentation
 - [ ] Release v2.2.0
 
 ### Future Sprint (Week 5+): v2.3.0
+
 - [ ] Advanced reference documents
 - [ ] Diagnostic scorer script
 - [ ] Integration tests

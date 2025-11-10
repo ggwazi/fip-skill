@@ -2,7 +2,9 @@
 
 ## Overview
 
-This Claude Skill provides comprehensive, evidence-based guidance for diagnosing and treating Feline Infectious Peritonitis (FIP). It's designed to assist veterinarians, veterinary students, and veterinary professionals in managing FIP cases effectively.
+This Claude Skill provides comprehensive, evidence-based guidance for diagnosing and treating Feline
+Infectious Peritonitis (FIP). It's designed to assist veterinarians, veterinary students, and veterinary
+professionals in managing FIP cases effectively.
 
 ## What's Included
 
@@ -329,9 +331,12 @@ How should I discuss this sensitively while prioritizing the cat's welfare?"
 
 ## Conclusion
 
-This FIP Veterinary Advisor Skill provides comprehensive, evidence-based guidance for one of the most challenging feline diseases. By combining ABCD diagnostic criteria with UC Davis treatment protocols, it helps veterinarians navigate complex FIP cases with confidence.
+This FIP Veterinary Advisor Skill provides comprehensive, evidence-based guidance for one of the most
+challenging feline diseases. By combining ABCD diagnostic criteria with UC Davis treatment protocols,
+it helps veterinarians navigate complex FIP cases with confidence.
 
-Remember: This skill is a tool to support your clinical judgment, not replace it. Always consider the individual patient, client circumstances, and your professional expertise when making decisions.
+Remember: This skill is a tool to support your clinical judgment, not replace it. Always consider the
+individual patient, client circumstances, and your professional expertise when making decisions.
 
 ---
 
