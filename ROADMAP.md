@@ -680,7 +680,7 @@ export function suggestNextSteps(findings, currentScore) {
 - [x] Create consolidated ROADMAP.md
 - [x] Archive TODO.md to docs/archive/
 - [x] Update cross-references in documentation
-- [ ] Begin infrastructure improvements (Prettier, EditorConfig, etc.)
+- [x] Add infrastructure improvements (Integration tests, Prettier, EditorConfig)
 - [ ] Release v2.1.1
 
 ### Next Sprint: Content Completion (Weeks 2-4)
