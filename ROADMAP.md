@@ -27,6 +27,7 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ### ✅ Completed Content (v2.1.0 - Verified)
 
 #### Client Education Templates (4/4 Complete) ✅
+
 All located in `src/assets/templates/`:
 
 1. ✅ **fip-explained.md** (15KB) - FIP basics in client-friendly language
@@ -35,6 +36,7 @@ All located in `src/assets/templates/`:
 4. ✅ **treatment-consent.md** (3.4KB) - Informed consent template
 
 #### Reference Documents (5/5 Complete) ✅
+
 All located in `src/references/`:
 
 1. ✅ **diagnostic-flowcharts.md** (12KB, 373 lines) - ABCD diagnostic trees A-D
@@ -44,6 +46,7 @@ All located in `src/references/`:
 5. ✅ **refractory-cases.md** (21KB, 732 lines) - Managing treatment failures
 
 #### Utility Scripts (4/5 Complete)
+
 All located in `src/scripts/`:
 
 1. ✅ **calculate-dose.js** (6.1KB, 150 lines) - GS-441524 dose calculator
@@ -523,6 +526,7 @@ export function suggestNextSteps(findings, currentScore) {
    - Tree D: Ocular signs predominate
 
 4. **Output Format**
+
    ```javascript
    {
      score: 9,
@@ -723,16 +727,19 @@ export function suggestNextSteps(findings, currentScore) {
 ## 🔗 References & Resources
 
 ### Evidence Base
+
 - **ABCD FIP Guidelines 2024:** `docs/reference/icatcare_fipupdate_july25.pdf`
 - **Existing References:** `src/references/*.md` (5 files)
 - **UC Davis Protocols:** Embedded in treatment-protocols.md
 
 ### Templates for New Content
+
 - **Client template format:** `src/assets/templates/fip-explained.md`
 - **Reference format:** `src/references/treatment-protocols.md`
 - **Script format:** `src/scripts/calculate-dose.js`
 
 ### Development Resources
+
 - **Contributing Guide:** `CONTRIBUTING.md`
 - **Cleanup Plan:** `CLEANUP_PLAN.md`
 - **Build Configuration:** `package.json`
@@ -741,6 +748,7 @@ export function suggestNextSteps(findings, currentScore) {
 - **Archive:** `docs/archive/TODO_v2.1.0.md` (replaced by this document)
 
 ### Documentation Standards
+
 - **Markdown Linting:** `.markdownlint.json` (line length 180, ATX headings)
 - **Line Endings:** LF (Unix-style)
 - **Encoding:** UTF-8
@@ -751,17 +759,20 @@ export function suggestNextSteps(findings, currentScore) {
 ## 📞 Questions or Issues?
 
 ### For Content Issues
+
 - **Medical accuracy questions:** Open issue with `content` label
 - **Evidence citation questions:** Reference ABCD Guidelines or UC Davis research
 - **Client language review:** Test with non-veterinary readers
 
 ### For Development Issues
+
 - **Build failures:** Check `npm run validate` and `npm run lint`
 - **Test failures:** Run `npm test` with verbose output
 - **Feature requests:** Open issue with `feature` label
 - **Bug reports:** Use bug report template in `.github/ISSUE_TEMPLATE/`
 
 ### For Contribution
+
 - **How to contribute:** See `CONTRIBUTING.md`
 - **Code review:** All PRs require review
 - **CI/CD pipeline:** GitHub Actions must pass
@@ -772,6 +783,7 @@ export function suggestNextSteps(findings, currentScore) {
 ## 📈 Success Metrics
 
 ### v2.2.0 Success Criteria
+
 - [ ] 100% of planned content files implemented (5 files)
 - [ ] All files have evidence citations
 - [ ] Medical accuracy reviewed
@@ -782,6 +794,7 @@ export function suggestNextSteps(findings, currentScore) {
 - [ ] Release: Tagged and published
 
 ### v2.3.0 Success Criteria
+
 - [ ] diagnostic-scorer.js implemented and tested
 - [ ] Integration tests: 4 test files, 20+ test cases
 - [ ] Test coverage: >60% overall, >80% for src/scripts/
@@ -790,6 +803,7 @@ export function suggestNextSteps(findings, currentScore) {
 - [ ] Release: Tagged and published
 
 ### v2.4.0 Success Criteria
+
 - [ ] All optional content complete
 - [ ] Code quality: >80% test coverage
 - [ ] Documentation: Complete and accurate

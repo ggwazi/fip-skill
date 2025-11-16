@@ -175,14 +175,18 @@ describe('Skill Loading Integration Tests', () => {
       for (const [fullMatch, text, link] of links) {
         // Skip external links
         if (link.startsWith('http')) continue;
-        if (link.startsWith('#')) continue; // Anchor links tested separately
+        if (link.startsWith('#')) continue; // Pure anchor links
+
+        // Strip anchor from link (e.g., "file.md#anchor" → "file.md")
+        const linkWithoutAnchor = link.split('#')[0];
+        if (!linkWithoutAnchor) continue; // Was just an anchor
 
         // Check if referenced file exists
-        const refPath = join(ROOT_DIR, 'src', link);
+        const refPath = join(ROOT_DIR, 'src', linkWithoutAnchor);
         try {
           await access(refPath);
         } catch (error) {
-          assert.fail(`Broken link in SKILL.md: [${text}](${link}) - file does not exist`);
+          assert.fail(`Broken link in SKILL.md: [${text}](${link}) - file does not exist at ${refPath}`);
         }
       }
     });

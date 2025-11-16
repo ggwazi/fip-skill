@@ -152,6 +152,7 @@ The repository is well-structured and professionally organized. However, there a
 ### Phase 1: Critical Fixes (Priority 1) - Day 1
 
 #### Task 1.1: Audit and Update TODO.md
+
 **Time:** 1 hour
 
 - [ ] Compare TODO.md against actual repository state
@@ -166,6 +167,7 @@ The repository is well-structured and professionally organized. However, there a
 - [ ] Add "Last Verified" date
 
 #### Task 1.2: Consolidate TODO.md and ROADMAP.md
+
 **Time:** 2 hours
 
 **Decision Options:**
@@ -192,6 +194,7 @@ The repository is well-structured and professionally organized. However, there a
 - [ ] Update CONTRIBUTING.md to reference ROADMAP.md
 
 #### Task 1.3: Verify File Inventory
+
 **Time:** 30 minutes
 
 - [ ] Create comprehensive file inventory script
@@ -204,9 +207,11 @@ The repository is well-structured and professionally organized. However, there a
 ### Phase 2: Infrastructure Improvements (Priority 2) - Day 2
 
 #### Task 2.1: Add Missing Integration Tests
+
 **Time:** 4 hours
 
 **Structure:**
+
 ```
 tests/
 ├── unit/                           # Existing
@@ -231,6 +236,7 @@ tests/
 - [ ] Treatment workflow (dose calc → tracking → cost)
 
 #### Task 2.2: Standardize Error Handling
+
 **Time:** 2 hours
 
 **Create:** `scripts/utils/error-handler.js`
@@ -269,9 +275,11 @@ export function validateRequired(params, required) {
 - [ ] src/scripts/*.js
 
 #### Task 2.3: Add Development Tooling
+
 **Time:** 1 hour
 
 **Add EditorConfig** (`.editorconfig`):
+
 ```ini
 root = true
 
@@ -292,6 +300,7 @@ indent_size = 2
 ```
 
 **Add Prettier** (`.prettierrc.json`):
+
 ```json
 {
   "semi": true,
@@ -304,6 +313,7 @@ indent_size = 2
 ```
 
 **Update package.json:**
+
 ```json
 {
   "scripts": {
@@ -318,6 +328,7 @@ indent_size = 2
 ```
 
 #### Task 2.4: Add Package Lock
+
 **Time:** 10 minutes
 
 ```bash
@@ -331,16 +342,19 @@ git commit -m "chore: add package-lock.json for deterministic builds"
 ### Phase 3: Documentation Enhancements (Priority 3) - Day 2-3
 
 #### Task 3.1: Generate API Documentation
+
 **Time:** 2 hours
 
 **Add JSDoc Generation:**
 
 **Install:**
+
 ```bash
 npm install --save-dev jsdoc jsdoc-to-markdown
 ```
 
 **Add scripts:**
+
 ```json
 {
   "scripts": {
@@ -365,6 +379,7 @@ npm install --save-dev jsdoc jsdoc-to-markdown
 - [ ] Future: diagnostic-scorer.js
 
 #### Task 3.2: Add SECURITY.md
+
 **Time:** 30 minutes
 
 **Create:** `SECURITY.md`
@@ -402,6 +417,7 @@ This project is an educational resource. Security concerns focus on:
 ```
 
 #### Task 3.3: Add CODEOWNERS
+
 **Time:** 15 minutes
 
 **Create:** `.github/CODEOWNERS`
@@ -425,6 +441,7 @@ docs/reference/ @ggwazi
 ```
 
 #### Task 3.4: Add Architecture Documentation
+
 **Time:** 2 hours
 
 **Create:** `docs/architecture.md`
@@ -446,6 +463,7 @@ docs/reference/ @ggwazi
 ### Phase 4: GitHub Configuration (Priority 4) - Day 3
 
 #### Task 4.1: Add Dependabot
+
 **Time:** 15 minutes
 
 **Create:** `.github/dependabot.yml`
@@ -470,6 +488,7 @@ updates:
 ```
 
 #### Task 4.2: Enhance Issue Templates with Forms
+
 **Time:** 1 hour
 
 **Convert to YAML issue forms** (better UX than markdown):
@@ -484,6 +503,7 @@ Benefits:
 - Better data validation
 
 #### Task 4.3: Add PR Labeler
+
 **Time:** 30 minutes
 
 **Create:** `.github/labeler.yml`
@@ -513,6 +533,7 @@ ci-cd:
 ```
 
 **Update workflow:**
+
 ```yaml
 # .github/workflows/label.yml (NEW)
 name: Label PRs
@@ -529,6 +550,7 @@ jobs:
 ```
 
 #### Task 4.4: Add Code Coverage Reporting
+
 **Time:** 1 hour
 
 **Update:** `.github/workflows/ci.yml`
@@ -554,15 +576,18 @@ jobs:
 ### Phase 5: Code Quality (Priority 5) - Day 3
 
 #### Task 5.1: Add Pre-commit Hooks
+
 **Time:** 1 hour
 
 **Install Husky:**
+
 ```bash
 npm install --save-dev husky lint-staged
 npx husky install
 ```
 
 **Create:** `.husky/pre-commit`
+
 ```bash
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
@@ -571,6 +596,7 @@ npm run lint:staged
 ```
 
 **Add to package.json:**
+
 ```json
 {
   "lint-staged": {
@@ -586,6 +612,7 @@ npm run lint:staged
 ```
 
 #### Task 5.2: Enhance JSDoc Comments
+
 **Time:** 2 hours
 
 **Standards:**
@@ -602,9 +629,11 @@ npm run lint:staged
 - [ ] All scripts/ files
 
 #### Task 5.3: Add License Headers
+
 **Time:** 30 minutes
 
 **Add to all .js files:**
+
 ```javascript
 /**
  * @license
@@ -620,6 +649,7 @@ npm run lint:staged
 ## 📁 Proposed Directory Structure
 
 ### Current Structure ✅ (Good)
+
 ```
 fip-skill/
 ├── .github/              # GitHub configuration
@@ -637,6 +667,7 @@ fip-skill/
 ```
 
 ### Proposed Structure (Enhanced)
+
 ```
 fip-skill/
 ├── .github/
@@ -705,6 +736,7 @@ fip-skill/
 ## 🔧 Recommended Best Practices
 
 ### Code Quality
+
 1. **Linting:** ✅ Already using markdownlint
 2. **Formatting:** ➕ Add Prettier
 3. **Type Checking:** ⏭️ Future: Consider TypeScript or JSDoc @types
@@ -712,6 +744,7 @@ fip-skill/
 5. **Pre-commit Hooks:** ➕ Add Husky
 
 ### Testing
+
 1. **Unit Tests:** ✅ Exist (2 files)
 2. **Integration Tests:** ➕ Add (missing)
 3. **Coverage:** ➕ Enforce thresholds
@@ -719,6 +752,7 @@ fip-skill/
 5. **Continuous Testing:** ✅ CI runs tests
 
 ### Documentation
+
 1. **README:** ✅ Comprehensive
 2. **API Docs:** ➕ Generate from JSDoc
 3. **Architecture:** ➕ Add docs/architecture.md
@@ -726,6 +760,7 @@ fip-skill/
 5. **Contributing:** ✅ Exists
 
 ### Security
+
 1. **Dependency Scanning:** ➕ Add Dependabot
 2. **Security Policy:** ➕ Add SECURITY.md
 3. **License:** ✅ MIT license exists
@@ -733,6 +768,7 @@ fip-skill/
 5. **Audit:** ✅ npm audit in CI
 
 ### Maintenance
+
 1. **Issue Templates:** ✅ Exist, ➕ Enhance with YAML forms
 2. **PR Templates:** ✅ Exist
 3. **Labeling:** ➕ Automate with labeler
@@ -744,6 +780,7 @@ fip-skill/
 ## 📋 Implementation Checklist
 
 ### Day 1: Critical Fixes
+
 - [ ] Audit TODO.md against actual files
 - [ ] Mark completed items (templates, refractory-cases.md)
 - [ ] Decide: Merge TODO.md + ROADMAP.md or keep separate
@@ -753,6 +790,7 @@ fip-skill/
 - [ ] Run validation to confirm accuracy
 
 ### Day 2: Infrastructure
+
 - [ ] Create tests/integration/ directory
 - [ ] Write skill-loading.test.js
 - [ ] Write workflow.test.js
@@ -767,6 +805,7 @@ fip-skill/
 - [ ] Commit changes
 
 ### Day 3: Documentation & Tooling
+
 - [ ] Install jsdoc and jsdoc-to-markdown
 - [ ] Create generate-api-docs.js script
 - [ ] Generate API docs for all scripts
@@ -790,6 +829,7 @@ fip-skill/
 ## 🎯 Success Metrics
 
 ### Before Cleanup
+
 - **Documentation Files:** 11 (with redundancy)
 - **Test Coverage:** Unit tests only (~40% coverage estimate)
 - **Code Consistency:** Informal
@@ -798,6 +838,7 @@ fip-skill/
 - **Tracked Issues:** Inaccurate (outdated TODO.md)
 
 ### After Cleanup
+
 - **Documentation Files:** 12+ (consolidated, accurate)
 - **Test Coverage:** 60-80% (with integration tests)
 - **Code Consistency:** Enforced (Prettier, EditorConfig, Husky)
@@ -810,24 +851,28 @@ fip-skill/
 ## 🚀 Next Steps After Cleanup
 
 ### Immediate (Week 1)
+
 1. Review and approve this cleanup plan
 2. Execute Phase 1 (Critical Fixes)
 3. Execute Phase 2 (Infrastructure)
 4. Execute Phase 3 (Documentation)
 
 ### Short Term (Week 2)
+
 1. Execute Phase 4 (GitHub Config)
 2. Execute Phase 5 (Code Quality)
 3. Full testing and validation
 4. Create v2.1.1 release with cleanup
 
 ### Medium Term (Month 1)
+
 1. Implement missing content per ROADMAP.md
 2. Add diagnostic-scorer.js
 3. Complete integration test suite
 4. Release v2.2.0
 
 ### Long Term (Quarter 1)
+
 1. Consider TypeScript migration
 2. Add E2E testing
 3. Performance optimization
@@ -838,6 +883,7 @@ fip-skill/
 ## 📞 Questions & Decisions Needed
 
 ### Critical Decisions
+
 1. **TODO.md vs ROADMAP.md:** Merge or keep separate?
    - **Recommendation:** Merge into ROADMAP.md
    - **Rationale:** Single source of truth, less maintenance
@@ -851,6 +897,7 @@ fip-skill/
    - **Rationale:** Catch issues before push, faster feedback
 
 ### Nice to Have Decisions
+
 4. **TypeScript Migration:** Convert .js to .ts?
    - **Recommendation:** Not now, consider for v3.0
    - **Rationale:** Significant effort, use JSDoc types for now
@@ -864,12 +911,14 @@ fip-skill/
 ## 📚 Resources & References
 
 ### Tools to Install
+
 - Prettier: Code formatting
 - Husky: Git hooks
 - JSDoc: Documentation generation
 - lint-staged: Run linters on staged files
 
 ### Documentation
+
 - [Conventional Commits](https://www.conventionalcommits.org/)
 - [Semantic Versioning](https://semver.org/)
 - [GitHub Issue Forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)
@@ -883,4 +932,3 @@ fip-skill/
 **Status:** 🟡 Awaiting Approval
 **Estimated Effort:** 2-3 days
 **Priority:** High
-

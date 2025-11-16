@@ -15,10 +15,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..', '..');
 
-// Import test fixtures
-const fixturesPath = join(__dirname, 'fixtures', 'sample-cases.json');
-let sampleCases;
-
 // Import utility scripts
 const { calculateDose, calculateWeightAdjustment } =
   await import(join(ROOT_DIR, 'src', 'scripts', 'calculate-dose.js'));
@@ -150,29 +146,28 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
       const initialDose = calculateDose({
         weight: clinicalPresentation.weight,
         diseaseForm,
-        concentration: 15,
-        includeFullTreatment: true
+        concentration: 15
       });
 
-      assert.ok(initialDose.dose > 0, 'Should calculate treatment dose');
-      assert.strictEqual(initialDose.diseaseForm, 'wet', 'Should use wet FIP protocol');
-      assert.strictEqual(initialDose.dosePerKg, 5, 'Wet FIP uses 5 mg/kg');
+      assert.ok(initialDose.total_dose_mg > 0, 'Should calculate treatment dose');
+      assert.strictEqual(initialDose.disease_form, 'wet', 'Should use wet FIP protocol');
+      assert.strictEqual(initialDose.dose_mg_per_kg, 5, 'Wet FIP uses 5 mg/kg');
 
       // Step 5: Monitor response (simulated weight gain after 2 weeks)
       const week2Weight = 2.8; // Improved, gaining weight
       const adjustedDose = calculateWeightAdjustment({
-        originalWeight: clinicalPresentation.weight,
+        currentWeight: clinicalPresentation.weight,
         newWeight: week2Weight,
-        diseaseForm,
+        currentDoseMg: initialDose.total_dose_mg,
         concentration: 15
       });
 
       assert.ok(
-        adjustedDose.newDose > initialDose.dose,
+        adjustedDose.new_dose_mg > initialDose.total_dose_mg,
         'Dose should increase with weight gain'
       );
       assert.ok(
-        adjustedDose.weightChange > 0,
+        adjustedDose.weight_change_g > 0,
         'Should register weight gain as positive sign'
       );
     });
@@ -207,13 +202,13 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
         concentration: 20 // Higher concentration to reduce volume
       });
 
-      assert.strictEqual(initialDose.diseaseForm, 'neurological', 'Should use neuro protocol');
-      assert.strictEqual(initialDose.dosePerKg, 10, 'Neurological FIP uses 10 mg/kg');
-      assert.ok(initialDose.dose === 40, 'Should be 40mg (4kg × 10mg/kg)');
+      assert.strictEqual(initialDose.disease_form, 'neurological', 'Should use neuro protocol');
+      assert.strictEqual(initialDose.dose_mg_per_kg, 10, 'Neurological FIP uses 10 mg/kg');
+      assert.ok(initialDose.total_dose_mg === 40, 'Should be 40mg (4kg × 10mg/kg)');
 
       // Step 5: Extended treatment expected (neurological cases often need >84 days)
       assert.ok(
-        initialDose.fullTreatmentDose > 0,
+        initialDose.full_treatment_mg > 0,
         'Should calculate full treatment amount'
       );
     });
@@ -238,11 +233,11 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
       });
 
       assert.ok(
-        escalatedProtocol.dose > initialProtocol.dose,
+        escalatedProtocol.total_dose_mg > initialProtocol.total_dose_mg,
         'Escalated dose should be higher'
       );
       assert.strictEqual(
-        escalatedProtocol.dosePerKg,
+        escalatedProtocol.dose_mg_per_kg,
         6,
         'Dry FIP protocol uses 6 mg/kg'
       );
@@ -255,11 +250,11 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
       });
 
       assert.ok(
-        furtherEscalation.dose > escalatedProtocol.dose,
+        furtherEscalation.total_dose_mg > escalatedProtocol.total_dose_mg,
         'Should escalate to maximum dosing'
       );
       assert.strictEqual(
-        furtherEscalation.dosePerKg,
+        furtherEscalation.dose_mg_per_kg,
         10,
         'Maximum protocol uses 10 mg/kg'
       );
@@ -286,19 +281,22 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
 
       // 1. Explain FIP to client
       assert.ok(
-        fipExplained.includes('FIP') || fipExplained.includes('Infectious Peritonitis'),
+        fipExplained.toLowerCase().includes('fip') ||
+        fipExplained.toLowerCase().includes('infectious peritonitis'),
         'Should explain what FIP is'
       );
 
       // 2. Teach home care (injection administration)
       assert.ok(
-        homeCareGuide.includes('injection') || homeCareGuide.includes('inject'),
+        homeCareGuide.toLowerCase().includes('injection') ||
+        homeCareGuide.toLowerCase().includes('inject'),
         'Should include injection instructions'
       );
 
       // 3. Provide monitoring schedule
       assert.ok(
-        monitoringSchedule.includes('week') || monitoringSchedule.includes('monitor'),
+        monitoringSchedule.toLowerCase().includes('week') ||
+        monitoringSchedule.toLowerCase().includes('monitor'),
         'Should provide monitoring timeline'
       );
     });
@@ -405,9 +403,9 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
 
         // 5. Monitoring (week 2)
         week2: calculateWeightAdjustment({
-          originalWeight: 2.3,
+          currentWeight: 2.3,
           newWeight: 2.6,
-          diseaseForm: 'wet',
+          currentDoseMg: 11.5, // 2.3kg × 5mg/kg
           concentration: 15
         }),
 
@@ -418,9 +416,12 @@ describe('Diagnostic and Treatment Workflow Tests', () => {
       // Validate workflow completeness
       assert.ok(workflow.presentation.completed, 'Workflow step 1: Presentation');
       assert.ok(workflow.diagnostics.completed, 'Workflow step 2: Diagnostics');
-      assert.ok(workflow.treatmentStart.dose > 0, 'Workflow step 3: Treatment calculation');
+      assert.ok(workflow.treatmentStart.total_dose_mg > 0, 'Workflow step 3: Treatment calculation');
       assert.ok(workflow.clientEducation.explained, 'Workflow step 4: Client education');
-      assert.ok(workflow.week2.newDose > workflow.treatmentStart.dose, 'Workflow step 5: Monitoring');
+      assert.ok(
+        workflow.week2.new_dose_mg > workflow.treatmentStart.total_dose_mg,
+        'Workflow step 5: Monitoring'
+      );
       assert.ok(workflow.completed, 'Workflow step 6: Completion');
     });
   });
