@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Sample FIP test cases for integration testing",
+  "cases": [
+    {
+      "id": "wet-fip-kitten-001",
+      "name": "Effusive FIP in young kitten",
+      "signalment": {
+        "age": 6,
+        "ageUnit": "months",
+        "weight": 2.2,
+        "weightUnit": "kg",
+        "breed": "Domestic Shorthair",
+        "sex": "Male Neutered"
+      },
+      "presentation": {
+        "chiefComplaint": "Lethargy, decreased appetite, abdominal distension",
+        "duration": "5 days",
+        "clinicalSigns": [
+          "fever (103.8°F)",
+          "lethargy",
+          "abdominal distension",
+          "decreased appetite",
+          "weight loss"
+        ]
+      },
+      "diagnostics": {
+        "effusion": true,
+        "effusionType": "abdominal",
+        "riv alta": true,
+        "agRatio": 0.45,
+        "globulin": 5.8,
+        "totalProtein": 8.3,
+        "lymphopenia": true,
+        "anemia": "mild non-regenerative"
+      },
+      "diagnosticTree": "A",
+      "diagnosis": "Effusive FIP - highly likely",
+      "treatment": {
+        "diseaseForm": "wet",
+        "initialDose": {
+          "dosePerKg": 5,
+          "totalDose": 11,
+          "concentration": 15,
+          "volume": 0.73
+        }
+      },
+      "outcome": {
+        "response": "good",
+        "week2Weight": 2.5,
+        "week4Weight": 2.8,
+        "week12Weight": 3.4,
+        "survived": true
+      }
+    },
+    {
+      "id": "neuro-fip-adult-002",
+      "name": "Neurological FIP in adult cat",
+      "signalment": {
+        "age": 3,
+        "ageUnit": "years",
+        "weight": 4.5,
+        "weightUnit": "kg",
+        "breed": "Domestic Longhair",
+        "sex": "Female Spayed"
+      },
+      "presentation": {
+        "chiefComplaint": "Seizures, ataxia, behavioral changes",
+        "duration": "2 weeks progressive",
+        "clinicalSigns": [
+          "generalized seizures",
+          "ataxia",
+          "head tilt",
+          "nystagmus",
+          "hyperesthesia",
+          "behavioral changes"
+        ]
+      },
+      "diagnostics": {
+        "effusion": false,
+        "neurologicalSigns": true,
+        "agRatio": 0.62,
+        "globulin": 5.2,
+        "totalProtein": 7.9,
+        "lymphopenia": true,
+        "CSFProtein": "elevated",
+        "MRI": "meningeal enhancement"
+      },
+      "diagnosticTree": "C",
+      "diagnosis": "Neurological FIP - highly likely",
+      "treatment": {
+        "diseaseForm": "neurological",
+        "initialDose": {
+          "dosePerKg": 10,
+          "totalDose": 45,
+          "concentration": 20,
+          "volume": 2.25
+        }
+      },
+      "outcome": {
+        "response": "slow but steady",
+        "week2Weight": 4.6,
+        "week4Weight": 4.7,
+        "week12Weight": 4.9,
+        "treatmentDuration": 120,
+        "survived": true,
+        "notes": "Required extended treatment beyond 84 days"
+      }
+    },
+    {
+      "id": "dry-fip-adult-003",
+      "name": "Non-effusive (dry) FIP",
+      "signalment": {
+        "age": 18,
+        "ageUnit": "months",
+        "weight": 3.8,
+        "weightUnit": "kg",
+        "breed": "Siamese",
+        "sex": "Male Neutered"
+      },
+      "presentation": {
+        "chiefComplaint": "Chronic wasting, intermittent fever",
+        "duration": "6 weeks",
+        "clinicalSigns": [
+          "progressive weight loss",
+          "intermittent fever",
+          "lethargy",
+          "icterus (mild)",
+          "enlarged mesenteric lymph nodes"
+        ]
+      },
+      "diagnostics": {
+        "effusion": false,
+        "neurologicalSigns": false,
+        "ocularSigns": false,
+        "agRatio": 0.68,
+        "globulin": 5.5,
+        "totalProtein": 8.2,
+        "lymphopenia": true,
+        "anemia": "moderate non-regenerative",
+        "hyperbilirubinemia": true
+      },
+      "diagnosticTree": "B",
+      "diagnosis": "Non-effusive (dry) FIP - probable",
+      "treatment": {
+        "diseaseForm": "dry",
+        "initialDose": {
+          "dosePerKg": 6,
+          "totalDose": 22.8,
+          "concentration": 15,
+          "volume": 1.52
+        }
+      },
+      "outcome": {
+        "response": "good",
+        "week2Weight": 3.9,
+        "week4Weight": 4.1,
+        "week12Weight": 4.6,
+        "survived": true
+      }
+    },
+    {
+      "id": "ocular-fip-young-004",
+      "name": "Ocular FIP with systemic signs",
+      "signalment": {
+        "age": 10,
+        "ageUnit": "months",
+        "weight": 2.9,
+        "weightUnit": "kg",
+        "breed": "Domestic Shorthair",
+        "sex": "Female Spayed"
+      },
+      "presentation": {
+        "chiefComplaint": "Cloudy eyes, squinting, fever",
+        "duration": "10 days",
+        "clinicalSigns": [
+          "bilateral anterior uveitis",
+          "hypopyon",
+          "fever",
+          "lethargy",
+          "mild weight loss"
+        ]
+      },
+      "diagnostics": {
+        "effusion": false,
+        "ocularSigns": true,
+        "uveitis": "bilateral",
+        "agRatio": 0.71,
+        "globulin": 5.1,
+        "totalProtein": 7.8,
+        "lymphopenia": true
+      },
+      "diagnosticTree": "D",
+      "diagnosis": "Ocular FIP with systemic involvement",
+      "treatment": {
+        "diseaseForm": "ocular",
+        "initialDose": {
+          "dosePerKg": 8,
+          "totalDose": 23.2,
+          "concentration": 20,
+          "volume": 1.16
+        },
+        "adjunct": ["topical corticosteroids for uveitis"]
+      },
+      "outcome": {
+        "response": "good",
+        "week2Weight": 3.0,
+        "week4Weight": 3.2,
+        "week12Weight": 3.6,
+        "ocularResponse": "resolved uveitis by week 4",
+        "survived": true
+      }
+    },
+    {
+      "id": "wet-fip-refractory-005",
+      "name": "Effusive FIP - initial treatment failure",
+      "signalment": {
+        "age": 8,
+        "ageUnit": "months",
+        "weight": 2.7,
+        "weightUnit": "kg",
+        "breed": "Bengal",
+        "sex": "Male Neutered"
+      },
+      "presentation": {
+        "chiefComplaint": "Abdominal distension, lethargy",
+        "duration": "1 week",
+        "clinicalSigns": [
+          "severe abdominal effusion",
+          "fever",
+          "lethargy",
+          "inappetence"
+        ]
+      },
+      "diagnostics": {
+        "effusion": true,
+        "effusionType": "abdominal",
+        "rivalta": true,
+        "agRatio": 0.38,
+        "globulin": 6.2,
+        "totalProtein": 8.9,
+        "lymphopenia": true,
+        "anemia": "moderate"
+      },
+      "diagnosticTree": "A",
+      "diagnosis": "Effusive FIP - highly likely",
+      "treatment": {
+        "diseaseForm": "wet",
+        "initialDose": {
+          "dosePerKg": 5,
+          "totalDose": 13.5,
+          "concentration": 15,
+          "volume": 0.9
+        },
+        "escalation": {
+          "reason": "No improvement after 2 weeks, persistent effusion",
+          "newDiseaseForm": "dry",
+          "newDosePerKg": 6,
+          "weekOfEscalation": 2
+        },
+        "furtherEscalation": {
+          "reason": "Minimal improvement, escalate further",
+          "newDosePerKg": 8,
+          "weekOfEscalation": 4
+        }
+      },
+      "outcome": {
+        "response": "slow initial, good after escalation",
+        "week2Weight": 2.7,
+        "week4Weight": 2.8,
+        "week8Weight": 3.1,
+        "week12Weight": 3.5,
+        "survived": true,
+        "notes": "Required dose escalation to achieve response"
+      }
+    },
+    {
+      "id": "wet-fip-tiny-kitten-006",
+      "name": "Effusive FIP in very young kitten",
+      "signalment": {
+        "age": 10,
+        "ageUnit": "weeks",
+        "weight": 0.65,
+        "weightUnit": "kg",
+        "breed": "Domestic Shorthair",
+        "sex": "Female"
+      },
+      "presentation": {
+        "chiefComplaint": "Failure to thrive, pot-belly",
+        "duration": "3 days",
+        "clinicalSigns": [
+          "abdominal distension",
+          "failure to gain weight",
+          "fever",
+          "weak"
+        ]
+      },
+      "diagnostics": {
+        "effusion": true,
+        "effusionType": "abdominal",
+        "rivalta": true,
+        "agRatio": 0.52,
+        "globulin": 4.8,
+        "lymphopenia": true
+      },
+      "diagnosticTree": "A",
+      "diagnosis": "Effusive FIP - highly likely",
+      "treatment": {
+        "diseaseForm": "wet",
+        "initialDose": {
+          "dosePerKg": 5,
+          "totalDose": 3.25,
+          "concentration": 20,
+          "volume": 0.16,
+          "notes": "Higher concentration used to minimize injection volume"
+        }
+      },
+      "outcome": {
+        "response": "excellent",
+        "week2Weight": 0.75,
+        "week4Weight": 0.95,
+        "week8Weight": 1.4,
+        "week12Weight": 2.0,
+        "survived": true,
+        "notes": "Dose adjusted frequently for rapid growth"
+      }
+    }
+  ],
+  "testScenarios": {
+    "diagnosticTrees": {
+      "TreeA": ["wet-fip-kitten-001", "wet-fip-refractory-005", "wet-fip-tiny-kitten-006"],
+      "TreeB": ["dry-fip-adult-003"],
+      "TreeC": ["neuro-fip-adult-002"],
+      "TreeD": ["ocular-fip-young-004"]
+    },
+    "outcomesByDiseaseForm": {
+      "wet": ["wet-fip-kitten-001", "wet-fip-refractory-005", "wet-fip-tiny-kitten-006"],
+      "dry": ["dry-fip-adult-003"],
+      "neurological": ["neuro-fip-adult-002"],
+      "ocular": ["ocular-fip-young-004"]
+    },
+    "specialScenarios": {
+      "refractoryCases": ["wet-fip-refractory-005"],
+      "pediatricCases": ["wet-fip-tiny-kitten-006"],
+      "neurologicalCases": ["neuro-fip-adult-002"],
+      "ocularCases": ["ocular-fip-young-004"]
+    }
+  }
+}

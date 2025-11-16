@@ -1,0 +1,16 @@
+# Build output
+dist/
+*.skill
+*.sha256
+
+# Dependencies
+node_modules/
+
+# Archives
+docs/archive/
+
+# Lock files
+package-lock.json
+
+# Templates (intentionally long lines for readability)
+src/assets/templates/
