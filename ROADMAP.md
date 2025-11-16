@@ -1,369 +1,608 @@
 # FIP Veterinary Advisor Skill - Development Roadmap
 
-> **Last Updated:** 2024-11-04
+> **Last Updated:** 2025-11-16
+> **Last Verified:** 2025-11-16 (Phase 1 Cleanup)
 > **Current Version:** 2.1.0
 > **Target Version:** 2.3.0
 > **Status:** Active Development
 
 This roadmap outlines the development plan for completing the FIP Veterinary Advisor skill. The repository infrastructure is complete (v2.1.0) - focus is now on **content completion**.
 
+**Note:** This document replaces and consolidates the previous TODO.md and ROADMAP.md files to provide a single source of truth for project status and planning.
+
 ---
 
-## 📊 Current Status
+## 📊 Current Status (Verified 2025-11-16)
 
-### ✅ Completed (v2.1.0)
+### ✅ Completed Infrastructure (v2.1.0)
 
 - Core infrastructure (package.json, build system)
-- GitHub Actions CI/CD workflows
-- Testing framework (unit tests)
-- 4 reference documents (diagnostic flowcharts, treatment protocols, differential diagnosis, prevention)
-- 3 utility scripts (dose calculator, treatment tracker, cost estimator)
-- 2 client templates (treatment consent, monitoring schedule)
-- Comprehensive documentation (installation, extending, contributing)
+- GitHub Actions CI/CD workflows (ci.yml, pr-check.yml, release.yml)
+- Testing framework (Node.js native test runner)
+- Unit tests (2 files: dose-calculator, maintenance-tools)
+- Build scripts (7 files: build, package, validate, version, find-issues, find-closeable-branches)
+- Comprehensive documentation (README, CHANGELOG, CONTRIBUTING, installation, extending, summary)
 - Build and release automation
 
-### 🎯 To Complete (v2.2.0 - v2.3.0)
+### ✅ Completed Content (v2.1.0 - Verified)
 
-- **4 client education templates** 🔴 HIGH PRIORITY
-- **6 enhanced reference documents** 🟡 MEDIUM PRIORITY
-- **1 diagnostic utility script** 🟡 MEDIUM PRIORITY
-- **Integration tests** 🟡 MEDIUM PRIORITY
+#### Client Education Templates (4/4 Complete) ✅
+All located in `src/assets/templates/`:
+
+1. ✅ **fip-explained.md** (15KB) - FIP basics in client-friendly language
+2. ✅ **home-care-guide.md** (13KB) - Step-by-step injection instructions
+3. ✅ **monitoring-schedule.md** (3.7KB) - Weekly/monthly monitoring checklist
+4. ✅ **treatment-consent.md** (3.4KB) - Informed consent template
+
+#### Reference Documents (5/5 Complete) ✅
+All located in `src/references/`:
+
+1. ✅ **diagnostic-flowcharts.md** (12KB, 373 lines) - ABCD diagnostic trees A-D
+2. ✅ **treatment-protocols.md** (18KB, 727 lines) - UC Davis GS-441524 protocols
+3. ✅ **differential-diagnosis.md** (15KB, 689 lines) - Diseases to differentiate from FIP
+4. ✅ **prevention-management.md** (11KB, 399 lines) - Prevention and multi-cat households
+5. ✅ **refractory-cases.md** (21KB, 732 lines) - Managing treatment failures
+
+#### Utility Scripts (4/5 Complete)
+All located in `src/scripts/`:
+
+1. ✅ **calculate-dose.js** (6.1KB, 150 lines) - GS-441524 dose calculator
+2. ✅ **treatment-tracker.js** (7.4KB) - Patient monitoring and progress tracking
+3. ✅ **cost-estimator.js** (7.2KB) - Treatment cost estimation
+4. ✅ **constants.js** (2.3KB, 87 lines) - Shared constants for all scripts
+5. ❌ **diagnostic-scorer.js** - NOT STARTED (planned for v2.3.0)
+
+### 🎯 Remaining Work (v2.2.0 - v2.4.0)
+
+**Summary:** 9 content items + infrastructure improvements
+
+- **1 client template** (prognosis-discussion.md) 🟡 MEDIUM PRIORITY
+- **5 enhanced reference documents** 🟡 MEDIUM PRIORITY
+- **1 diagnostic utility script** (diagnostic-scorer.js) 🟡 MEDIUM PRIORITY
+- **1 post-treatment template** (relapse-watch.md) 🟢 LOW PRIORITY
+- **Integration tests** 🔴 HIGH PRIORITY (infrastructure)
 - **API documentation** 🟢 LOW PRIORITY
+
+---
+
+## 📈 File Inventory (Verified 2025-11-16)
+
+| Category | Complete | Total | Completion |
+|----------|----------|-------|------------|
+| **Client Templates** | 4 | 5 | 80% |
+| **Reference Documents** | 5 | 10 | 50% |
+| **Utility Scripts** | 4 | 5 | 80% |
+| **Unit Tests** | 2 | 2 | 100% |
+| **Integration Tests** | 0 | 4 | 0% |
+| **API Documentation** | 0 | 4 | 0% |
+| **Overall Content** | 13 | 24 | 54% |
 
 ---
 
 ## 🚀 Release Plan
 
-### Version 2.2.0 - Client Education Focus
+### Version 2.1.1 - Repository Cleanup (In Progress)
 
-**Target Date:** 2-3 weeks
-**Focus:** Essential client-facing materials
+**Target Date:** Current week
+**Focus:** Repository restructuring and best practices
 
 **Deliverables:**
 
-1. ✅ home-care-guide.md - Injection instructions for clients
-2. ✅ fip-explained.md - FIP basics in client-friendly language
-3. prognosis-discussion.md - Framework for discussing outcomes
-4. refractory-cases.md - Managing treatment failures (veterinary focus)
+1. ✅ Comprehensive cleanup plan (CLEANUP_PLAN.md)
+2. ✅ Consolidated roadmap (this file)
+3. ⏳ Archive old TODO.md
+4. ⏳ Integration tests foundation
+5. ⏳ Development tooling (Prettier, EditorConfig, Husky)
+6. ⏳ Enhanced documentation (API docs, architecture.md, SECURITY.md)
 
 **Success Criteria:**
 
-- All 4 files implemented with evidence citations
-- Templates tested for clarity and completeness
-- SKILL.md updated with references
-- Tests passing, markdown lint clean
+- Single source of truth for project tracking
+- Accurate file inventory
+- Infrastructure improvements documented
+- All tests passing
 
 ---
 
-### Version 2.3.0 - Advanced Veterinary Guidance
+### Version 2.2.0 - Content Completion
 
-**Target Date:** 4-6 weeks
-**Focus:** Complex cases and special populations
+**Target Date:** 3-4 weeks
+**Focus:** Complete remaining client-facing and reference materials
 
 **Deliverables:**
 
-1. combination-therapy.md - Multiple antiviral protocols
-2. pediatric-fip.md - Kittens <12 weeks considerations
-3. laboratory-reference.md - Complete lab interpretation guide
-4. diagnostic-scorer.js - Quantify FIP suspicion
-5. relapse-watch.md - Post-treatment monitoring
-6. Integration tests suite
+#### High Priority (Essential)
+
+1. ❌ **prognosis-discussion.md** - Framework for discussing outcomes with clients
+   - Location: `src/assets/templates/prognosis-discussion.md`
+   - Size: ~4-5 KB
+   - Content: Success rates, financial discussion, quality of life, difficult conversations
+
+#### Medium Priority (Important)
+
+2. ❌ **combination-therapy.md** - Multiple antiviral protocols and adjunctive treatments
+   - Location: `src/references/combination-therapy.md`
+   - Size: ~4-6 KB
+   - Content: GS-441524 + Remdesivir, corticosteroids, immunomodulators, drug interactions
+
+3. ❌ **pediatric-fip.md** - Special considerations for kittens <12 weeks old
+   - Location: `src/references/pediatric-fip.md`
+   - Size: ~3-5 KB
+   - Content: Dosing adjustments, injection volumes, growth monitoring, litter management
+
+4. ❌ **laboratory-reference.md** - Complete guide to interpreting lab results
+   - Location: `src/references/laboratory-reference.md`
+   - Size: ~6-8 KB
+   - Content: CBC interpretation, chemistry panels, effusion analysis, monitoring trends
+
+#### Low Priority (Nice to Have)
+
+5. ❌ **relapse-watch.md** - Post-treatment monitoring guidance
+   - Location: `src/assets/templates/relapse-watch.md`
+   - Size: ~2-3 KB
+   - Content: Signs of relapse, monitoring schedule, when to restart treatment
 
 **Success Criteria:**
 
-- Reference documents complete with citations
-- Diagnostic scorer script tested
+- All 5 files implemented with evidence citations
+- Medical accuracy reviewed
+- SKILL.md updated with references
+- Tests passing, markdown lint clean
+- Documentation updated
+
+---
+
+### Version 2.3.0 - Advanced Features & Testing
+
+**Target Date:** 6-8 weeks
+**Focus:** Advanced tooling and comprehensive testing
+
+**Deliverables:**
+
+1. ❌ **diagnostic-scorer.js** - Quantify FIP suspicion based on clinical findings
+   - Location: `src/scripts/diagnostic-scorer.js`
+   - Size: ~150-200 lines
+   - Features: ABCD flowchart evidence weighting, probability scoring, tree recommendation
+   - Testing: Unit tests required in `tests/unit/diagnostic-scorer.test.js`
+
+2. ❌ **Integration Tests** - End-to-end workflow testing
+   - Location: `tests/integration/`
+   - Files:
+     - `skill-loading.test.js` - Test SKILL.md loads correctly
+     - `workflow.test.js` - Test diagnostic and treatment workflows
+     - `scripts-integration.test.js` - Test all scripts work together
+     - `fixtures/sample-cases.json` - Test data
+   - Coverage: All diagnostic trees (A, B, C, D), dose calculation, tracking, cost estimation
+
+3. ❌ **API Documentation** - Generated from JSDoc comments
+   - Location: `docs/api/`
+   - Files:
+     - `calculate-dose.md`
+     - `treatment-tracker.md`
+     - `cost-estimator.md`
+     - `diagnostic-scorer.md`
+   - Auto-generated from JSDoc using jsdoc-to-markdown
+
+**Success Criteria:**
+
+- Diagnostic scorer implemented and tested
 - Integration tests covering all workflows
+- Test coverage >60% overall, >80% for scripts
+- API documentation complete
 - Full skill validation passing
 
 ---
 
-### Version 2.4.0 - Documentation & Polish (Future)
+### Version 2.4.0 - Polish & Optional Content (Future)
 
-**Target Date:** 8-10 weeks
-**Focus:** Professional documentation and optional content
+**Target Date:** 10-12 weeks
+**Focus:** Professional polish and optional advanced content
 
 **Deliverables:**
 
-1. case-studies.md - Real-world examples (anonymized)
-2. drug-sources.md - Regional availability (with disclaimers)
-3. docs/api/ - API documentation for scripts
-4. docs/architecture.md - System design overview
-5. Final polish and optimization
+1. ❌ **case-studies.md** - Real-world treatment examples
+   - Location: `src/references/case-studies.md`
+   - Size: ~8-10 KB
+   - Content: 5-10 detailed cases with outcomes, lessons learned
+   - **Important:** Ensure client consent and anonymization
+
+2. ❌ **drug-sources.md** - Regional availability and quality considerations
+   - Location: `src/references/drug-sources.md`
+   - Size: ~3-4 KB
+   - Content: Legal status overview, compounding pharmacies, quality considerations
+   - **Caution:** Sensitive content - focus on education, not sourcing recommendations
+
+3. ❌ **docs/architecture.md** - System design and technical overview
+   - Size: ~4-6 KB
+   - Content: Repository structure, build process, skill format, design decisions
+
+4. Final polish and optimization
+   - Code review and refactoring
+   - Performance optimization
+   - Documentation review
+   - User experience improvements
 
 ---
 
-## 📋 Detailed Task Breakdown
+## 📋 Detailed Content Requirements
 
-### 🔴 Priority 1: Essential Client Templates (Week 1-2)
+### Missing Client Template
 
-#### 1. home-care-guide.md
+#### prognosis-discussion.md 🟡 MEDIUM PRIORITY
 
-**Location:** `src/assets/templates/home-care-guide.md`
-**Size:** ~3-4 KB
-**Status:** ✅ IN PROGRESS
-
-**Content Requirements:**
-
-- Injection site selection and rotation
-- Proper subcutaneous injection technique
-- Storage and handling of GS-441524
-- Safety precautions (human and pet)
-- Missed dose protocol
-- When to call veterinarian
-- Common side effects and reactions
-- Visual references (text descriptions)
-
-**Evidence Base:**
-
-- UC Davis protocols
-- Veterinary nursing standards
-- Published GS-441524 studies
-
----
-
-#### 2. fip-explained.md
-
-**Location:** `src/assets/templates/fip-explained.md`
-**Size:** ~3-5 KB
-**Status:** ✅ IN PROGRESS
-
-**Content Requirements:**
-
-- FIP basics (simplified pathophysiology)
-- Coronavirus mutation explanation
-- Why FIP was historically fatal
-- Modern treatment breakthrough
-- Success rates and realistic expectations
-- Common misconceptions debunked
-- Resources for further information
-
-**Tone:** Compassionate, clear, non-technical
-**Audience:** Pet owners with minimal medical knowledge
-
----
-
-#### 3. prognosis-discussion.md
+**Purpose:** Framework for discussing outcomes and expectations with clients
 
 **Location:** `src/assets/templates/prognosis-discussion.md`
-**Size:** ~4-5 KB
-**Status:** 🔲 NOT STARTED
+**Target Size:** 4-5 KB
+**Audience:** Veterinarians communicating with cat owners
 
-**Content Requirements:**
+**Required Sections:**
 
-- Realistic success rates by disease form
-- Factors affecting prognosis (age, form, timing)
-- Treatment duration expectations (12+ weeks)
-- Financial investment discussion points
-- Quality of life considerations
-- When euthanasia may be appropriate
-- Scripts for difficult conversations
+1. **Realistic Success Rates**
+   - 85%+ for wet FIP (effusive)
+   - 60-70% for neurological FIP
+   - 70-80% for ocular FIP
+   - Factors affecting outcomes
+
+2. **Treatment Duration Expectations**
+   - Minimum 12 weeks (84 days)
+   - Possible extensions for neurological/ocular
+   - Monitoring requirements
+   - Timeline for improvement
+
+3. **Financial Investment**
+   - Cost range discussion points
+   - Payment plan considerations
+   - Insurance coverage (if applicable)
+   - Budget planning tools
+
+4. **Quality of Life Considerations**
+   - Daily injection burden
+   - Side effects management
+   - Activity restrictions
+   - Family impact
+
+5. **Decision-Making Framework**
+   - Is treatment right for this cat?
+   - Is treatment feasible for this family?
+   - When to reconsider
+   - Alternative options
+
+6. **Difficult Conversations**
+   - When treatment isn't working
+   - When euthanasia may be appropriate
+   - Supporting grieving clients
+   - Sample scripts
 
 **Evidence Base:**
-
-- ABCD Guidelines 2024
+- ABCD Guidelines 2024 (prognosis data)
 - Published outcome studies
-- UC Davis treatment data
+- UC Davis treatment success rates
+
+**Tone:** Evidence-based, compassionate, realistic
 
 ---
 
-#### 4. refractory-cases.md
+### Missing Reference Documents
 
-**Location:** `src/references/refractory-cases.md`
-**Size:** ~5-7 KB
-**Status:** ✅ IN PROGRESS
+#### combination-therapy.md 🟡 MEDIUM PRIORITY
 
-**Content Requirements:**
-
-- Definition of treatment failure
-- Reasons for failure (dosing, quality, misdiagnosis)
-- Dose escalation protocols
-- Alternative/adjunctive therapies
-- Switching between formulations
-- Managing concurrent conditions
-- When to consider euthanasia
-- Case examples and troubleshooting
-
-**Evidence Base:**
-
-- UC Davis research
-- Published case series
-- ABCD Guidelines
-
----
-
-### 🟡 Priority 2: Advanced References (Week 3-4)
-
-#### 5. combination-therapy.md
+**Purpose:** Multiple antiviral protocols and adjunctive treatments
 
 **Location:** `src/references/combination-therapy.md`
-**Size:** ~4-6 KB
-**Status:** 🔲 NOT STARTED
+**Target Size:** 4-6 KB
 
-**Content Requirements:**
+**Required Sections:**
 
-- GS-441524 + Remdesivir protocols
-- Corticosteroid use (when/why/dosing)
-- Immunomodulators (Polyprenyl Immunostimulant)
-- Supportive care medications
-- Pain management protocols
-- Nutrition support
-- Drug interactions to avoid
-- Evidence quality markers
+1. **Antiviral Combinations**
+   - GS-441524 + Remdesivir protocols
+   - When to consider combination therapy
+   - Dosing for each agent
+   - Evidence quality
+
+2. **Corticosteroid Use**
+   - Indications (severe inflammation, neurological FIP)
+   - Prednisolone dosing protocols
+   - When to taper
+   - Risks vs. benefits
+
+3. **Immunomodulators**
+   - Polyprenyl Immunostimulant (PI)
+   - Mechanism and rationale
+   - Dosing and administration
+   - Limited evidence base
+
+4. **Supportive Care**
+   - Appetite stimulants
+   - Anti-nausea medications
+   - Pain management
+   - Nutrition support
+
+5. **Drug Interactions**
+   - Medications to avoid
+   - Timing considerations
+   - Monitoring requirements
+
+6. **Evidence Quality Markers**
+   - ⭐⭐⭐ Well-established (GS-441524 monotherapy)
+   - ⭐⭐ Moderate evidence (corticosteroids in neuro FIP)
+   - ⭐ Limited evidence (immunomodulators)
+   - ❓ Experimental (novel combinations)
 
 **Caution:** Clearly distinguish experimental vs. established therapies
 
 ---
 
-#### 6. pediatric-fip.md
+#### pediatric-fip.md 🟡 MEDIUM PRIORITY
+
+**Purpose:** Special considerations for kittens <12 weeks old
 
 **Location:** `src/references/pediatric-fip.md`
-**Size:** ~3-5 KB
-**Status:** 🔲 NOT STARTED
+**Target Size:** 3-5 KB
 
-**Content Requirements:**
+**Required Sections:**
 
-- Challenges in neonatal/pediatric FIP
-- Dosing adjustments for small kittens
-- Injection volume considerations
-- Growth monitoring during treatment
-- Maternal antibody interference with testing
-- Litter management protocols
-- Prognosis differences in young kittens
-- Queen/cattery considerations
+1. **Unique Challenges**
+   - Small body size and injection volumes
+   - Rapid growth during treatment
+   - Limited venous access
+   - Diagnostic challenges
 
-**Evidence Base:** Limited - note where data is sparse
+2. **Dosing Adjustments**
+   - Weight-based dosing considerations
+   - Concentration selection for small volumes
+   - Injection site rotation in tiny kittens
+   - Frequency considerations
+
+3. **Injection Volume Considerations**
+   - Maximum subcutaneous volume per site
+   - Multiple site protocols
+   - Dilution strategies
+   - Concentration optimization
+
+4. **Growth Monitoring**
+   - Weekly weight checks
+   - Dose adjustments for growth
+   - Expected weight gain curves
+   - When growth is abnormal
+
+5. **Diagnostic Challenges**
+   - Maternal antibody interference
+   - Testing timeline considerations
+   - Clinical diagnosis emphasis
+   - Rivalta test reliability
+
+6. **Litter Management**
+   - Preventing spread to littermates
+   - Isolation protocols
+   - Environmental decontamination
+   - When to test other kittens
+
+7. **Prognosis Differences**
+   - Success rates in young kittens
+   - Neurological involvement more common
+   - Failure to thrive concerns
+
+8. **Queen/Cattery Considerations**
+   - Breeding decisions
+   - Genetic factors
+   - Cattery management
+   - Future litter planning
+
+**Evidence Base:** Limited - explicitly note where data is sparse
 
 ---
 
-#### 7. laboratory-reference.md
+#### laboratory-reference.md 🟡 MEDIUM PRIORITY
+
+**Purpose:** Complete guide to interpreting lab results in FIP
 
 **Location:** `src/references/laboratory-reference.md`
-**Size:** ~6-8 KB
-**Status:** 🔲 NOT STARTED
+**Target Size:** 6-8 KB
 
-**Content Requirements:**
+**Required Sections:**
 
-- CBC interpretation (anemia, lymphopenia patterns)
-- Chemistry panel (globulin, A:G ratio, bilirubin)
-- Effusion analysis (Rivalta test, cell counts, protein, PCR)
-- Advanced testing (immunofluorescence, immunohistochemistry)
-- Monitoring bloodwork trends
-- Response indicators and warning signs
-- When to adjust treatment
+1. **Complete Blood Count (CBC)**
+   - **Anemia patterns:** Non-regenerative anemia common
+   - **Lymphopenia:** Significant finding (absolute lymphocyte count <1500/μL)
+   - **Neutrophil changes:** Left shift, toxic changes
+   - **Thrombocytopenia:** May be present
+   - **Reference ranges and FIP-specific patterns**
 
-**Format:** Reference tables, decision trees
+2. **Chemistry Panel**
+   - **Globulin elevation:** Total protein >7.8 g/dL, globulin >5.1 g/dL
+   - **Albumin:Globulin (A:G) ratio:** <0.8 highly suspicious, <0.6 very suspicious
+   - **Bilirubin patterns:** Hyperbilirubinemia in wet FIP
+   - **Liver enzymes:** ALT, ALP elevation patterns
+   - **Kidney values:** BUN, creatinine in renal involvement
+
+3. **Effusion Analysis** (Wet FIP)
+   - **Rivalta test:** Procedure and interpretation (positive = FIP likely)
+   - **Protein content:** Typically >3.5 g/dL
+   - **Cell count and differential:** Low cellularity, predominantly neutrophils
+   - **PCR testing on fluid:** Sensitivity and specificity considerations
+   - **Visual appearance:** Straw-colored, viscous, clots on standing
+
+4. **Advanced Testing**
+   - **Immunofluorescence (IF):** Requires biopsy, highly specific
+   - **Immunohistochemistry (IHC):** Gold standard, requires tissue
+   - **PCR interpretation:** False positives/negatives, viral load significance
+   - **Serology:** Limited utility, cannot distinguish FCoV from FIPV
+
+5. **Monitoring Bloodwork Trends During Treatment**
+   - **Response indicators:**
+     - Decreasing globulin
+     - Increasing A:G ratio
+     - Resolving anemia
+     - Normalizing lymphocyte count
+   - **Warning signs:**
+     - Persistent lymphopenia after 2 weeks
+     - Rising bilirubin despite treatment
+     - Worsening anemia
+   - **When to adjust treatment:** Dose escalation triggers
+
+6. **Laboratory Decision Trees**
+   - Initial diagnostic workup flowchart
+   - Monitoring frequency guidelines
+   - Treatment adjustment decision points
+
+**Format:** Reference tables, normal ranges, decision trees, interpretation guides
 
 ---
 
-#### 8. diagnostic-scorer.js
+### Missing Utility Script
+
+#### diagnostic-scorer.js 🟡 MEDIUM PRIORITY
+
+**Purpose:** Quantify FIP suspicion based on clinical findings using ABCD Guidelines weighting
 
 **Location:** `src/scripts/diagnostic-scorer.js`
-**Size:** ~150-200 lines
-**Status:** 🔲 NOT STARTED
+**Target Size:** 150-200 lines
 
 **Functionality:**
 
 ```javascript
 /**
- * Calculate FIP probability score based on weighted evidence
+ * Calculate FIP probability score based on weighted evidence from ABCD flowcharts
+ *
  * @param {Object} findings - Clinical and laboratory findings
- * @returns {Object} Score and recommended diagnostic tree
+ * @param {boolean} findings.effusion - Presence of effusion (wet FIP)
+ * @param {number} findings.agRatio - Albumin:Globulin ratio (if available)
+ * @param {number} findings.globulin - Globulin level in g/dL (if available)
+ * @param {boolean} findings.rivalta - Rivalta test result (if effusion present)
+ * @param {boolean} findings.lymphopenia - Lymphopenia present (<1500/μL)
+ * @param {string} findings.neurologicalSigns - None/mild/severe
+ * @param {string} findings.ocularSigns - None/uveitis/other
+ * @param {number} findings.age - Age in months
+ * @param {boolean} findings.fever - Non-responsive fever
+ * @returns {Object} score, probability, recommendedTree, nextSteps
  */
+export function calculateDiagnosticScore(findings) {
+  // Implementation
+}
+
+/**
+ * Determine which ABCD diagnostic tree to follow
+ * @param {Object} findings
+ * @returns {string} Tree A, B, C, or D
+ */
+export function recommendDiagnosticTree(findings) {
+  // Implementation
+}
+
+/**
+ * Suggest next diagnostic steps based on current findings
+ * @param {Object} findings
+ * @param {number} currentScore
+ * @returns {Array<string>} Recommended next steps
+ */
+export function suggestNextSteps(findings, currentScore) {
+  // Implementation
+}
 ```
 
 **Features:**
 
-- Implement +/- evidence weighting from ABCD flowcharts
-- Calculate cumulative diagnostic score
-- Recommend which diagnostic tree (A, B, C, or D)
-- Suggest next diagnostic steps
-- Output probability categories (low/moderate/high)
+1. **Evidence Weighting** (based on ABCD Guidelines)
+   - Strong positive evidence (+3): Effusion with positive Rivalta, A:G <0.6
+   - Moderate positive (+2): A:G 0.6-0.8, hyperglobulinemia >5.1 g/dL
+   - Mild positive (+1): Lymphopenia, fever, young age, ocular signs
+   - Weak positive (+0.5): Neurological signs without other findings
+   - Negative evidence (-1): Normal A:G ratio >1.0, normal globulin
 
-**Testing Required:** Unit tests in `tests/unit/diagnostic-scorer.test.js`
+2. **Probability Categories**
+   - Low suspicion: Score 0-3
+   - Moderate suspicion: Score 4-7
+   - High suspicion: Score 8-12
+   - Very high suspicion: Score >12
+
+3. **Tree Recommendation Logic**
+   - Tree A: Effusion present
+   - Tree B: Dry FIP suspected (no effusion, systemic signs)
+   - Tree C: Neurological signs predominate
+   - Tree D: Ocular signs predominate
+
+4. **Output Format**
+   ```javascript
+   {
+     score: 9,
+     probability: "high",
+     recommendedTree: "A",
+     confidence: "moderate",
+     nextSteps: [
+       "Perform Rivalta test on effusion",
+       "Analyze effusion protein content and cytology",
+       "Consider PCR on effusion fluid",
+       "Evaluate A:G ratio if not already done"
+     ],
+     warnings: [
+       "PCR alone cannot diagnose FIP - interpret in clinical context"
+     ]
+   }
+   ```
+
+**Testing Requirements:**
+- Unit tests in `tests/unit/diagnostic-scorer.test.js`
+- Test all diagnostic trees (A, B, C, D)
+- Test edge cases (minimal findings, maximal findings)
+- Test probability thresholds
+- Validate against known FIP cases
 
 ---
 
-#### 9. Integration Tests
+### Missing Post-Treatment Template
 
-**Location:** `tests/integration/`
-**Status:** 🔲 NOT STARTED
+#### relapse-watch.md 🟢 LOW PRIORITY
 
-**Required Test Files:**
-
-- `skill-loading.test.js` - Skill loads and parses correctly
-- `workflow.test.js` - Diagnostic and treatment workflows
-- `scripts.test.js` - All utility scripts work together
-- `fixtures/sample-cases.json` - Test data
-
-**Test Coverage:**
-
-- Skill loading and reference accessibility
-- Diagnostic workflows (Trees A, B, C, D)
-- Treatment workflows (dose calculation, cost estimation)
-- Script integration and data flow
-
----
-
-### 🟢 Priority 3: Optional Content (Week 5-6)
-
-#### 10. relapse-watch.md
+**Purpose:** Post-treatment monitoring guidance for preventing and detecting relapse
 
 **Location:** `src/assets/templates/relapse-watch.md`
-**Size:** ~2-3 KB
-**Status:** 🔲 NOT STARTED
+**Target Size:** 2-3 KB
 
-**Content:** Post-treatment monitoring guidance, signs of relapse, bloodwork timeline
+**Required Sections:**
 
----
+1. **Signs of Relapse to Watch For**
+   - Return of fever
+   - Decreased appetite
+   - Lethargy
+   - Re-accumulation of effusion
+   - Neurological or ocular signs returning
 
-#### 11. case-studies.md
+2. **Monitoring Schedule After Treatment Ends**
+   - Weekly for first month
+   - Monthly for 3 months
+   - Every 3 months for first year
+   - Annual thereafter
 
-**Location:** `src/references/case-studies.md`
-**Size:** ~8-10 KB
-**Status:** 🔲 NOT STARTED
+3. **Bloodwork Timeline**
+   - 1 month post-treatment: CBC, chemistry
+   - 3 months post-treatment: Repeat labs
+   - 6 months: Full panel
+   - 12 months: Annual check
 
-**Content:** 5-10 detailed case studies with outcomes, lessons learned
+4. **When to Restart Treatment**
+   - Clinical relapse criteria
+   - Laboratory relapse indicators
+   - How quickly to act
+   - Duration of retreatment
 
-**Important:** Ensure client consent and anonymization
+5. **Lifetime Considerations**
+   - FIP survivors may have chronic changes
+   - Monitoring for late complications
+   - Quality of life in survivors
+   - Life expectancy data
 
----
+6. **Multi-Cat Household Precautions**
+   - Coronavirus shedding post-recovery
+   - Introducing new cats
+   - Environmental management
+   - Monitoring other cats
 
-#### 12. drug-sources.md
-
-**Location:** `src/references/drug-sources.md`
-**Size:** ~3-4 KB
-**Status:** 🔲 NOT STARTED
-
-**Content:** Regional availability, quality considerations, legal disclaimers
-
-**Caution:** Sensitive content - focus on education, not sourcing recommendations
-
----
-
-#### 13. API Documentation
-
-**Location:** `docs/api/`
-**Status:** 🔲 NOT STARTED
-
-**Required Files:**
-
-- `calculate-dose.md` - Dose calculator API
-- `treatment-tracker.md` - Treatment tracker API
-- `cost-estimator.md` - Cost estimator API
-- `diagnostic-scorer.md` - Diagnostic scorer API
-
-**Generation:** Consider auto-generating from JSDoc comments
-
----
-
-#### 14. architecture.md
-
-**Location:** `docs/architecture.md`
-**Size:** ~4-6 KB
-**Status:** 🔲 NOT STARTED
-
-**Content:** System design, build process, skill file format, design decisions
+7. **Client Checklist**
+   - Daily observations
+   - Weekly weight checks
+   - Temperature monitoring (if indicated)
+   - When to call immediately
 
 ---
 
@@ -372,31 +611,35 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 ### For Each Content File
 
 1. **Research Phase**
-   - Review evidence sources (ABCD Guidelines, UC Davis, peer-reviewed literature)
+   - Review evidence sources (ABCD Guidelines, UC Davis research, peer-reviewed literature)
    - Gather citations and references
+   - Review existing related content
    - Outline content structure
 
 2. **Creation Phase**
-   - Write content following existing templates
-   - Include all required sections
-   - Add evidence citations
-   - Follow markdown style guide
+   - Write content following existing template patterns
+   - Include all required sections (see detailed requirements above)
+   - Add evidence citations throughout
+   - Follow markdown style guide (.markdownlint.json)
+   - Include appropriate disclaimers
 
 3. **Integration Phase**
-   - Link from SKILL.md (if applicable)
-   - Add to package.json files array
-   - Update cross-references
+   - Link from SKILL.md in relevant sections (if applicable)
+   - Add to package.json `files` array (if new directory)
+   - Update cross-references in related documents
+   - Add to this ROADMAP.md completion tracking
 
 4. **Validation Phase**
-   - Run `npm run validate`
-   - Run `npm run lint`
-   - Run `npm test`
-   - Fix any issues
+   - Run `npm run validate` - Comprehensive validation checks
+   - Run `npm run lint` - Markdown linting
+   - Run `npm test` - All tests must pass
+   - Fix any issues identified
 
 5. **Documentation Phase**
-   - Update CHANGELOG.md
-   - Update README.md (if needed)
-   - Update this ROADMAP.md
+   - Update CHANGELOG.md with additions
+   - Update README.md feature list (if applicable)
+   - Update this ROADMAP.md status
+   - Update completion percentages
 
 ---
 
@@ -404,74 +647,178 @@ This roadmap outlines the development plan for completing the FIP Veterinary Adv
 
 ### All Content Must Have
 
-- [ ] Evidence citations from peer-reviewed sources
-- [ ] Medical accuracy verification
-- [ ] Appropriate disclaimers
-- [ ] Client-friendly language (if applicable)
-- [ ] Markdown lint passing
-- [ ] File size reasonable (<10KB for references)
-- [ ] Linked from SKILL.md (if applicable)
-- [ ] Added to package.json files array
+- [ ] **Evidence citations** from peer-reviewed sources or authoritative guidelines
+- [ ] **Medical accuracy** verification (ideally by DVM)
+- [ ] **Appropriate disclaimers** (educational purposes, not medical advice)
+- [ ] **Client-friendly language** (if client-facing template)
+- [ ] **Markdown lint passing** (npm run lint)
+- [ ] **File size reasonable** (<10KB for references, <5KB for templates)
+- [ ] **Linked from SKILL.md** (if applicable to workflows)
+- [ ] **Added to package.json** files array (if new directory)
+- [ ] **Consistent formatting** with existing files
 
 ### All Scripts Must Have
 
-- [ ] JSDoc comments
-- [ ] Input validation
-- [ ] Error handling
-- [ ] Unit tests with >80% coverage
-- [ ] Clear function signatures
-- [ ] Usage examples
+- [ ] **JSDoc comments** with @param, @returns, @throws, @example
+- [ ] **Input validation** for all parameters
+- [ ] **Error handling** with meaningful error messages
+- [ ] **Unit tests** with >80% code coverage
+- [ ] **Clear function signatures** with TypeScript-style JSDoc types
+- [ ] **Usage examples** in comments or separate examples file
+- [ ] **Constants** extracted to constants.js where appropriate
+- [ ] **Export functions** properly for testing and reuse
 
 ---
 
 ## 📊 Progress Tracking
 
-### Current Sprint (Week 1-2): v2.2.0 Prep
+### Current Sprint: Repository Cleanup (Week of 2025-11-16)
 
-- [x] Repository cleanup (delete .skill artifacts)
-- [x] Archive IMPROVEMENT_PLAN.md
-- [x] Create ROADMAP.md
-- [⏳] Implement home-care-guide.md
-- [⏳] Implement fip-explained.md
-- [⏳] Implement refractory-cases.md
-- [ ] Implement prognosis-discussion.md
+- [x] Comprehensive repository analysis
+- [x] Create CLEANUP_PLAN.md
+- [x] Audit TODO.md vs actual files
+- [x] Create consolidated ROADMAP.md
+- [x] Archive TODO.md to docs/archive/
+- [x] Update cross-references in documentation
+- [ ] Begin infrastructure improvements (Prettier, EditorConfig, etc.)
+- [ ] Release v2.1.1
 
-### Next Sprint (Week 3-4): v2.2.0 Release
+### Next Sprint: Content Completion (Weeks 2-4)
 
-- [ ] Complete remaining v2.2.0 deliverables
-- [ ] Full testing and validation
-- [ ] Update all documentation
+**Goal:** Complete v2.2.0 content deliverables
+
+- [ ] prognosis-discussion.md (HIGH PRIORITY)
+- [ ] combination-therapy.md
+- [ ] pediatric-fip.md
+- [ ] laboratory-reference.md
+- [ ] relapse-watch.md
+- [ ] Update SKILL.md with new references
+- [ ] Full validation and testing
 - [ ] Release v2.2.0
 
-### Future Sprint (Week 5+): v2.3.0
+### Future Sprint: Advanced Features (Weeks 5-8)
 
-- [ ] Advanced reference documents
-- [ ] Diagnostic scorer script
-- [ ] Integration tests
+**Goal:** Complete v2.3.0 with tooling and testing
+
+- [ ] Implement diagnostic-scorer.js
+- [ ] Create integration test suite
+- [ ] Generate API documentation
+- [ ] Add docs/architecture.md
+- [ ] Achieve >60% test coverage
 - [ ] Release v2.3.0
+
+### Long-term: Polish & Optional Content (Weeks 9-12)
+
+**Goal:** Complete v2.4.0 with polish
+
+- [ ] case-studies.md (with client consent)
+- [ ] drug-sources.md (with appropriate disclaimers)
+- [ ] Final code review and refactoring
+- [ ] Performance optimization
+- [ ] Documentation review
+- [ ] Release v2.4.0
 
 ---
 
-## 🔗 References
+## 🔗 References & Resources
 
-- **Evidence Base:** `docs/reference/icatcare_fipupdate_july25.pdf`
-- **Existing Templates:** `src/assets/templates/*.md`
-- **Existing References:** `src/references/*.md`
+### Evidence Base
+- **ABCD FIP Guidelines 2024:** `docs/reference/icatcare_fipupdate_july25.pdf`
+- **Existing References:** `src/references/*.md` (5 files)
+- **UC Davis Protocols:** Embedded in treatment-protocols.md
+
+### Templates for New Content
+- **Client template format:** `src/assets/templates/fip-explained.md`
+- **Reference format:** `src/references/treatment-protocols.md`
+- **Script format:** `src/scripts/calculate-dose.js`
+
+### Development Resources
 - **Contributing Guide:** `CONTRIBUTING.md`
+- **Cleanup Plan:** `CLEANUP_PLAN.md`
+- **Build Configuration:** `package.json`
+- **Validation Script:** `scripts/validate.js`
 - **Archive:** `docs/archive/IMPROVEMENT_PLAN.md` (historical context)
+- **Archive:** `docs/archive/TODO_v2.1.0.md` (replaced by this document)
+
+### Documentation Standards
+- **Markdown Linting:** `.markdownlint.json` (line length 180, ATX headings)
+- **Line Endings:** LF (Unix-style)
+- **Encoding:** UTF-8
+- **Style Guide:** Follow existing file patterns
 
 ---
 
 ## 📞 Questions or Issues?
 
-- Open an issue with the `content` label for medical content questions
-- Open an issue with the `feature` label for new feature requests
-- Check `CONTRIBUTING.md` for contribution guidelines
-- Review archived `IMPROVEMENT_PLAN.md` for historical context
+### For Content Issues
+- **Medical accuracy questions:** Open issue with `content` label
+- **Evidence citation questions:** Reference ABCD Guidelines or UC Davis research
+- **Client language review:** Test with non-veterinary readers
+
+### For Development Issues
+- **Build failures:** Check `npm run validate` and `npm run lint`
+- **Test failures:** Run `npm test` with verbose output
+- **Feature requests:** Open issue with `feature` label
+- **Bug reports:** Use bug report template in `.github/ISSUE_TEMPLATE/`
+
+### For Contribution
+- **How to contribute:** See `CONTRIBUTING.md`
+- **Code review:** All PRs require review
+- **CI/CD pipeline:** GitHub Actions must pass
+- **Pre-commit:** Run validation and linting locally before pushing
 
 ---
 
-**Version:** 2.1.0 → 2.3.0
-**Last Updated:** 2024-11-04
+## 📈 Success Metrics
+
+### v2.2.0 Success Criteria
+- [ ] 100% of planned content files implemented (5 files)
+- [ ] All files have evidence citations
+- [ ] Medical accuracy reviewed
+- [ ] Markdown lint: 0 errors, 0 warnings
+- [ ] Validation: All checks passing
+- [ ] Tests: All passing (unit tests)
+- [ ] Documentation: README, CHANGELOG updated
+- [ ] Release: Tagged and published
+
+### v2.3.0 Success Criteria
+- [ ] diagnostic-scorer.js implemented and tested
+- [ ] Integration tests: 4 test files, 20+ test cases
+- [ ] Test coverage: >60% overall, >80% for src/scripts/
+- [ ] API documentation: Auto-generated for all 5 scripts
+- [ ] CI/CD: All workflows passing
+- [ ] Release: Tagged and published
+
+### v2.4.0 Success Criteria
+- [ ] All optional content complete
+- [ ] Code quality: >80% test coverage
+- [ ] Documentation: Complete and accurate
+- [ ] Performance: Build <5s, tests <10s
+- [ ] Polish: No TODOs, no placeholders
+- [ ] Release: Production-ready
+
+---
+
+## 🗂️ Archive Notice
+
+**This document replaces:**
+- `TODO.md` (archived to `docs/archive/TODO_v2.1.0.md`)
+- Previous `ROADMAP.md` (content merged into this file)
+
+**Rationale for consolidation:**
+- Eliminates redundancy between TODO.md and ROADMAP.md
+- Provides single source of truth for project status
+- Reduces maintenance burden (one file to update)
+- Improves accuracy (verified against actual repository state)
+- Better organization (clear sections for completed vs. remaining work)
+
+**Last verified:** 2025-11-16 - All file counts and statuses confirmed against actual repository
+
+---
+
+**Version:** 2.1.0 → 2.4.0
+**Last Updated:** 2025-11-16
+**Last Verified:** 2025-11-16
 **Maintainer:** @ggwazi
 **Status:** 🟢 Active Development
+**Completion:** 54% (13/24 content items)
