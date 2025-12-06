@@ -25,7 +25,7 @@
     
     <div class="text-sm font-bold text-surface-400 uppercase mt-6 mb-2">Reference</div>
     <ul class="space-y-1">
-       <li><a href="/docs/icatcare_fipupdate_july25.pdf" target="_blank" class="block p-2 rounded hover:bg-surface-500/10">ABCD Guidelines (PDF)</a></li>
+       <li><a href="/docs/reference/icatcare_fipupdate_july25.pdf" target="_blank" class="block p-2 rounded hover:bg-surface-500/10">ABCD Guidelines (PDF)</a></li>
     </ul>
   </nav>
 </div>

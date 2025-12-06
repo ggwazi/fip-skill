@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { skeleton } from '@skeletonlabs/skeleton/plugin';
+import typography from '@tailwindcss/typography';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
@@ -17,6 +18,7 @@ export default {
 	plugins: [
 		skeleton({
 			themes: { preset: [ "skeleton" ] }
-		})
+		}),
+        typography
 	]
 }
