@@ -1,5 +1,5 @@
 <script>
-  import { Router, Route, Link } from 'svelte-spa-router';
+  import Router from 'svelte-spa-router';
   import Sidebar from './lib/Sidebar.svelte';
   import DocViewer from './lib/DocViewer.svelte';
   import Home from './lib/Home.svelte';
@@ -11,9 +11,9 @@
   };
 </script>
 
-<div class="h-screen w-full flex flex-col md:flex-row overflow-hidden bg-surface-50-900-token text-surface-900-50-token">
+<div class="h-screen w-full flex flex-col md:flex-row overflow-hidden bg-surface-50-900 text-surface-900-50">
   <!-- Sidebar -->
-  <aside class="w-full md:w-64 flex-none border-r border-surface-500/30 bg-surface-100-800-token">
+  <aside class="w-full md:w-64 flex-none border-r border-surface-500/30 bg-surface-100-800">
     <Sidebar />
   </aside>
 
