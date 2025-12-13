@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "../node_modules/@skeletonlabs/skeleton/dist/index.css";
+@import "../node_modules/@skeletonlabs/skeleton/dist/themes/cerberus.css";
+
+@source "../node_modules/@skeletonlabs/skeleton-svelte";
+
+html, body {
+	@apply h-full overflow-hidden;
+}
